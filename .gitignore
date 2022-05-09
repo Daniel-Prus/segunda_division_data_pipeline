@@ -8,6 +8,7 @@ __pycache__/
 # Visual Studio
 .vs*
 /dags/restore_historical_data/csv_to_postgres_ssis/.vs/
+dags/restore_historical_data/csv_to_postgres_ssis/.vs
 
 # Distribution / packaging
 .Python
