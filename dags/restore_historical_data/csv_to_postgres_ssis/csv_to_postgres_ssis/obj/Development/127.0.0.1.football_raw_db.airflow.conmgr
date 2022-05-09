@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="127.0.0.1.football_raw_db.airflow"
+  DTS:DTSID="{6F7CA64B-CCA6-4EC8-8575-C4C5578D833A}"
+  DTS:CreationName="ADO.NET:System.Data.Odbc.OdbcConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="server=127.0.0.1;uid=airflow;Driver={PostgreSQL UNICODE};database=football_raw_db;port=5432;sslmode=disable;readonly=0;protocol=7.4;fakeoidindex=0;showoidcolumn=0;rowversioning=0;showsystemtables=0;fetch=100;unknownsizes=0;maxvarcharsize=255;maxlongvarcharsize=8190;debug=0;commlog=0;usedeclarefetch=0;textaslongvarchar=1;unknownsaslongvarchar=0;boolsaschar=1;parse=0;lfconversion=1;updatablecursors=1;trueisminus1=0;bi=0;byteaaslongvarbinary=1;useserversideprepare=1;lowercaseidentifier=0;d6=-101;optionalerrors=0;fetchrefcursors=0;xaopt=1;">
+      <DTS:Password
+        DTS:Name="pwd"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA05PK7V3Jc0C8jhZKGds7eAAAAAACAAAAAAAQZgAAAAEAACAAAACc+RrnEnMM1O9gGdUWHP0LIVYahW1++ENd6p4znxdcKwAAAAAOgAAAAAIAACAAAADXzNAbHctulu77dCa1mbZ5JY3CwLep4+NwlNd+GZZ6VXAAAADgKh1dtnS9kVB8JTA5mAl5dJLw2E/I5ZdaHYc9giBQbAmA8NEQ5Dxk/RjLxXx96oEu8KX7CdmnnUIhP9wGI8rmBPjGvW8TtZsbi7uq7WswPGAG/Wy1/4ml/RkLJWh/Lv33NqdocsOmZ1lVG5PuEmkBQAAAANqYla5//+DPNR6pyRRZDodAWJK6mCQczyU3NLHlnTrDRqvUxvHra9rNYeYYRi6Vk5W5l6n3iuvhjgy/V9Yyd9Q=</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
