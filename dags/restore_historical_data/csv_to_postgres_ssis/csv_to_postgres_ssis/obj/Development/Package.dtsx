@@ -1,0 +1,2754 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/23/2022 10:47:37 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-G6VJ78V"
+  DTS:CreatorName="DESKTOP-G6VJ78V\admin"
+  DTS:DTSID="{E84597F2-4CAB-4CC0-B408-866FB057F159}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="49"
+  DTS:VersionGUID="{DEBB3E9F-6FD8-43F5-B379-AC79558C17EB}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[fixtures_csv]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{18F66074-C9D6-423B-973C-066251055AB4}"
+      DTS:ObjectName="fixtures_csv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\admin\PycharmProjects\segunda_division_data_pipeline\01_restore_hist_data\fixtures_data.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 0"
+              DTS:DTSID="{206C5FAF-8C98-4CA3-97D4-C70982724BDF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fixture_id"
+              DTS:DTSID="{6F9FF15B-638E-4C70-93AD-4EB96044CD6A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fixture_date"
+              DTS:DTSID="{ADCC9556-1520-47E0-B9D8-B341A58C7424}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fixture_timestamp"
+              DTS:DTSID="{7A827D7E-84D4-4E77-A8E0-D007C876D57B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="league_id"
+              DTS:DTSID="{F7316189-31DB-4103-92F1-940F800D91B9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="league_name"
+              DTS:DTSID="{BFCAFB4D-2C1C-402E-8599-AB7BCCD6089E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="league_country"
+              DTS:DTSID="{0348A2F0-E36E-4A43-9EFB-7E1820329E20}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="league_season"
+              DTS:DTSID="{9017AC45-2C7F-4B3A-A8A0-E8AEB5D0150A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="league_round"
+              DTS:DTSID="{8C34FD21-CFE6-44DA-8823-8FF7285F8D76}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="teams_home_id"
+              DTS:DTSID="{71262C3A-CD9E-45C1-82FD-49358A83D0BE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="teams_home_name"
+              DTS:DTSID="{CE2AB25F-4065-4788-AA71-06E807A6983E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="teams_home_winner"
+              DTS:DTSID="{1EC2D1C2-B70D-4DCA-BF20-347AC8A71E74}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="teams_away_id"
+              DTS:DTSID="{A40E12E2-5035-4B64-A7EB-0FB2CCAE2397}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="teams_away_name"
+              DTS:DTSID="{23675944-17D6-4D82-873D-16994AF387C2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="teams_away_winner"
+              DTS:DTSID="{C72E2DB2-13E4-47E1-BE51-35B143E8FEE4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="goals_home"
+              DTS:DTSID="{AF2206F8-0A20-4FB6-916F-77B0A7710A02}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="goals_away"
+              DTS:DTSID="{7E4966B4-6018-4E81-9FD6-CB7775A34479}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="score_halftime_home"
+              DTS:DTSID="{4678D008-81E2-4C76-96C5-2C0415D8BBB6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="score_halftime_away"
+              DTS:DTSID="{7E6B83A1-E761-4BAD-94C2-E54CA5D007CF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="halftime_goals_total"
+              DTS:DTSID="{199BCFE8-2529-49A9-8047-9D76A2FF5BD3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fulltime_goals_total"
+              DTS:DTSID="{DF05151E-B6BE-475A-99D6-131738CCCBA6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="match_result"
+              DTS:DTSID="{2303ED17-7F87-4BA4-BB51-A42F4DD15AB4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="halftime_match_result"
+              DTS:DTSID="{F4191A24-60F4-4037-A9A2-BA0574811C2D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fulltime_match_result"
+              DTS:DTSID="{41DB8846-2F39-46A8-940A-0079D54F3042}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[schedule_csv]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{1453D3A7-3DE9-4502-985A-86C45BEA4549}"
+      DTS:ObjectName="schedule_csv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\admin\PycharmProjects\segunda_division_data_pipeline\01_restore_hist_data\schedule.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 0"
+              DTS:DTSID="{FF76EA07-43E5-4B3C-9A32-93B4DF811081}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fixture_id"
+              DTS:DTSID="{9A107950-B4F2-4708-856E-1A4D71D943A0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fixture_timezone"
+              DTS:DTSID="{BE1FD731-C03A-471D-8AB3-A7D35DF35E4C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fixture_date"
+              DTS:DTSID="{5B9E506B-5E38-471D-96B5-E371E3158DCF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fixture_timestamp"
+              DTS:DTSID="{173D6263-A1B0-40FA-A5D4-C12DA89E47CA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="teams_home_id"
+              DTS:DTSID="{0B904614-EA13-4E55-BDA8-D961557D79FA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="teams_away_id"
+              DTS:DTSID="{99CE93B3-C1ED-43D3-8B82-488ED555E15F}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[seasons_csv]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C5A2D90F-C8C9-44FE-B955-82165873384B}"
+      DTS:ObjectName="seasons_csv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\admin\PycharmProjects\segunda_division_data_pipeline\01_restore_hist_data\seasons.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="season_id"
+              DTS:DTSID="{080A310E-CA15-422B-8EB9-DD84D25DBAA2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="league_id"
+              DTS:DTSID="{999861DB-C861-47B9-BE58-A23FA404FD06}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="start_date"
+              DTS:DTSID="{D93A5614-E6D8-4821-894A-84369861C50A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="end_date"
+              DTS:DTSID="{5D5C4571-4C9D-4C93-91BC-246753CB63D8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="season_info"
+              DTS:DTSID="{B02CBC92-0E23-4293-B7F1-0E007BC99309}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[teams_csv]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{9D8C0E3C-D2FE-4B1F-816E-780F55B92083}"
+      DTS:ObjectName="teams_csv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\admin\PycharmProjects\segunda_division_data_pipeline\01_restore_hist_data\team_id.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="team"
+              DTS:DTSID="{6CEC7BB1-6C31-4E1C-91DD-A0909C4D1229}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{65A28A8F-75C0-4C19-9072-AF8F90852861}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Postgres_api"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{84E0F52C-9E37-4322-8C91-46C8EC5EDD0E}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Postgres_api"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              localeId="1033"
+              name="ADO_NET_Postgres_api_fixtures"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"api"."fixtures"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Connections[IDbConnection]"
+                  connectionManagerID="{6F7CA64B-CCA6-4EC8-8575-C4C5578D833A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[127.0.0.1.football_raw_db.airflow]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[fixture_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="fixture_id"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[fixture_id]"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[fixture_id]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[fixture_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="fixture_date"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[fixture_date]"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[fixture_date]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[fixture_timestamp]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="fixture_timestamp"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[fixture_timestamp]"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[fixture_timestamp]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[league_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="league_id"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[league_id]"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[league_id]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[league_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="league_name"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[league_name]"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[league_name]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[league_country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="league_country"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[league_country]"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[league_country]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[league_season]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="league_season"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[league_season]"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[league_season]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[league_round]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="league_round"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[league_round]"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[league_round]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[teams_home_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="teams_home_id"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[teams_home_id]"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[teams_home_id]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[teams_home_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="teams_home_name"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[teams_home_name]"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[teams_home_name]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[teams_home_winner]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="teams_home_winner"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[teams_home_winner]"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[teams_home_winner]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[teams_away_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="teams_away_id"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[teams_away_id]"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[teams_away_id]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[teams_away_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="teams_away_name"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[teams_away_name]"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[teams_away_name]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[teams_away_winner]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="teams_away_winner"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[teams_away_winner]"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[teams_away_winner]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[goals_home]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="goals_home"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[goals_home]"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[goals_home]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[goals_away]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="goals_away"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[goals_away]"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[goals_away]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[score_halftime_home]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="score_halftime_home"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[score_halftime_home]"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[score_halftime_home]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[score_halftime_away]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="score_halftime_away"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[score_halftime_away]"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[score_halftime_away]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[halftime_goals_total]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="halftime_goals_total"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[halftime_goals_total]"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[halftime_goals_total]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[fulltime_goals_total]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="fulltime_goals_total"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[fulltime_goals_total]"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[fulltime_goals_total]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[match_result]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="match_result"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[match_result]"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[match_result]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[halftime_match_result]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="halftime_match_result"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[halftime_match_result]"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[halftime_match_result]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[fulltime_match_result]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="fulltime_match_result"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[fulltime_match_result]"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[fulltime_match_result]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[fixture_id]"
+                      dataType="i8"
+                      name="fixture_id" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[fixture_date]"
+                      dataType="dbTimeStamp"
+                      name="fixture_date" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[fixture_timestamp]"
+                      dataType="wstr"
+                      length="50"
+                      name="fixture_timestamp" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[league_id]"
+                      dataType="i4"
+                      name="league_id" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[league_name]"
+                      dataType="wstr"
+                      length="100"
+                      name="league_name" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[league_country]"
+                      dataType="wstr"
+                      length="100"
+                      name="league_country" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[league_season]"
+                      dataType="i4"
+                      name="league_season" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[league_round]"
+                      dataType="i2"
+                      name="league_round" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[teams_home_id]"
+                      dataType="i4"
+                      name="teams_home_id" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[teams_home_name]"
+                      dataType="wstr"
+                      length="50"
+                      name="teams_home_name" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[teams_home_winner]"
+                      dataType="wstr"
+                      length="5"
+                      name="teams_home_winner" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[teams_away_id]"
+                      dataType="i4"
+                      name="teams_away_id" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[teams_away_name]"
+                      dataType="wstr"
+                      length="50"
+                      name="teams_away_name" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[teams_away_winner]"
+                      dataType="wstr"
+                      length="5"
+                      name="teams_away_winner" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[goals_home]"
+                      dataType="i2"
+                      name="goals_home" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[goals_away]"
+                      dataType="i2"
+                      name="goals_away" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[score_halftime_home]"
+                      dataType="i2"
+                      name="score_halftime_home" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[score_halftime_away]"
+                      dataType="i2"
+                      name="score_halftime_away" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[halftime_goals_total]"
+                      dataType="i2"
+                      name="halftime_goals_total" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[fulltime_goals_total]"
+                      dataType="i2"
+                      name="fulltime_goals_total" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[match_result]"
+                      dataType="i2"
+                      name="match_result" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[halftime_match_result]"
+                      dataType="wstr"
+                      length="50"
+                      name="halftime_match_result" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[fulltime_match_result]"
+                      dataType="wstr"
+                      length="50"
+                      name="fulltime_match_result" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[updated]"
+                      dataType="dbTimeStamp"
+                      name="updated" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Postgres_api\ADO_NET_Postgres_api_schedule"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="ADO_NET_Postgres_api_schedule"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"api"."schedule"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Connections[IDbConnection]"
+                  connectionManagerID="{6F7CA64B-CCA6-4EC8-8575-C4C5578D833A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[127.0.0.1.football_raw_db.airflow]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Inputs[ADO NET Destination Input].Columns[fixture_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="fixture_id"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Inputs[ADO NET Destination Input].ExternalColumns[fixture_id]"
+                      lineageId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].Columns[fixture_id]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Inputs[ADO NET Destination Input].Columns[fixture_timezone]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="fixture_timezone"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Inputs[ADO NET Destination Input].ExternalColumns[fixture_timezone]"
+                      lineageId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].Columns[fixture_timezone]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Inputs[ADO NET Destination Input].Columns[fixture_date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="fixture_date"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Inputs[ADO NET Destination Input].ExternalColumns[fixture_date]"
+                      lineageId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].Columns[fixture_date]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Inputs[ADO NET Destination Input].Columns[fixture_timestamp]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="fixture_timestamp"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Inputs[ADO NET Destination Input].ExternalColumns[fixture_timestamp]"
+                      lineageId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].Columns[fixture_timestamp]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Inputs[ADO NET Destination Input].Columns[teams_home_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="teams_home_id"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Inputs[ADO NET Destination Input].ExternalColumns[teams_home_id]"
+                      lineageId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].Columns[teams_home_id]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Inputs[ADO NET Destination Input].Columns[teams_away_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="teams_away_id"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Inputs[ADO NET Destination Input].ExternalColumns[teams_away_id]"
+                      lineageId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].Columns[teams_away_id]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Inputs[ADO NET Destination Input].ExternalColumns[fixture_id]"
+                      dataType="i8"
+                      name="fixture_id" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Inputs[ADO NET Destination Input].ExternalColumns[fixture_timezone]"
+                      dataType="wstr"
+                      length="50"
+                      name="fixture_timezone" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Inputs[ADO NET Destination Input].ExternalColumns[fixture_date]"
+                      dataType="dbTimeStamp"
+                      name="fixture_date" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Inputs[ADO NET Destination Input].ExternalColumns[teams_home_id]"
+                      dataType="i4"
+                      name="teams_home_id" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Inputs[ADO NET Destination Input].ExternalColumns[teams_away_id]"
+                      dataType="i4"
+                      name="teams_away_id" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Inputs[ADO NET Destination Input].ExternalColumns[fixture_timestamp]"
+                      dataType="wstr"
+                      length="50"
+                      name="fixture_timestamp" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Inputs[ADO NET Destination Input].ExternalColumns[updated]"
+                      dataType="dbTimeStamp"
+                      name="updated" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Postgres_api\ADO_NET_Postgres_api_seasons"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="ADO_NET_Postgres_api_seasons"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"api"."seasons"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Postgres_api\ADO_NET_Postgres_api_seasons.Connections[IDbConnection]"
+                  connectionManagerID="{6F7CA64B-CCA6-4EC8-8575-C4C5578D833A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[127.0.0.1.football_raw_db.airflow]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Postgres_api\ADO_NET_Postgres_api_seasons.Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_seasons.Inputs[ADO NET Destination Input].Columns[season_id]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="season_id"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_seasons.Inputs[ADO NET Destination Input].ExternalColumns[season_id]"
+                      lineageId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output].Columns[season_id]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_seasons.Inputs[ADO NET Destination Input].Columns[league_id]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="league_id"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_seasons.Inputs[ADO NET Destination Input].ExternalColumns[league_id]"
+                      lineageId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output].Columns[league_id]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_seasons.Inputs[ADO NET Destination Input].Columns[start_date]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="start_date"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_seasons.Inputs[ADO NET Destination Input].ExternalColumns[start_date]"
+                      lineageId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output].Columns[start_date]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_seasons.Inputs[ADO NET Destination Input].Columns[end_date]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="end_date"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_seasons.Inputs[ADO NET Destination Input].ExternalColumns[end_date]"
+                      lineageId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output].Columns[end_date]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_seasons.Inputs[ADO NET Destination Input].ExternalColumns[season_id]"
+                      dataType="i4"
+                      name="season_id" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_seasons.Inputs[ADO NET Destination Input].ExternalColumns[league_id]"
+                      dataType="i4"
+                      name="league_id" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_seasons.Inputs[ADO NET Destination Input].ExternalColumns[start_date]"
+                      dataType="dbTimeStamp"
+                      name="start_date" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_seasons.Inputs[ADO NET Destination Input].ExternalColumns[end_date]"
+                      dataType="dbTimeStamp"
+                      name="end_date" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_seasons.Inputs[ADO NET Destination Input].ExternalColumns[season_info]"
+                      dataType="wstr"
+                      length="9"
+                      name="season_info" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Postgres_api\ADO_NET_Postgres_api_seasons.Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\Postgres_api\ADO_NET_Postgres_api_seasons.Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_seasons.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Postgres_api\ADO_NET_Postgres_api_seasons.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_seasons.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Postgres_api\ADO_NET_Postgres_api_seasons.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Postgres_api\ADO_NET_Postgres_api_teams"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="ADO_NET_Postgres_api_teams"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"api"."teams"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Postgres_api\ADO_NET_Postgres_api_teams.Connections[IDbConnection]"
+                  connectionManagerID="{6F7CA64B-CCA6-4EC8-8575-C4C5578D833A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[127.0.0.1.football_raw_db.airflow]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Postgres_api\ADO_NET_Postgres_api_teams.Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_teams.Inputs[ADO NET Destination Input].Columns[id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="id"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_teams.Inputs[ADO NET Destination Input].ExternalColumns[team_id]"
+                      lineageId="Package\Postgres_api\teams_csv.Outputs[Flat File Source Output].Columns[id]" />
+                    <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_teams.Inputs[ADO NET Destination Input].Columns[team]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="team"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_teams.Inputs[ADO NET Destination Input].ExternalColumns[team_name]"
+                      lineageId="Package\Postgres_api\teams_csv.Outputs[Flat File Source Output].Columns[team]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_teams.Inputs[ADO NET Destination Input].ExternalColumns[team_id]"
+                      dataType="i4"
+                      name="team_id" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_teams.Inputs[ADO NET Destination Input].ExternalColumns[team_name]"
+                      dataType="wstr"
+                      length="50"
+                      name="team_name" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Postgres_api\ADO_NET_Postgres_api_teams.Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\Postgres_api\ADO_NET_Postgres_api_teams.Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_teams.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Postgres_api\ADO_NET_Postgres_api_teams.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_teams.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Postgres_api\ADO_NET_Postgres_api_teams.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Postgres_api\fixtures_csv"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="fixtures_csv"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Postgres_api\fixtures_csv.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[fixtures_csv]"
+                  connectionManagerRefId="Package.ConnectionManagers[fixtures_csv]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[fixture_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[fixture_id]"
+                      length="50"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[fixture_id]"
+                      name="fixture_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[fixture_date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[fixture_date]"
+                      length="50"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[fixture_date]"
+                      name="fixture_date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[fixture_timestamp]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[fixture_timestamp]"
+                      length="50"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[fixture_timestamp]"
+                      name="fixture_timestamp"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[league_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[league_id]"
+                      length="50"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[league_id]"
+                      name="league_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[league_name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[league_name]"
+                      length="50"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[league_name]"
+                      name="league_name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[league_country]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[league_country]"
+                      length="50"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[league_country]"
+                      name="league_country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[league_season]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[league_season]"
+                      length="50"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[league_season]"
+                      name="league_season"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[league_round]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[league_round]"
+                      length="50"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[league_round]"
+                      name="league_round"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[teams_home_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[teams_home_id]"
+                      length="50"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[teams_home_id]"
+                      name="teams_home_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[teams_home_name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[teams_home_name]"
+                      length="50"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[teams_home_name]"
+                      name="teams_home_name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[teams_home_winner]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[teams_home_winner]"
+                      length="5"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[teams_home_winner]"
+                      name="teams_home_winner"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[teams_away_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[teams_away_id]"
+                      length="50"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[teams_away_id]"
+                      name="teams_away_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[teams_away_name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[teams_away_name]"
+                      length="50"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[teams_away_name]"
+                      name="teams_away_name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[teams_away_winner]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[teams_away_winner]"
+                      length="5"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[teams_away_winner]"
+                      name="teams_away_winner"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[goals_home]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[goals_home]"
+                      length="50"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[goals_home]"
+                      name="goals_home"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[goals_away]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[goals_away]"
+                      length="50"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[goals_away]"
+                      name="goals_away"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[score_halftime_home]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[score_halftime_home]"
+                      length="50"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[score_halftime_home]"
+                      name="score_halftime_home"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[score_halftime_away]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[score_halftime_away]"
+                      length="50"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[score_halftime_away]"
+                      name="score_halftime_away"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[halftime_goals_total]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[halftime_goals_total]"
+                      length="50"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[halftime_goals_total]"
+                      name="halftime_goals_total"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[fulltime_goals_total]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[fulltime_goals_total]"
+                      length="50"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[fulltime_goals_total]"
+                      name="fulltime_goals_total"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[match_result]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[match_result]"
+                      length="50"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[match_result]"
+                      name="match_result"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[halftime_match_result]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[halftime_match_result]"
+                      length="50"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[halftime_match_result]"
+                      name="halftime_match_result"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[fulltime_match_result]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[fulltime_match_result]"
+                      length="50"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[fulltime_match_result]"
+                      name="fulltime_match_result"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[Column 0]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 0" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[fixture_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="fixture_id" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[fixture_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="fixture_date" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[fixture_timestamp]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="fixture_timestamp" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[league_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="league_id" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[league_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="league_name" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[league_country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="league_country" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[league_season]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="league_season" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[league_round]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="league_round" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[teams_home_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="teams_home_id" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[teams_home_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="teams_home_name" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[teams_home_winner]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="teams_home_winner" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[teams_away_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="teams_away_id" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[teams_away_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="teams_away_name" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[teams_away_winner]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="teams_away_winner" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[goals_home]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="goals_home" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[goals_away]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="goals_away" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[score_halftime_home]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="score_halftime_home" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[score_halftime_away]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="score_halftime_away" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[halftime_goals_total]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="halftime_goals_total" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[fulltime_goals_total]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="fulltime_goals_total" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[match_result]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="match_result" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[halftime_match_result]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="halftime_match_result" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[fulltime_match_result]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="fulltime_match_result" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Postgres_api\schedule_csv"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="schedule_csv"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Postgres_api\schedule_csv.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[schedule_csv]"
+                  connectionManagerRefId="Package.ConnectionManagers[schedule_csv]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].Columns[fixture_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].ExternalColumns[fixture_id]"
+                      length="50"
+                      lineageId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].Columns[fixture_id]"
+                      name="fixture_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].Columns[fixture_timezone]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].ExternalColumns[fixture_timezone]"
+                      length="50"
+                      lineageId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].Columns[fixture_timezone]"
+                      name="fixture_timezone"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].Columns[fixture_date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].ExternalColumns[fixture_date]"
+                      length="50"
+                      lineageId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].Columns[fixture_date]"
+                      name="fixture_date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].Columns[fixture_timestamp]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].ExternalColumns[fixture_timestamp]"
+                      length="50"
+                      lineageId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].Columns[fixture_timestamp]"
+                      name="fixture_timestamp"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].Columns[teams_home_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].ExternalColumns[teams_home_id]"
+                      length="50"
+                      lineageId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].Columns[teams_home_id]"
+                      name="teams_home_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].Columns[teams_away_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].ExternalColumns[teams_away_id]"
+                      length="50"
+                      lineageId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].Columns[teams_away_id]"
+                      name="teams_away_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].ExternalColumns[Column 0]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 0" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].ExternalColumns[fixture_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="fixture_id" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].ExternalColumns[fixture_timezone]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="fixture_timezone" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].ExternalColumns[fixture_date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="fixture_date" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].ExternalColumns[fixture_timestamp]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="fixture_timestamp" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].ExternalColumns[teams_home_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="teams_home_id" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output].ExternalColumns[teams_away_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="teams_away_id" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Postgres_api\seasons_csv"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="seasons_csv"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Postgres_api\seasons_csv.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[seasons_csv]"
+                  connectionManagerRefId="Package.ConnectionManagers[seasons_csv]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output].Columns[season_id]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output].ExternalColumns[season_id]"
+                      length="50"
+                      lineageId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output].Columns[season_id]"
+                      name="season_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output].Columns[league_id]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output].ExternalColumns[league_id]"
+                      length="50"
+                      lineageId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output].Columns[league_id]"
+                      name="league_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output].Columns[start_date]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output].ExternalColumns[start_date]"
+                      length="50"
+                      lineageId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output].Columns[start_date]"
+                      name="start_date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output].Columns[end_date]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output].ExternalColumns[end_date]"
+                      length="50"
+                      lineageId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output].Columns[end_date]"
+                      name="end_date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output].ExternalColumns[season_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="season_id" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output].ExternalColumns[league_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="league_id" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output].ExternalColumns[start_date]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="start_date" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output].ExternalColumns[end_date]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="end_date" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output].ExternalColumns[season_info]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="season_info" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Postgres_api\teams_csv"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="teams_csv"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Postgres_api\teams_csv.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[teams_csv]"
+                  connectionManagerRefId="Package.ConnectionManagers[teams_csv]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Postgres_api\teams_csv.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Postgres_api\teams_csv.Outputs[Flat File Source Output].Columns[team]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\teams_csv.Outputs[Flat File Source Output].ExternalColumns[team]"
+                      length="50"
+                      lineageId="Package\Postgres_api\teams_csv.Outputs[Flat File Source Output].Columns[team]"
+                      name="team"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\teams_csv.Outputs[Flat File Source Output].Columns[id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\teams_csv.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      length="50"
+                      lineageId="Package\Postgres_api\teams_csv.Outputs[Flat File Source Output].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\teams_csv.Outputs[Flat File Source Output].ExternalColumns[team]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="team" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\teams_csv.Outputs[Flat File Source Output].ExternalColumns[id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="id" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Postgres_api\teams_csv.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Postgres_api\teams_csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Postgres_api\teams_csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Postgres_api\teams_csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Postgres_api\teams_csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Postgres_api\teams_csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Postgres_api\teams_csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Postgres_api.Paths[Flat File Source Output]"
+              endId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Postgres_api.Paths[Flat File Source Output1]"
+              endId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Inputs[ADO NET Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Postgres_api\schedule_csv.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Postgres_api.Paths[Flat File Source Output2]"
+              endId="Package\Postgres_api\ADO_NET_Postgres_api_seasons.Inputs[ADO NET Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Postgres_api.Paths[Flat File Source Output3]"
+              endId="Package\Postgres_api\ADO_NET_Postgres_api_teams.Inputs[ADO NET Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Postgres_api\teams_csv.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL truncate tables"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{D0024DC9-47A9-4CB1-8582-0D6B89271850}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL truncate tables"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6F7CA64B-CCA6-4EC8-8575-C4C5578D833A}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE api.fixtures, api.schedule, api.seasons;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{4C3BB76F-3481-40C3-9743-7CA4F56EBCA4}"
+      DTS:From="Package\SQL truncate tables"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Postgres_api" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\Postgres_api"
+          TopLeft="49.285715125045,178.176473087093" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\SQL truncate tables"
+          TopLeft="268.571433145173,21.4117650061742" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="353.771433145173,63.0117650061742">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-235.285718020128,115.164708080919"
+              Start="0,0"
+              End="-235.285718020128,107.664708080919">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.5823540404596" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,53.5823540404596"
+                    Point2="0,57.5823540404596"
+                    Point3="-4,57.5823540404596" />
+                  <mssgle:LineSegment
+                    End="-231.285718020128,57.5823540404596" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-231.285718020128,57.5823540404596"
+                    Point2="-235.285718020128,57.5823540404596"
+                    Point3="-235.285718020128,61.5823540404596" />
+                  <mssgle:LineSegment
+                    End="-235.285718020128,107.664708080919" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Postgres_api">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="140.8,41.6"
+          Id="Package\Postgres_api\schedule_csv"
+          TopLeft="22.8571432463978,113.94117806857" />
+        <NodeLayout
+          Size="237.6,41.6"
+          Id="Package\Postgres_api\ADO_NET_Postgres_api_schedule"
+          TopLeft="346.428577328215,110.88235449626" />
+        <NodeLayout
+          Size="231.2,41.6"
+          Id="Package\Postgres_api\ADO_NET_Postgres_api_fixtures"
+          TopLeft="349.285720234014,29.0588239369509" />
+        <NodeLayout
+          Size="137.6,41.6"
+          Id="Package\Postgres_api\fixtures_csv"
+          TopLeft="25.7142861521977,26.0000003646402" />
+        <EdgeLayout
+          Id="Package\Postgres_api.Paths[Flat File Source Output1]"
+          TopLeft="163.657143246398,133.211766282415">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="182.771434081817,0"
+              Start="0,0"
+              End="175.271434081817,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="175.271434081817,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Postgres_api.Paths[Flat File Source Output]"
+          TopLeft="163.314286152198,48.3294121507955">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="185.971434081816,0"
+              Start="0,0"
+              End="178.471434081816,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="178.471434081816,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="140,41.6"
+          Id="Package\Postgres_api\seasons_csv"
+          TopLeft="25.0000004257475,196.529414520957" />
+        <NodeLayout
+          Size="233.6,41.6"
+          Id="Package\Postgres_api\ADO_NET_Postgres_api_seasons"
+          TopLeft="346.428577328215,192.705885055569" />
+        <EdgeLayout
+          Id="Package\Postgres_api.Paths[Flat File Source Output2]"
+          TopLeft="165.000000425747,215.417649788263">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="181.428576902468,0"
+              Start="0,0"
+              End="173.928576902468,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="173.928576902468,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="128,41.6"
+          Id="Package\Postgres_api\teams_csv"
+          TopLeft="25.0000004257475,286.000004011042" />
+        <NodeLayout
+          Size="224.8,41.6"
+          Id="Package\Postgres_api\ADO_NET_Postgres_api_teams"
+          TopLeft="347.142863054665,283.705886331809" />
+        <EdgeLayout
+          Id="Package\Postgres_api.Paths[Flat File Source Output3]"
+          TopLeft="153.000000425748,305.652945171426">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="194.142862628917,0"
+              Start="0,0"
+              End="186.642862628917,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="186.642862628917,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Postgres_api\ADO_NET_Postgres_api_schedule">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Postgres_api\ADO_NET_Postgres_api_fixtures">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Postgres_api\ADO_NET_Postgres_api_seasons">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Postgres_api\ADO_NET_Postgres_api_teams">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
