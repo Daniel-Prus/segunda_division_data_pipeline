@@ -10,8 +10,8 @@ $$
 DECLARE
 	current_seASon int;
 BEGIN
-	SELECT MAX(seASon) INTO current_season FROM fact_results WHERE league_id = league_id_param;
-	return current_seASon;
+	SELECT MAX(season) INTO current_season FROM fact_results WHERE league_id = league_id_param;
+	return current_season;
 END;
 $$ LANGUAGE plpgsql;
 
@@ -25,7 +25,7 @@ $$
 DECLARE
 	current_round int;
 BEGIN
-	SELECT MAX(round) INTO current_round FROM fact_results WHERE seASon = (SELECT get_current_season (league_id_param)) AND goals_home IS NOT NULL;
+	SELECT MAX(round) INTO current_round FROM fact_results WHERE season = (SELECT get_current_season (league_id_param)) AND goals_home IS NOT NULL;
 	return current_round;
 END;
 $$ LANGUAGE plpgsql;
