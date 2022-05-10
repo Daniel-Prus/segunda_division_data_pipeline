@@ -1,4 +1,5 @@
 -- refresh materalized views
+-- unique index is required - 'CREATE UNIQUE INDEX ON mat_view_segdiv_current_standings (standings_type_id,team_position'
 
 CREATE OR REPLACE FUNCTION trigger_refresh_mat_view()
     RETURNS TRIGGER
