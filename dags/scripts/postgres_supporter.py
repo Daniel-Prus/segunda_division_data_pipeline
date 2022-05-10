@@ -176,7 +176,6 @@ class FootballDB:
 
 
 class SegundaDivisionDW:
-
     fact_results = """
     CREATE TABLE fact_results(
         id bigserial,
@@ -265,7 +264,8 @@ class SegundaDivisionDW:
     );
     """
 
-    add_indexes ="""
+    add_indexes = """
         CREATE INDEX fact_results_multi_col_idx ON fact_results USING btree (league_id, season, round);
+        CREATE INDEX fact_results_season_idx ON fact_results USING btree (season);
         CREATE INDEX fact_standings_multi_col_idx ON fact_standings USING btree (league_id, season, standings_type_id, round);
     """
