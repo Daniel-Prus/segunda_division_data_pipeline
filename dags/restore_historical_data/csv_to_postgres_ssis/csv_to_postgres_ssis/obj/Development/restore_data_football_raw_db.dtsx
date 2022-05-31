@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="restore_data_football_raw_db"
   DTS:PackageType="5"
-  DTS:VersionBuild="97"
-  DTS:VersionGUID="{18667DCB-90F1-4AD5-87F2-CB7CBC8A2FAF}">
+  DTS:VersionBuild="110"
+  DTS:VersionGUID="{64E29D80-59B4-4F2C-BB37-2F756D7B9260}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA05PK7V3Jc0C8jhZKGds7eAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACmZK9TAEpT5v63DH0zN1kkub6FZ0YbACGzONtqAoeniAAAAAAOgAAAAAIAACAAAACnNAc/mSsgK0oLmURZYS9XNwPLCB0CC4OVEitfHl590BAAAADT/WxminhX+Ipdvr3BrMjTQAAAAH5beXYRO7TkPrrDjLjUpCkDEf6TsOeQ2p7RG0TIGRkOu0esqflh6pWHHXPn9oJs6G5E9K6NLP4oFRld621y3DU</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA96rRf88phUepSYQ+Br5oOQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABmXJogYVU3JXkG0k+KVuyPS0ycFqXs0VTIbprGKzIODgAAAAAOgAAAAAIAACAAAACfA6ARfNjlWkPAUTgDUCxywUuX1qrzCghTrxK8kW5+IhAAAAAP/Ds56UHgflrrECsBCh+FQAAAADkLt+bzxEpu/76mtS6lzarbN5ykTWn5kD7roWA+BwEKx4wFNMW9+FamMXMaZkeXxGGKG/po0Gaw1K83zFWZSyM</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -191,7 +191,16 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="league_id"
-              DTS:DTSID="{E0462CF4-83C0-4E38-BD6C-807243FA0746}"
+              DTS:DTSID="{8F4ED869-66E8-4638-B858-0B2B762E74CC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="league_level"
+              DTS:DTSID="{7B7D7587-2FEA-42CB-9DA0-CBD35AE4DEEB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -200,16 +209,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="league_name"
-              DTS:DTSID="{85E1C903-647E-432C-9517-219AEE0044EE}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="league_country"
-              DTS:DTSID="{8B107725-7CE5-426A-86AB-137F9FA4507D}"
+              DTS:DTSID="{AC443E8A-982A-4201-9DAF-7AC4A0295680}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -217,8 +217,8 @@
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="rounds"
-              DTS:DTSID="{2FA1B4B8-7C83-4401-B5A8-2023379F0D03}"
+              DTS:ObjectName="league_country"
+              DTS:DTSID="{641EE706-3A80-4EA6-BF57-1EA3FF11B566}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -352,39 +352,39 @@
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
+              DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="season_id"
-              DTS:DTSID="{527B9A86-1BC5-4185-B861-8EFEE15204D2}"
+              DTS:DTSID="{D105A067-C3D3-42A1-BA31-E541E7B4E03D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
+              DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="league_id"
-              DTS:DTSID="{AA8EEC52-15CB-4DC5-BCC2-EB523023BBC9}"
+              DTS:DTSID="{EA71645E-407B-4CA4-9B36-1022D060FEBD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
+              DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="start_date"
-              DTS:DTSID="{9CD1CB57-FE71-499D-8D1F-04421CF5481C}"
+              DTS:DTSID="{8E58CC84-C037-45B2-909D-AA3A11BF77FA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
+              DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="end_date"
-              DTS:DTSID="{5573CA85-CC0D-4383-9EE3-6310AF63FAD7}"
+              DTS:DTSID="{1C4075B7-375D-4CC2-92D2-B7A45016623B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -392,8 +392,8 @@
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="season_info"
-              DTS:DTSID="{D5191233-97D2-4679-93B6-C9E4CECF8F04}"
+              DTS:ObjectName="rounds"
+              DTS:DTSID="{76141201-FCA1-44B3-8087-C260ADEE3D1B}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -954,7 +954,7 @@
         <DTS:Property
           DTS:DataType="8"
           DTS:Name="ParameterValue"
-          Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA05PK7V3Jc0C8jhZKGds7eAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAY9wKBOS0YO5bzRPSmT3/bUmvTbhUm9mvybIlMvF6OJAAAAAAOgAAAAAIAACAAAAD8GlN7/hS+W35iSoEr8/GvnC4wJwjBj3NM/M6yfn2w+BAAAAAOeOX8LtRG/m0VNfml+Fn2QAAAAEflWzKmFbSZ6drvkCLyzitaD2e9pADMg3LZJl2Hb32OHaWUm1oNW+IZh1YHc5QcK8zGI7QoKWTJEhY6/oU51uI</DTS:Property>
+          Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA96rRf88phUepSYQ+Br5oOQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADTQBAtG8/Sq/6FW+t2T8bdj/7HqApS+LeGPEUgvxlbogAAAAAOgAAAAAIAACAAAADOf7zIZBQQ+vdRTGZ9XX9TKNfZ7iry31rAFiludB33ZBAAAABZSZhlNUHmcmBwXmnThkp5QAAAAFx9qhLkOG2lf5bIt4Yy95rw77KaJtvByrgfR/M12bN0fYET8Q+eIGUqm7Ja/a2iV/Yk8dmN2upEEVOUszGE3o0</DTS:Property>
       </DTS:Property>
     </DTS:PackageParameter>
     <DTS:PackageParameter
@@ -1299,13 +1299,13 @@
                       externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_leagues.Inputs[ADO NET Destination Input].ExternalColumns[league_country]"
                       lineageId="Package\Postgres_api\leagues_csv.Outputs[Flat File Source Output].Columns[league_country]" />
                     <inputColumn
-                      refId="Package\Postgres_api\ADO_NET_Postgres_api_leagues.Inputs[ADO NET Destination Input].Columns[rounds]"
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_leagues.Inputs[ADO NET Destination Input].Columns[league_level]"
                       cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="rounds"
-                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_leagues.Inputs[ADO NET Destination Input].ExternalColumns[rounds]"
-                      lineageId="Package\Postgres_api\leagues_csv.Outputs[Flat File Source Output].Columns[rounds]" />
+                      cachedName="league_level"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_leagues.Inputs[ADO NET Destination Input].ExternalColumns[league_level]"
+                      lineageId="Package\Postgres_api\leagues_csv.Outputs[Flat File Source Output].Columns[league_level]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1313,6 +1313,10 @@
                       refId="Package\Postgres_api\ADO_NET_Postgres_api_leagues.Inputs[ADO NET Destination Input].ExternalColumns[league_id]"
                       dataType="i2"
                       name="league_id" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_leagues.Inputs[ADO NET Destination Input].ExternalColumns[league_level]"
+                      dataType="i2"
+                      name="league_level" />
                     <externalMetadataColumn
                       refId="Package\Postgres_api\ADO_NET_Postgres_api_leagues.Inputs[ADO NET Destination Input].ExternalColumns[league_name]"
                       dataType="wstr"
@@ -1323,10 +1327,6 @@
                       dataType="wstr"
                       length="100"
                       name="league_country" />
-                    <externalMetadataColumn
-                      refId="Package\Postgres_api\ADO_NET_Postgres_api_leagues.Inputs[ADO NET Destination Input].ExternalColumns[rounds]"
-                      dataType="i2"
-                      name="rounds" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1633,6 +1633,14 @@
                       externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_seasons.Inputs[ADO NET Destination Input].ExternalColumns[end_date]"
                       lineageId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output].Columns[end_date]" />
                     <inputColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_seasons.Inputs[ADO NET Destination Input].Columns[rounds]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="rounds"
+                      externalMetadataColumnId="Package\Postgres_api\ADO_NET_Postgres_api_seasons.Inputs[ADO NET Destination Input].ExternalColumns[rounds]"
+                      lineageId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output].Columns[rounds]" />
+                    <inputColumn
                       refId="Package\Postgres_api\ADO_NET_Postgres_api_seasons.Inputs[ADO NET Destination Input].Columns[season_id]"
                       cachedCodepage="65001"
                       cachedDataType="str"
@@ -1664,6 +1672,10 @@
                       dataType="wstr"
                       length="9"
                       name="season_info" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_seasons.Inputs[ADO NET Destination Input].ExternalColumns[rounds]"
+                      dataType="i2"
+                      name="rounds" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2302,15 +2314,15 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Postgres_api\leagues_csv.Outputs[Flat File Source Output].Columns[rounds]"
+                      refId="Package\Postgres_api\leagues_csv.Outputs[Flat File Source Output].Columns[league_level]"
                       codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Postgres_api\leagues_csv.Outputs[Flat File Source Output].ExternalColumns[rounds]"
+                      externalMetadataColumnId="Package\Postgres_api\leagues_csv.Outputs[Flat File Source Output].ExternalColumns[league_level]"
                       length="50"
-                      lineageId="Package\Postgres_api\leagues_csv.Outputs[Flat File Source Output].Columns[rounds]"
-                      name="rounds"
+                      lineageId="Package\Postgres_api\leagues_csv.Outputs[Flat File Source Output].Columns[league_level]"
+                      name="league_level"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -2345,11 +2357,11 @@
                       length="50"
                       name="league_country" />
                     <externalMetadataColumn
-                      refId="Package\Postgres_api\leagues_csv.Outputs[Flat File Source Output].ExternalColumns[rounds]"
+                      refId="Package\Postgres_api\leagues_csv.Outputs[Flat File Source Output].ExternalColumns[league_level]"
                       codePage="65001"
                       dataType="str"
                       length="50"
-                      name="rounds" />
+                      name="league_level" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -2843,6 +2855,28 @@
                           name="UseBinaryFormat">false</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output].Columns[rounds]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output].ExternalColumns[rounds]"
+                      length="50"
+                      lineageId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output].Columns[rounds]"
+                      name="rounds"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2871,11 +2905,11 @@
                       length="50"
                       name="end_date" />
                     <externalMetadataColumn
-                      refId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output].ExternalColumns[season_info]"
+                      refId="Package\Postgres_api\seasons_csv.Outputs[Flat File Source Output].ExternalColumns[rounds]"
                       codePage="65001"
                       dataType="str"
                       length="50"
-                      name="season_info" />
+                      name="rounds" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -5732,34 +5766,6 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="135.2,41.6"
-          Id="Package\Postgres_api\leagues_csv"
-          TopLeft="27.8571433315472,370.882358142661" />
-        <NodeLayout
-          Size="137.6,41.6"
-          Id="Package\Postgres_api\teams_csv"
-          TopLeft="25.0000004257475,286.000004011042" />
-        <NodeLayout
-          Size="140,41.6"
-          Id="Package\Postgres_api\seasons_csv"
-          TopLeft="25.0000004257475,196.529414520957" />
-        <NodeLayout
-          Size="239.2,42.4"
-          Id="Package\Postgres_api\ADO_NET_Postgres_api_teams"
-          TopLeft="347.142863054665,283.705886331809" />
-        <NodeLayout
-          Size="237.6,41.6"
-          Id="Package\Postgres_api\ADO_NET_Postgres_api_schedule"
-          TopLeft="346.428577328215,110.88235449626" />
-        <NodeLayout
-          Size="134.4,41.6"
-          Id="Package\Postgres_api\fixtures_csv"
-          TopLeft="25.0000004257475,22.1764708992519" />
-        <NodeLayout
-          Size="232,41.6"
-          Id="Package\Postgres_api\ADO_NET_Postgres_api_leagues"
-          TopLeft="351.428577413365,373.941181714972" />
-        <NodeLayout
           Size="130.4,41.6"
           Id="Package\Postgres_api\results_csv"
           TopLeft="22.8571432463978,113.94117806857" />
@@ -5768,23 +5774,51 @@
           Id="Package\Postgres_api\ADO_NET_Postgres_api_fixtures"
           TopLeft="341.428577243065,22.9411767923296" />
         <NodeLayout
-          Size="236.8,42.4"
+          Size="134.4,41.6"
+          Id="Package\Postgres_api\fixtures_csv"
+          TopLeft="25.0000004257475,22.1764708992519" />
+        <NodeLayout
+          Size="135.2,41.6"
+          Id="Package\Postgres_api\leagues_csv"
+          TopLeft="27.8571433315472,370.882358142661" />
+        <NodeLayout
+          Size="237.6,41.6"
+          Id="Package\Postgres_api\ADO_NET_Postgres_api_schedule"
+          TopLeft="346.428577328215,110.88235449626" />
+        <NodeLayout
+          Size="239.2,42.4"
+          Id="Package\Postgres_api\ADO_NET_Postgres_api_teams"
+          TopLeft="347.142863054665,283.705886331809" />
+        <NodeLayout
+          Size="232,41.6"
+          Id="Package\Postgres_api\ADO_NET_Postgres_api_leagues"
+          TopLeft="351.428577413365,373.941181714972" />
+        <NodeLayout
+          Size="140,41.6"
+          Id="Package\Postgres_api\seasons_csv"
+          TopLeft="26.4285718786473,196.529414520957" />
+        <NodeLayout
+          Size="233.6,41.6"
           Id="Package\Postgres_api\ADO_NET_Postgres_api_seasons"
           TopLeft="346.428577328215,192.705885055569" />
+        <NodeLayout
+          Size="137.6,41.6"
+          Id="Package\Postgres_api\teams_csv"
+          TopLeft="25.0000004257475,286.000004011042" />
         <EdgeLayout
           Id="Package\Postgres_api.Paths[Flat File Source Output4]"
           TopLeft="163.057143331547,393.211769928817">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="188.371434081817,0"
+              EndConnector="188.371434081818,0"
               Start="0,0"
-              End="180.871434081817,0">
+              End="180.871434081818,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="180.871434081817,0" />
+                    End="180.871434081818,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5839,18 +5873,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Postgres_api.Paths[Flat File Source Output1]"
-          TopLeft="165.000000425747,215.617649788263">
+          TopLeft="166.428571878647,215.417649788263">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="181.428576902468,0"
+              EndConnector="180.000005449568,0"
               Start="0,0"
-              End="173.928576902468,0">
+              End="172.500005449568,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="173.928576902468,0" />
+                    End="172.500005449568,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5885,7 +5919,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Postgres_api\ADO_NET_Postgres_api_teams">
+    design-time-name="Package\Postgres_api\ADO_NET_Postgres_api_fixtures">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5901,7 +5935,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Postgres_api\ADO_NET_Postgres_api_leagues">
+    design-time-name="Package\Postgres_api\ADO_NET_Postgres_api_teams">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5909,7 +5943,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Postgres_api\ADO_NET_Postgres_api_fixtures">
+    design-time-name="Package\Postgres_api\ADO_NET_Postgres_api_leagues">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

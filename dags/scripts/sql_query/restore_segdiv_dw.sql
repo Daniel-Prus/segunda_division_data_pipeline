@@ -1,24 +1,32 @@
--- Build Segunda Division Data Warehouse
+-- Build Segunda Division Data Warehouse from scratch
 
-truncate table  dim_season, dim_team, dim_league, dim_fixtures, fact_results restart identity cascade;
+truncate table  dim_league_season, dim_team, dim_fixtures, fact_results restart identity cascade;
 truncate table dim_standings_type, fact_standings restart identity cascade;
 
 drop extension if exists dblink;
 create extension dblink;
 
+-- dim_league_season
 
--- dim_league
+insert into dim_league_season
 
-insert into dim_league
+    select *
+    from dblink ('hostaddr=127.0.0.1 port=5432 dbname=football_db user=airflow password=airflow',
+				 'SELECT l.league_id, s.season, l.league_level, l.league_name, l.league_country,
+                            s.start_date, s.end_date, s.season_info, s.rounds
+                  FROM api.season AS s
+                  LEFT JOIN api.league AS l ON l.league_id = s.league_id')
+    as t (
+        league_id smallint,
+        season smallint,
+        league_level smallint,
+        league_name varchar,
+        league_country varchar,
+        start_date date,
+        end_date date,
+        season_info varchar(9),
+        rounds smallint);
 
-	select *
-	from dblink ('hostaddr=127.0.0.1 port=5432 dbname=football_db user=airflow password=airflow',
-				 'SELECT * FROM api.league')
-	as t(
-		league_id smallint,
-		league_name varchar,
-		league_country varchar,
-		rounds smallint);
 
 -- dim_fixtures
 
@@ -31,20 +39,6 @@ insert into dim_fixtures
 		fixture_id bigint,
         fixture_date_utc timestamp without time zone,
         fixture_timestamp varchar);
-
--- dim_season
-
-insert into dim_season
-	select *
-
-    from dblink ('hostaddr=127.0.0.1 port=5432 dbname=football_db user=airflow password=airflow',
-				 'SELECT * FROM api.season')
-    as t(
-		season integer,
-        league_id integer,
-        start_date date,
-        end_date date,
-        season_info varchar);
 
 insert into dim_team
 	select *
@@ -148,15 +142,10 @@ insert into fact_standings (league_id, season, standings_type_id, round, team_po
 ALTER TABLE fact_results
     ADD CONSTRAINT FK_results_team_home FOREIGN KEY (team_home_id) REFERENCES dim_team (team_id),
 	ADD CONSTRAINT FK_results_team_away FOREIGN KEY (team_away_id) REFERENCES dim_team (team_id),
-	ADD CONSTRAINT FK_results_season FOREIGN KEY (league_id, season) REFERENCES dim_season (league_id, season),
-	ADD CONSTRAINT FK_results_fixtures FOREIGN KEY (fixture_id) REFERENCES dim_fixtures (fixture_id),
-	ADD CONSTRAINT FK_results_league FOREIGN KEY (league_id) REFERENCES dim_league (league_id);
+	ADD CONSTRAINT FK_results_league_season FOREIGN KEY (league_id, season) REFERENCES dim_league_season (league_id, season),
+	ADD CONSTRAINT FK_results_fixtures FOREIGN KEY (fixture_id) REFERENCES dim_fixtures (fixture_id);
 
 ALTER TABLE fact_standings
 	ADD CONSTRAINT FK_standings_team FOREIGN KEY (team_id) REFERENCES dim_team (team_id),
-	ADD CONSTRAINT FK_standings_season FOREIGN KEY (league_id, season) REFERENCES dim_season (league_id, season),
-	ADD CONSTRAINT FK_standings_league FOREIGN KEY (league_id) REFERENCES dim_league (league_id),
+	ADD CONSTRAINT FK_standings_league_season FOREIGN KEY (league_id, season) REFERENCES dim_league_season (league_id, season),
 	ADD CONSTRAINT FK_standings_type FOREIGN KEY (standings_type_id) REFERENCES dim_standings_type (standings_type_id);
-
-ALTER TABLE dim_season
-	ADD CONSTRAINT FK_season_league FOREIGN KEY (league_id) REFERENCES dim_league (league_id);

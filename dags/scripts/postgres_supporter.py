@@ -64,6 +64,7 @@ class FootballDB:
         start_date date NOT NULL,
         end_date date NOT NULL,
         season_info varchar(9) GENERATED ALWAYS AS ((((date_part('year'::text, start_date))::text || '/'::text) || (date_part('year'::text, end_date))::text)) STORED,
+        rounds smallint,
         CONSTRAINT PK_api_season PRIMARY KEY (season, league_id)
     );
     """
@@ -79,9 +80,9 @@ class FootballDB:
     api_league = """
         CREATE TABLE api.league(
         league_id smallint NOT NULL,
+        league_level smallint,
         league_name varchar(100),
         league_country varchar(100),
-        rounds smallint,
         CONSTRAINT PK_league PRIMARY KEY (league_id)
     );
     """
@@ -226,17 +227,20 @@ class SegundaDivisionDW:
     );
     """
 
-    dim_season = """
-        CREATE TABLE dim_season(
-        season smallint NOT NULL,
+    dim_league_season = """
+    CREATE TABLE dim_league_season(
         league_id smallint NOT NULL,
+        season smallint NOT NULL,
+        league_level smallint NOT NULL,
+        league_name varchar(100),
+        league_country varchar(100),
         start_date date NOT NULL,
         end_date date NOT NULL,
         season_info varchar(9),
-        CONSTRAINT PK_dim_season PRIMARY KEY (season, league_id)
+        rounds smallint,
+        CONSTRAINT PK_dim_league_season PRIMARY KEY (league_id, season)
     );
     """
-
     dim_team = """
           CREATE TABLE dim_team(
           team_id integer NOT NULL,
@@ -244,16 +248,6 @@ class SegundaDivisionDW:
           CONSTRAINT PK_dim_team PRIMARY KEY (team_id)
       );
       """
-
-    dim_league = """
-        CREATE TABLE dim_league(
-        league_id smallint NOT NULL,
-        league_name varchar(100),
-        league_country varchar(100),
-        rounds smallint,
-        CONSTRAINT PK_dim_league PRIMARY KEY (league_id)
-    );
-    """
 
     dim_fixtures = """
         CREATE TABLE dim_fixtures(
