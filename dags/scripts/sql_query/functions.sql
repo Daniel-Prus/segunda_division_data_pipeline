@@ -8,7 +8,7 @@ RETURNS int
 AS
 $$
 DECLARE
-	current_seASon int;
+	current_season int;
 BEGIN
 	SELECT MAX(season) INTO current_season FROM fact_results WHERE league_id = league_id_param;
 	return current_season;

@@ -113,7 +113,7 @@ def calulate_league_table(season):
     for season in seg.seasons:
         raw_data_filtered = raw_data[raw_data['league.season'] == season]
         df = pd.DataFrame()
-        for rnd in range(1, 43):
+        for rnd in range(1 , 43):
             if rnd == 1:
                 round_filtered = raw_data_filtered[raw_data_filtered['league.round'] == 'Regular Season - ' + str(rnd)]
                 seg_div = TeamDrawAnalysis(round_filtered)
