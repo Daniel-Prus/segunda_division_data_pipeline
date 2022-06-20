@@ -6,12 +6,10 @@ from scripts.create_connection import create_conn_file_path
 from airflow.operators.bash import BashOperator
 
 csv_files_sensor = ['results', 'fixtures', 'teams', 'seasons', 'leagues', 'league_table', 'league_table_home',
-                    'league_table_away', 'team_market_value']
-
+                    'league_table_away', 'team_market_value', 'draw_series']
 
 with DAG("restore_data", start_date=datetime(2022, 1, 1),
          schedule_interval=None, catchup=False, tags=['segdiv']) as dag:
-
     # create file path connection for csv files
     add_file_path_conn = PythonOperator(
         task_id="add_restore_data_file_path_conn",
@@ -22,7 +20,7 @@ with DAG("restore_data", start_date=datetime(2022, 1, 1),
             "login": "airflow",
             "pwd": "airflow",
             "desc": "csv_files_connection",
-            "extra": '{"path":"/opt/airflow/dags/restore_historical_data"}'
+            "extra": '{"path":"/opt/airflow/dags/restore_historical_data/files"}'
         }
 
     )
@@ -30,8 +28,9 @@ with DAG("restore_data", start_date=datetime(2022, 1, 1),
     remove_csv_files_if_exists = BashOperator(
         task_id="remove_csv_files_if_exists",
         bash_command="""
-        cd /opt/airflow/dags/restore_historical_data && \
-        rm -f raw_data.csv results.csv league_table.csv league_table_home.csv league_table_away.csv fixtures.csv        
+        cd /opt/airflow/dags/restore_historical_data/files && \
+        rm -f raw_data.csv results.csv league_table.csv league_table_home.csv league_table_away.csv fixtures.csv \
+        draw_series.csv      
         """,
         do_xcom_push=False
     )
@@ -40,11 +39,7 @@ with DAG("restore_data", start_date=datetime(2022, 1, 1),
         task_id="run_csv_files_py",
         bash_command="""
         cd /opt/airflow/dags/restore_historical_data && \
-        python 01_raw_data.py && \
-        python 02_league_table.py && \
-        python 03_home_table.py && \
-        python 04_away_table.py && \
-        python 05_fixtures.py 
+        python run_segdiv_data.py
         """,
         do_xcom_push=False
     )
@@ -63,4 +58,3 @@ with DAG("restore_data", start_date=datetime(2022, 1, 1),
     ]
 
     add_file_path_conn >> remove_csv_files_if_exists >> run_csv_files_py >> csv_sensor_tasks
-

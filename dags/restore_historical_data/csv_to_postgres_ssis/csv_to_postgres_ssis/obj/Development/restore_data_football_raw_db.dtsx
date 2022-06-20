@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="restore_data_football_raw_db"
   DTS:PackageType="5"
-  DTS:VersionBuild="110"
-  DTS:VersionGUID="{64E29D80-59B4-4F2C-BB37-2F756D7B9260}">
+  DTS:VersionBuild="114"
+  DTS:VersionGUID="{6237048B-0781-42C3-9417-06257C09DBAD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA96rRf88phUepSYQ+Br5oOQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABmXJogYVU3JXkG0k+KVuyPS0ycFqXs0VTIbprGKzIODgAAAAAOgAAAAAIAACAAAACfA6ARfNjlWkPAUTgDUCxywUuX1qrzCghTrxK8kW5+IhAAAAAP/Ds56UHgflrrECsBCh+FQAAAADkLt+bzxEpu/76mtS6lzarbN5ykTWn5kD7roWA+BwEKx4wFNMW9+FamMXMaZkeXxGGKG/po0Gaw1K83zFWZSyM</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA96rRf88phUepSYQ+Br5oOQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADbW63O/OWMsV4QKNd2fJeSgltwsEebeIEDggqMhn9QvwAAAAAOgAAAAAIAACAAAACAhGpnNBHHlvGQFzSySDcnQIVHIp2x17G8JTvNqdftkhAAAAAyfRbXX+Zh1q2rkL3pd0+wQAAAAPswcrn/VKiG5nOl5OrAZ5UZKq2mWcUxlh5R3Qn6W0Qv4GtfER/Roqs/y9h2o9sQjdDc06gd75HWWu9gQzHWi/w</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -45,7 +45,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\admin\PycharmProjects\segunda_division_data_pipeline\dags\restore_historical_data\fixtures.csv">
+          DTS:ConnectionString="C:\Users\admin\PycharmProjects\segunda_division_data_pipeline\dags\restore_historical_data\files\fixtures.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -54,7 +54,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 0"
-              DTS:DTSID="{21EAC37F-6CA7-4AF6-816F-3D0218064127}"
+              DTS:DTSID="{C135F03F-F683-4274-895E-6D62351C54CD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -63,7 +63,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="fixture_id"
-              DTS:DTSID="{8229665A-DF73-4086-8AE0-CC504D3C66F1}"
+              DTS:DTSID="{3752E477-70B8-4F1C-AE5E-03E6D1BF6756}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -72,7 +72,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="fixture_date"
-              DTS:DTSID="{7DF28BF0-E523-42BB-8302-35841C1F10D3}"
+              DTS:DTSID="{28EC14A0-EF7A-4D68-A55B-D1B94F89E5FE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -81,7 +81,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="fixture_timestamp"
-              DTS:DTSID="{F932E3A2-CA7D-4E15-868C-02D2064B6FA9}"
+              DTS:DTSID="{4E9520F4-6BF0-40A9-8A2F-EAD7DA38C26D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -90,7 +90,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="league_id"
-              DTS:DTSID="{1D6DDB63-5896-4466-93D6-3D3964F8BCD0}"
+              DTS:DTSID="{7350B846-FCAB-4D7C-8123-5D9DD30ED99D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -99,7 +99,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="league_name"
-              DTS:DTSID="{69DCC9FF-7B71-4226-B616-031D9A5E6F2B}"
+              DTS:DTSID="{3A444F8C-E379-4C57-998D-5272FDFB7F66}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -108,7 +108,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="league_country"
-              DTS:DTSID="{1C89DDA8-E12F-4687-9C0C-6B59BA4C926E}"
+              DTS:DTSID="{ED8B41AE-4CE1-4D55-A860-E8D2E3B8E354}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -117,7 +117,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="league_season"
-              DTS:DTSID="{B9C12FD7-90A2-4C2B-B999-3F400AAA8A35}"
+              DTS:DTSID="{59FD7038-8935-43F2-B9D2-206ECA5BAB72}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -126,7 +126,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="league_round"
-              DTS:DTSID="{8C41BFEB-3339-461A-B646-98D900224534}"
+              DTS:DTSID="{0ECAF6F9-0199-4CE0-B342-CF9C54846280}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -135,7 +135,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="teams_home_id"
-              DTS:DTSID="{A418E1AE-DAFE-4A0D-A32D-8469A4E81B99}"
+              DTS:DTSID="{366E8E71-D424-474D-81A2-59303126CCF5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -144,7 +144,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="teams_home_name"
-              DTS:DTSID="{8799B297-16BF-46C9-8624-6BF48D860B7A}"
+              DTS:DTSID="{FF68C225-D07A-4B4D-86D1-1AA94CCA8F07}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -153,7 +153,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="teams_away_id"
-              DTS:DTSID="{C588F899-C538-4A43-B275-9B45199FCB9D}"
+              DTS:DTSID="{13E0AFAF-7F5F-4518-8FE0-70021E241D01}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -162,7 +162,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="teams_away_name"
-              DTS:DTSID="{C519E8D6-A3EB-4BC5-AFB4-6A5B11A96135}"
+              DTS:DTSID="{98F4C0EA-4558-41A4-B7E8-003EDCA7D14C}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -182,7 +182,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="C:\Users\admin\PycharmProjects\segunda_division_data_pipeline\dags\restore_historical_data\leagues.csv">
+          DTS:ConnectionString="C:\Users\admin\PycharmProjects\segunda_division_data_pipeline\dags\restore_historical_data\files\leagues.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -191,7 +191,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="league_id"
-              DTS:DTSID="{8F4ED869-66E8-4638-B858-0B2B762E74CC}"
+              DTS:DTSID="{39B715CF-3652-4587-8385-70266FB2D3EE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -200,7 +200,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="league_level"
-              DTS:DTSID="{7B7D7587-2FEA-42CB-9DA0-CBD35AE4DEEB}"
+              DTS:DTSID="{F34A1611-96B3-435F-9617-4F04821E0BA9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -209,7 +209,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="league_name"
-              DTS:DTSID="{AC443E8A-982A-4201-9DAF-7AC4A0295680}"
+              DTS:DTSID="{14537A7C-6035-4C56-8995-9484DD623B85}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -218,7 +218,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="league_country"
-              DTS:DTSID="{641EE706-3A80-4EA6-BF57-1EA3FF11B566}"
+              DTS:DTSID="{A9F35B81-84DD-41C4-81F1-3A3FB207AB41}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -238,7 +238,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="C:\Users\admin\PycharmProjects\segunda_division_data_pipeline\dags\restore_historical_data\results.csv">
+          DTS:ConnectionString="C:\Users\admin\PycharmProjects\segunda_division_data_pipeline\dags\restore_historical_data\files\results.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -247,7 +247,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="fixture_id"
-              DTS:DTSID="{D4B57CFA-C70C-41CD-A545-93AE0D4BD51E}"
+              DTS:DTSID="{70449D3B-CB08-476E-8330-C8AC967EAB7E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -256,7 +256,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="teams_home_winner"
-              DTS:DTSID="{67D712E4-A03D-4F0C-9F30-7822AE31A5CB}"
+              DTS:DTSID="{FB4B0DB7-8CEA-4F03-99BB-134D2F1593F0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -265,7 +265,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="teams_away_winner"
-              DTS:DTSID="{FB4A3136-0C43-40DB-85D7-FFEC618A95A7}"
+              DTS:DTSID="{DA3EFB87-AE86-4BAE-919E-0E465C34ADF9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -274,7 +274,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="goals_home"
-              DTS:DTSID="{5F1B0188-FCA7-418F-B4D9-BE9A49BE46B6}"
+              DTS:DTSID="{AE659E51-DDF8-4219-A8E0-A07400543FB1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -283,7 +283,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="goals_away"
-              DTS:DTSID="{3B63AFE3-F1A0-4CF3-A65B-FCB973638CEC}"
+              DTS:DTSID="{00290D8B-3F93-4049-ABB3-1BFE259D095A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -292,7 +292,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="score_halftime_home"
-              DTS:DTSID="{9D3B2904-FF4C-452D-956E-03762D787326}"
+              DTS:DTSID="{2DF66E99-3D9F-4C95-A226-E723ED6775E2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -301,7 +301,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="score_halftime_away"
-              DTS:DTSID="{A0539B7C-A0BB-485E-8A1C-742352172D15}"
+              DTS:DTSID="{3072FB99-01AC-4D39-AEDE-826F8AB00C4C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -310,7 +310,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="halftime_goals_total"
-              DTS:DTSID="{F6858BB0-C073-4692-B227-AF8023D350FC}"
+              DTS:DTSID="{C6B52695-4A23-4D5B-9103-649E62917B14}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -319,7 +319,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="fulltime_goals_total"
-              DTS:DTSID="{A7EEA3D0-ED3A-4D63-8491-B6DED4A30E7E}"
+              DTS:DTSID="{FC7990B1-A302-437D-A8F1-CD7C9D025EFA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -328,7 +328,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="match_result"
-              DTS:DTSID="{EE221F90-9B15-4DC6-9DB9-BC76D154FE16}"
+              DTS:DTSID="{CB56CAE5-4FD3-4AD0-B60E-A1A9D40BD801}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -348,7 +348,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="C:\Users\admin\PycharmProjects\segunda_division_data_pipeline\dags\restore_historical_data\seasons.csv">
+          DTS:ConnectionString="C:\Users\admin\PycharmProjects\segunda_division_data_pipeline\dags\restore_historical_data\files\seasons.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -357,7 +357,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="season_id"
-              DTS:DTSID="{D105A067-C3D3-42A1-BA31-E541E7B4E03D}"
+              DTS:DTSID="{A9C02CA1-54CD-4121-9F76-E2EE8A8638BB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -366,7 +366,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="league_id"
-              DTS:DTSID="{EA71645E-407B-4CA4-9B36-1022D060FEBD}"
+              DTS:DTSID="{D7851C2B-CA9E-4D3E-80D5-15E931FC14F9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -375,7 +375,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="start_date"
-              DTS:DTSID="{8E58CC84-C037-45B2-909D-AA3A11BF77FA}"
+              DTS:DTSID="{040411AF-1CE5-4224-9CAE-050B5FCCA346}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -384,7 +384,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="end_date"
-              DTS:DTSID="{1C4075B7-375D-4CC2-92D2-B7A45016623B}"
+              DTS:DTSID="{C61C0732-6664-407D-85A9-F2351EFDB0A1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -393,7 +393,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="rounds"
-              DTS:DTSID="{76141201-FCA1-44B3-8087-C260ADEE3D1B}"
+              DTS:DTSID="{96FA0ED4-8ECB-486B-825E-F2290BCFFFE0}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -413,7 +413,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="C:\Users\admin\PycharmProjects\segunda_division_data_pipeline\dags\restore_historical_data\teams.csv">
+          DTS:ConnectionString="C:\Users\admin\PycharmProjects\segunda_division_data_pipeline\dags\restore_historical_data\files\teams.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -422,7 +422,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="team"
-              DTS:DTSID="{8F732A05-CF87-406D-970E-151EE573885C}"
+              DTS:DTSID="{C76ABD21-A1DD-4F76-B1E9-8C684A4D263F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -431,7 +431,72 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="id"
-              DTS:DTSID="{204B3C20-7A68-4F78-9F02-9B8FB032313E}"
+              DTS:DTSID="{7373868B-CEF7-4F2C-AD38-0CECE72C0B83}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[cal_draw_series]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C999BFF0-098E-4640-831B-DF44B2FFAA83}"
+      DTS:ObjectName="cal_draw_series">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\admin\PycharmProjects\segunda_division_data_pipeline\dags\restore_historical_data\files\draw_series.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fixture_id"
+              DTS:DTSID="{745E5A0C-FE31-434D-AA17-75A6FF1EACE1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="no_draw_home"
+              DTS:DTSID="{75E4A7F2-CEE5-4752-9219-C8242E0D0A47}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="draw_home"
+              DTS:DTSID="{8D3BE789-20D1-41AE-A93A-64CB7E21E0C8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="no_draw_away"
+              DTS:DTSID="{007664AF-473D-4638-83DF-4E53D1F8C7EF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="draw_away"
+              DTS:DTSID="{A244C661-BDE6-42A4-BBC9-5E909292C224}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -451,7 +516,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="C:\Users\admin\PycharmProjects\segunda_division_data_pipeline\dags\restore_historical_data\league_table_away.csv">
+          DTS:ConnectionString="C:\Users\admin\PycharmProjects\segunda_division_data_pipeline\dags\restore_historical_data\files\league_table_away.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -460,7 +525,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="index"
-              DTS:DTSID="{5F452A75-85BB-4B45-8486-FBFF251BDA94}"
+              DTS:DTSID="{0D59C0E6-95E1-4A27-8B10-C70BC2C01740}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -469,7 +534,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Team"
-              DTS:DTSID="{900372B9-9ACB-4A4C-957D-7B0B4F1FD6E7}"
+              DTS:DTSID="{2AD6C176-6236-42E1-81BF-6194CC8D1923}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -478,7 +543,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="MP"
-              DTS:DTSID="{F540086B-63F3-4CEF-A51C-607A7CA16E5F}"
+              DTS:DTSID="{606D9135-2045-477A-B69B-EA9B1C183964}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -487,7 +552,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="W"
-              DTS:DTSID="{DF62BBCE-4DD2-4505-9470-089448E3373E}"
+              DTS:DTSID="{35BC0249-6586-4081-8FAE-61C5DB6C4D67}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -496,7 +561,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="D"
-              DTS:DTSID="{A2A5B260-3394-45D3-851E-93A729083582}"
+              DTS:DTSID="{50C54EBF-ED6B-4F04-9B04-C158A2ADF890}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -505,7 +570,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="L"
-              DTS:DTSID="{6FDAAD38-A4A7-4C78-A1F3-3DB400482D04}"
+              DTS:DTSID="{D4221590-5DAA-44A2-9DFF-32186DA0E69A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -514,7 +579,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="GF"
-              DTS:DTSID="{E39CD963-B53B-460B-9F99-3F4C6926E9B2}"
+              DTS:DTSID="{4A042862-03BE-41DF-8C19-FD8AF4B026B9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -523,7 +588,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="GA"
-              DTS:DTSID="{933445EB-119E-426B-AA33-3E688DBCB07C}"
+              DTS:DTSID="{119DCE75-8AE7-4953-A72B-DA4AC5D7D401}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -532,7 +597,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="GD"
-              DTS:DTSID="{03DC491F-38EF-414B-A9C6-061F3B1E5C83}"
+              DTS:DTSID="{B2498BE6-01E5-4CA3-88FA-5341579A71F3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -541,7 +606,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Pts"
-              DTS:DTSID="{421F82FE-C101-42C8-B930-12141AF5425C}"
+              DTS:DTSID="{3486EEC3-6338-478C-BD0E-DE390535DA9B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -550,7 +615,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="season"
-              DTS:DTSID="{5018E1C6-0EA1-4B35-B691-4D6B1AF548C2}"
+              DTS:DTSID="{06EAF462-E834-4D95-AA6E-A0BE50044323}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -559,7 +624,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="round"
-              DTS:DTSID="{0BB83446-7EF1-4A71-8D05-147550FAD262}"
+              DTS:DTSID="{EB86245E-A11B-463E-A950-20374DA0BD11}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -568,7 +633,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="league_id"
-              DTS:DTSID="{D3242741-956A-432F-9353-899E25BF4F5B}"
+              DTS:DTSID="{77581C45-4A1D-4C88-965D-4E8FE85949FD}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -588,7 +653,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="C:\Users\admin\PycharmProjects\segunda_division_data_pipeline\dags\restore_historical_data\league_table.csv">
+          DTS:ConnectionString="C:\Users\admin\PycharmProjects\segunda_division_data_pipeline\dags\restore_historical_data\files\league_table.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -597,7 +662,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="index"
-              DTS:DTSID="{9195E35A-04EA-4A8F-B738-CE8AA0564635}"
+              DTS:DTSID="{5265F683-7731-4DE6-A223-D9DF64532EC4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -606,7 +671,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Team"
-              DTS:DTSID="{56457F72-8662-4F6A-94A4-E366537DAC1C}"
+              DTS:DTSID="{E45045E8-0246-4BCF-8FEE-191336F3AD35}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -615,7 +680,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="MP"
-              DTS:DTSID="{4E4D688C-214A-4337-A9DA-D3D663892530}"
+              DTS:DTSID="{A50C7FCD-6B31-4321-B993-DD495FDAFD48}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -624,7 +689,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="W"
-              DTS:DTSID="{56EDA6D0-2E2A-43D4-8D85-B59BEB10310C}"
+              DTS:DTSID="{D002CDCA-EEF1-48DB-89CC-948AC432D4EC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -633,7 +698,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="D"
-              DTS:DTSID="{90F68DD2-B1F9-49D3-82F9-2DB15158524E}"
+              DTS:DTSID="{691A6095-6BB9-41F5-848A-2A7735994284}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -642,7 +707,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="L"
-              DTS:DTSID="{055F5024-90FD-41A9-A301-0325ECC62DA1}"
+              DTS:DTSID="{AB966060-C166-4488-B1DA-A11D6A44C53D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -651,7 +716,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="GF"
-              DTS:DTSID="{AA52D411-9A37-4A2C-BD22-5132F802DD63}"
+              DTS:DTSID="{994E6F24-042E-4061-9443-458AE489278E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -660,7 +725,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="GA"
-              DTS:DTSID="{F5C709B7-477B-4D01-ACD7-460D1AC6E803}"
+              DTS:DTSID="{8AC74EC7-EDED-4351-A50B-6B4321FF059D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -669,7 +734,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="GD"
-              DTS:DTSID="{42C37DA5-E9FB-43E9-925A-3DFBCCD9365E}"
+              DTS:DTSID="{4470343E-145F-46CD-95B1-62896C3F241C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -678,7 +743,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Pts"
-              DTS:DTSID="{6275C04F-31FC-4974-A26D-BAB88A1ED8D3}"
+              DTS:DTSID="{791CBA74-2A1B-4209-A186-81069A532B5E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -687,7 +752,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="season"
-              DTS:DTSID="{02978775-B5B8-46FC-9920-C358DF376D70}"
+              DTS:DTSID="{5C9F9E7B-8546-4BB7-A4E2-068868FD43AE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -696,7 +761,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="round"
-              DTS:DTSID="{781DEA56-0C96-4175-9AD4-6422FCEACBBA}"
+              DTS:DTSID="{29534C9E-1026-4BC7-80B9-9C2488AA841C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -705,7 +770,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="league_id"
-              DTS:DTSID="{FE368966-19D0-4E4B-8FB3-1404AFAF778D}"
+              DTS:DTSID="{1F1C22C7-6747-4FFB-BD65-149345E26151}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -725,7 +790,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="C:\Users\admin\PycharmProjects\segunda_division_data_pipeline\dags\restore_historical_data\league_table_home.csv">
+          DTS:ConnectionString="C:\Users\admin\PycharmProjects\segunda_division_data_pipeline\dags\restore_historical_data\files\league_table_home.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -734,7 +799,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="index"
-              DTS:DTSID="{406B986B-EDDB-4762-8FAA-F1DE90B475D9}"
+              DTS:DTSID="{CEAEDEA9-13D1-4966-908D-C971C6A2C642}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -743,7 +808,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Team"
-              DTS:DTSID="{9C676027-8C20-4606-A17A-F71A7105452D}"
+              DTS:DTSID="{E0A881F0-C66A-494D-9E2B-7F295E1E184D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -752,7 +817,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="MP"
-              DTS:DTSID="{44CB8FDA-CD8D-4CEB-BE3D-C8B82512858A}"
+              DTS:DTSID="{CFDF490A-2807-4557-A15E-71EEB5223296}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -761,7 +826,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="W"
-              DTS:DTSID="{C05295C8-4718-42AC-A1E6-83B4EB2A4B82}"
+              DTS:DTSID="{F9E3C9D5-C0A4-4411-9A24-A764A0961F09}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -770,7 +835,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="D"
-              DTS:DTSID="{FBAF25E0-316C-4E5B-B120-CEB178EB8685}"
+              DTS:DTSID="{D3CBEE25-854D-4944-A0D6-D6766C8A57C6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -779,7 +844,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="L"
-              DTS:DTSID="{0D82FAD0-5EBD-4650-9CD0-E8D5150FA1FC}"
+              DTS:DTSID="{7A0CE0C2-F361-40E4-A201-10389B49751F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -788,7 +853,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="GF"
-              DTS:DTSID="{EB4B0F31-90D8-4EEF-BA7A-93D5F90C6D87}"
+              DTS:DTSID="{3E808931-BEE5-406C-8653-D725B63F7F4E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -797,7 +862,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="GA"
-              DTS:DTSID="{C0B39963-271B-4C1B-AC3D-54D7A2B86A6C}"
+              DTS:DTSID="{2A0F3865-7E26-4067-B31F-1D004B1F7630}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -806,7 +871,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="GD"
-              DTS:DTSID="{8DC17DF9-2600-4545-A976-C1AC4CCF48BD}"
+              DTS:DTSID="{FE03545A-460A-4524-9244-1D8A29B6C603}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -815,7 +880,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Pts"
-              DTS:DTSID="{16C38D26-78A2-4055-B46C-15F25F2ACE78}"
+              DTS:DTSID="{3BE3DE0E-7130-476C-B938-B47DB3544D32}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -824,7 +889,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="season"
-              DTS:DTSID="{76EFC312-A498-4289-BAD7-0A0A99E1F218}"
+              DTS:DTSID="{69D7BD59-3051-4534-AAE4-682466F68B29}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -833,7 +898,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="round"
-              DTS:DTSID="{D447FAA0-D4DD-446B-BB9D-0C0965569699}"
+              DTS:DTSID="{8A05C232-C560-4178-8EFB-3B5C6042689C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -842,7 +907,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="league_id"
-              DTS:DTSID="{DB839B5F-7E83-437A-8110-C0E4E57B601D}"
+              DTS:DTSID="{4A870065-9A64-4959-BCA7-604DE36A273D}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -862,7 +927,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="C:\Users\admin\PycharmProjects\segunda_division_data_pipeline\dags\restore_historical_data\team_market_value.csv">
+          DTS:ConnectionString="C:\Users\admin\PycharmProjects\segunda_division_data_pipeline\dags\restore_historical_data\files\team_market_value.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -871,7 +936,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="team"
-              DTS:DTSID="{2A2CF552-8D1D-4C04-9CBF-95589DBCFF23}"
+              DTS:DTSID="{8D4031C1-A708-4B2A-9F67-7CADD38A27CA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -880,7 +945,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="season"
-              DTS:DTSID="{68ECA6C2-4430-45FA-A27E-BDF39DB9D36E}"
+              DTS:DTSID="{CE284244-34B4-4303-AF99-195CBFA79B6E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -889,7 +954,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="squad"
-              DTS:DTSID="{14E0575A-42F1-45EE-983A-6799D16EA7DA}"
+              DTS:DTSID="{A50A9321-3DF8-494E-B0B0-74D84CC304B2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -898,7 +963,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="age"
-              DTS:DTSID="{F5CE33E7-56C7-432C-B83F-D74BFBE4E7D0}"
+              DTS:DTSID="{0A13EE3E-98DD-4AC0-9DCD-9E9D32879EFB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -907,7 +972,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="foreigners"
-              DTS:DTSID="{46875008-D755-4DDF-BDBD-7F2E63AD4854}"
+              DTS:DTSID="{6587BBC0-60BC-42F6-B495-A289FEC7F8ED}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -916,7 +981,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="market_value"
-              DTS:DTSID="{5CB19575-D7EF-43DD-85D1-EE1F24B55524}"
+              DTS:DTSID="{EFA0E3C6-0A36-4F76-862E-AF535FAB1F9B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -925,7 +990,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="total_market_value"
-              DTS:DTSID="{E36E2514-EE29-43C9-9287-8B2FB079924F}"
+              DTS:DTSID="{663E87A0-7B18-494F-AF79-6C7ACC02E846}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -954,7 +1019,7 @@
         <DTS:Property
           DTS:DataType="8"
           DTS:Name="ParameterValue"
-          Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA96rRf88phUepSYQ+Br5oOQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADTQBAtG8/Sq/6FW+t2T8bdj/7HqApS+LeGPEUgvxlbogAAAAAOgAAAAAIAACAAAADOf7zIZBQQ+vdRTGZ9XX9TKNfZ7iry31rAFiludB33ZBAAAABZSZhlNUHmcmBwXmnThkp5QAAAAFx9qhLkOG2lf5bIt4Yy95rw77KaJtvByrgfR/M12bN0fYET8Q+eIGUqm7Ja/a2iV/Yk8dmN2upEEVOUszGE3o0</DTS:Property>
+          Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA96rRf88phUepSYQ+Br5oOQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACJY7nR4ckKDeyxHlLKx6dhwC6x+0Nc7G4t7g4Wd+yyGwAAAAAOgAAAAAIAACAAAAAbpovE8fg68C6Vg8NgWf4kql1lNKf6nuFibicqdjarMhAAAADia6u+mdA+oKHUe5Fl4rouQAAAAAqodd0GV5wanRPRcnMwgvTf9ioXC8KqdZecdeXZX7UdI0XEYNTkFnzOeJLPVVEtv3N5LLsEdSvX418ZSKzVx1k</DTS:Property>
       </DTS:Property>
     </DTS:PackageParameter>
     <DTS:PackageParameter
@@ -3108,6 +3173,150 @@
           version="1">
           <components>
             <component
+              refId="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="ADO_NET_Postgres_cal_draw_series"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"cal"."draw_series"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[127.0.0.1.football_db.airflow]"
+                  connectionManagerRefId="Package.ConnectionManagers[127.0.0.1.football_db.airflow]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series.Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series.Inputs[ADO NET Destination Input].Columns[fixture_id]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="fixture_id"
+                      externalMetadataColumnId="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series.Inputs[ADO NET Destination Input].ExternalColumns[fixture_id]"
+                      lineageId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Output].Columns[fixture_id]" />
+                    <inputColumn
+                      refId="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series.Inputs[ADO NET Destination Input].Columns[no_draw_home]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="no_draw_home"
+                      externalMetadataColumnId="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series.Inputs[ADO NET Destination Input].ExternalColumns[no_draw_home]"
+                      lineageId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Output].Columns[no_draw_home]" />
+                    <inputColumn
+                      refId="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series.Inputs[ADO NET Destination Input].Columns[draw_home]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="draw_home"
+                      externalMetadataColumnId="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series.Inputs[ADO NET Destination Input].ExternalColumns[draw_home]"
+                      lineageId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Output].Columns[draw_home]" />
+                    <inputColumn
+                      refId="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series.Inputs[ADO NET Destination Input].Columns[no_draw_away]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="no_draw_away"
+                      externalMetadataColumnId="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series.Inputs[ADO NET Destination Input].ExternalColumns[no_draw_away]"
+                      lineageId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Output].Columns[no_draw_away]" />
+                    <inputColumn
+                      refId="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series.Inputs[ADO NET Destination Input].Columns[draw_away]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="draw_away"
+                      externalMetadataColumnId="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series.Inputs[ADO NET Destination Input].ExternalColumns[draw_away]"
+                      lineageId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Output].Columns[draw_away]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series.Inputs[ADO NET Destination Input].ExternalColumns[fixture_id]"
+                      dataType="i8"
+                      name="fixture_id" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series.Inputs[ADO NET Destination Input].ExternalColumns[no_draw_home]"
+                      dataType="i2"
+                      name="no_draw_home" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series.Inputs[ADO NET Destination Input].ExternalColumns[draw_home]"
+                      dataType="i2"
+                      name="draw_home" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series.Inputs[ADO NET Destination Input].ExternalColumns[no_draw_away]"
+                      dataType="i2"
+                      name="no_draw_away" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series.Inputs[ADO NET Destination Input].ExternalColumns[draw_away]"
+                      dataType="i2"
+                      name="draw_away" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series.Inputs[ADO NET Destination Input].ExternalColumns[updated]"
+                      dataType="dbTimeStamp"
+                      name="updated" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series.Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series.Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Postgres_cal\ADO_NET_Postgres_cal_league_table"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
@@ -3820,6 +4029,211 @@
                       refId="Package\Postgres_cal\ADO_NET_Postgres_cal_league_table_home.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Postgres_cal\ADO_NET_Postgres_cal_league_table_home.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Postgres_cal\cal_draw_series"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1045"
+              name="cal_draw_series"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Postgres_cal\cal_draw_series.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[cal_draw_series]"
+                  connectionManagerRefId="Package.ConnectionManagers[cal_draw_series]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Output].Columns[fixture_id]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Output].ExternalColumns[fixture_id]"
+                      length="50"
+                      lineageId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Output].Columns[fixture_id]"
+                      name="fixture_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Output].Columns[no_draw_home]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Output].ExternalColumns[no_draw_home]"
+                      length="50"
+                      lineageId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Output].Columns[no_draw_home]"
+                      name="no_draw_home"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Output].Columns[draw_home]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Output].ExternalColumns[draw_home]"
+                      length="50"
+                      lineageId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Output].Columns[draw_home]"
+                      name="draw_home"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Output].Columns[no_draw_away]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Output].ExternalColumns[no_draw_away]"
+                      length="50"
+                      lineageId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Output].Columns[no_draw_away]"
+                      name="no_draw_away"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Output].Columns[draw_away]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Output].ExternalColumns[draw_away]"
+                      length="50"
+                      lineageId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Output].Columns[draw_away]"
+                      name="draw_away"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Output].ExternalColumns[fixture_id]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="fixture_id" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Output].ExternalColumns[no_draw_home]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="no_draw_home" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Output].ExternalColumns[draw_home]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="draw_home" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Output].ExternalColumns[no_draw_away]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="no_draw_away" />
+                    <externalMetadataColumn
+                      refId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Output].ExternalColumns[draw_away]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="draw_away" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -5131,6 +5545,11 @@
               endId="Package\Postgres_cal\ADO_NET_Postgres_cal_league_table_away.Inputs[ADO NET Destination Input]"
               name="Flat File Source Output"
               startId="Package\Postgres_cal\cal_league_table_away_csv.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Postgres_cal.Paths[Flat File Source Output3]"
+              endId="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series.Inputs[ADO NET Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Postgres_cal\cal_draw_series.Outputs[Flat File Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -5609,7 +6028,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{ED43957B-1B95-4776-BC0C-B80842444622}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE api.fixtures, api.results, api.season, api.team, api.league, val.team_market_value, cal.league_table, cal.league_table_home, cal.league_table_away;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="TRUNCATE TABLE api.fixtures, api.results, api.season, api.team, api.league, val.team_market_value, cal.league_table, cal.league_table_home, cal.league_table_away, cal.draw_series;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -5764,31 +6183,31 @@
     design-time-name="Package\Postgres_api">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="130.4,41.6"
-          Id="Package\Postgres_api\results_csv"
-          TopLeft="22.8571432463978,113.94117806857" />
-        <NodeLayout
-          Size="231.2,41.6"
-          Id="Package\Postgres_api\ADO_NET_Postgres_api_fixtures"
-          TopLeft="341.428577243065,22.9411767923296" />
-        <NodeLayout
-          Size="134.4,41.6"
-          Id="Package\Postgres_api\fixtures_csv"
-          TopLeft="25.0000004257475,22.1764708992519" />
+          Size="137.6,41.6"
+          Id="Package\Postgres_api\teams_csv"
+          TopLeft="25.0000004257475,286.000004011042" />
         <NodeLayout
           Size="135.2,41.6"
           Id="Package\Postgres_api\leagues_csv"
           TopLeft="27.8571433315472,370.882358142661" />
         <NodeLayout
+          Size="239.2,42.4"
+          Id="Package\Postgres_api\ADO_NET_Postgres_api_teams"
+          TopLeft="347.142863054665,283.705886331809" />
+        <NodeLayout
+          Size="134.4,41.6"
+          Id="Package\Postgres_api\fixtures_csv"
+          TopLeft="25.0000004257475,22.1764708992519" />
+        <NodeLayout
           Size="237.6,41.6"
           Id="Package\Postgres_api\ADO_NET_Postgres_api_schedule"
           TopLeft="346.428577328215,110.88235449626" />
         <NodeLayout
-          Size="239.2,42.4"
-          Id="Package\Postgres_api\ADO_NET_Postgres_api_teams"
-          TopLeft="347.142863054665,283.705886331809" />
+          Size="130.4,41.6"
+          Id="Package\Postgres_api\results_csv"
+          TopLeft="22.8571432463978,113.94117806857" />
         <NodeLayout
           Size="232,41.6"
           Id="Package\Postgres_api\ADO_NET_Postgres_api_leagues"
@@ -5798,79 +6217,13 @@
           Id="Package\Postgres_api\seasons_csv"
           TopLeft="26.4285718786473,196.529414520957" />
         <NodeLayout
+          Size="231.2,41.6"
+          Id="Package\Postgres_api\ADO_NET_Postgres_api_fixtures"
+          TopLeft="341.428577243065,22.9411767923296" />
+        <NodeLayout
           Size="233.6,41.6"
           Id="Package\Postgres_api\ADO_NET_Postgres_api_seasons"
           TopLeft="346.428577328215,192.705885055569" />
-        <NodeLayout
-          Size="137.6,41.6"
-          Id="Package\Postgres_api\teams_csv"
-          TopLeft="25.0000004257475,286.000004011042" />
-        <EdgeLayout
-          Id="Package\Postgres_api.Paths[Flat File Source Output4]"
-          TopLeft="163.057143331547,393.211769928817">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="188.371434081818,0"
-              Start="0,0"
-              End="180.871434081818,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="180.871434081818,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Postgres_api.Paths[Flat File Source Output3]"
-          TopLeft="159.400000425748,43.3588238457907">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="182.028576817318,0"
-              Start="0,0"
-              End="174.528576817318,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="174.528576817318,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Postgres_api.Paths[Flat File Source Output2]"
-          TopLeft="162.600000425748,305.852945171426">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="184.542862628917,0"
-              Start="0,0"
-              End="177.042862628917,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="177.042862628917,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Postgres_api.Paths[Flat File Source Output1]"
           TopLeft="166.428571878647,215.417649788263">
@@ -5890,7 +6243,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5912,14 +6267,88 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Postgres_api.Paths[Flat File Source Output4]"
+          TopLeft="163.057143331547,393.211769928817">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="188.371434081818,0"
+              Start="0,0"
+              End="180.871434081818,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="180.871434081818,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Postgres_api.Paths[Flat File Source Output3]"
+          TopLeft="159.400000425748,43.3588238457907">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="182.028576817318,0"
+              Start="0,0"
+              End="174.528576817318,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="174.528576817318,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Postgres_api.Paths[Flat File Source Output2]"
+          TopLeft="162.600000425748,305.852945171426">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="184.542862628917,0"
+              Start="0,0"
+              End="177.042862628917,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="177.042862628917,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Postgres_api\ADO_NET_Postgres_api_fixtures">
+    design-time-name="Package\Postgres_api\ADO_NET_Postgres_api_teams">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5935,7 +6364,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Postgres_api\ADO_NET_Postgres_api_teams">
+    design-time-name="Package\Postgres_api\ADO_NET_Postgres_api_leagues">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5943,7 +6372,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Postgres_api\ADO_NET_Postgres_api_leagues">
+    design-time-name="Package\Postgres_api\ADO_NET_Postgres_api_fixtures">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5962,7 +6391,7 @@
     design-time-name="Package\Postgres_cal">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="216.8,41.6"
           Id="Package\Postgres_cal\cal_league_table_away_csv"
@@ -5972,7 +6401,7 @@
           Id="Package\Postgres_cal\ADO_NET_Postgres_cal_league_table_home"
           TopLeft="470.714293730502,143.764707898599" />
         <NodeLayout
-          Size="209.6,41.6"
+          Size="178.4,41.6"
           Id="Package\Postgres_cal\cal_league_table_csv"
           TopLeft="113.333333333333,49.1666666666667" />
         <NodeLayout
@@ -6006,33 +6435,29 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Postgres_cal.Paths[Flat File Source Output]"
-          TopLeft="322.933333333333,70.7313725597443">
+          TopLeft="291.733333333333,70.7313725597443">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="146.590474450994,0"
+              EndConnector="177.790474450994,0"
               Start="0,0"
-              End="139.090474450994,0">
+              End="170.290474450994,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="139.090474450994,0" />
+                    End="170.290474450994,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6054,9 +6479,37 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="216,41.6"
+          Id="Package\Postgres_cal\cal_draw_series"
+          TopLeft="108.571430420389,318.117651520304" />
+        <NodeLayout
+          Size="251.2,41.6"
+          Id="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series"
+          TopLeft="472.142865183402,319.647063306459" />
+        <EdgeLayout
+          Id="Package\Postgres_cal.Paths[Flat File Source Output3]"
+          TopLeft="324.571430420389,339.682357413381">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="147.571434763013,0"
+              Start="0,0"
+              End="140.071434763013,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="140.071434763013,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6128,6 +6581,14 @@
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Postgres_val\ADO_NET_Postgres_val_teams_market_value">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

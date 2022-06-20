@@ -29,7 +29,6 @@ with DAG("seg_div_data_pipeline", start_date=datetime.fromisoformat(start_date),
          end_date=datetime.fromisoformat(end_date),
          schedule_interval="0 11 * * 2", catchup=True, template_searchpath="/opt/airflow/dags/scripts/sql_query/",
          tags=['segdiv']) as dag:
-
     start = DummyOperator(task_id="start")
 
     get_api_to_csv = PythonOperator(

@@ -8,7 +8,6 @@ class FootballDB:
         CREATE SCHEMA IF NOT EXISTS api AUTHORIZATION airflow;
         CREATE SCHEMA IF NOT EXISTS val AUTHORIZATION airflow;
         CREATE SCHEMA IF NOT EXISTS cal AUTHORIZATION airflow;
-
     """
 
     api_fixtures = """
@@ -147,6 +146,24 @@ class FootballDB:
     );
     """
 
+    cal_draw_series = """
+        CREATE TABLE cal.draw_series(
+        fixture_id bigint NOT NULL,
+        no_draw_home smallint,
+        draw_home smallint,
+        no_draw_away smallint,
+        draw_away smallint,
+        updated timestamp DEFAULT CURRENT_TIMESTAMP
+    );
+    """
+
+    cal_draw_series_drop_duplicates = """
+        DELETE FROM cal.draw_series T1
+        USING cal.draw_series T2
+        WHERE  T1.ctid < T2.ctid       				
+        AND  T1.fixture_id = T2.fixture_id;
+    """
+
     val_team_market_value = """
         CREATE TABLE val.team_market_value(
         id BIGSERIAL PRIMARY KEY NOT NULL,
@@ -164,6 +181,7 @@ class FootballDB:
     add_indexes = """
         CREATE INDEX fixtures_fixture_id_idx ON api.fixtures USING btree (fixture_id);
         CREATE INDEX results_fixture_id_idx ON api.results USING btree (fixture_id);
+        CREATE INDEX draw_series_fixture_id_idx ON cal.draw_series USING btree (fixture_id);
     """
 
     def clear_season_data(self):

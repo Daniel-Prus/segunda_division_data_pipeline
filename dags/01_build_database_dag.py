@@ -70,6 +70,7 @@ with DAG("build_database", start_date=datetime(2022, 1, 1),
                 football_db.cal_league_table,
                 football_db.cal_league_table_home,
                 football_db.cal_league_table_away,
+                football_db.cal_draw_series,
                 football_db.val_team_market_value,
                 football_db.add_indexes
             ]
