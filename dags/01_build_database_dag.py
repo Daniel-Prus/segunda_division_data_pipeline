@@ -5,7 +5,7 @@ from airflow.providers.postgres.operators.postgres import PostgresOperator
 from airflow.utils.task_group import TaskGroup
 from airflow.models.baseoperator import chain
 from scripts.create_connection import create_conn_postgres, create_conn_file_path
-from dags.scripts.postgres_sql.postgres_supporter import FootballDB, SegundaDivisionDW
+from dags.scripts.postgres_scripts.postgres_supporter import FootballDB, SegundaDivisionDW
 from scripts.dag_docs.docs import DagDocs
 
 football_db = FootballDB()
@@ -13,7 +13,7 @@ segunda_division_dw = SegundaDivisionDW()
 
 with DAG("build_database", start_date=datetime(2022, 1, 1),
          schedule_interval=None, catchup=False, tags=['segdiv'],
-         template_searchpath="/opt/airflow/dags/scripts/postgres_sql/") as dag:
+         template_searchpath="/opt/airflow/dags/scripts/postgres_scripts/") as dag:
     dag.doc_md = DagDocs().build_database_doc
 
     # create main postgres connection
