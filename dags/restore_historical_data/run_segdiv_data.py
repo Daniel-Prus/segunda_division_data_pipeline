@@ -10,10 +10,11 @@ LEAGUE_ID = 141
 SEASONS = [2018, 2019, 2020, 2021]
 API_CREDENTIALS = read_json_api_credentials("./api_football_beta.json")
 
-
 # get and save raw_data.csv:
-raw_data = GetApiFootballData(API_CREDENTIALS).get_fixtures_data(league_id=LEAGUE_ID, seasons=SEASONS)
+api_data = GetApiFootballData(API_CREDENTIALS).get_fixtures_data(league_id=LEAGUE_ID, seasons=SEASONS)
+raw_data = api_data.copy()
 raw_data.to_csv('./files/raw_data.csv', index=False)
+
 
 # get results.csv:
 fixtures_data = TeamDrawAnalysis(raw_data).fixtures_data
