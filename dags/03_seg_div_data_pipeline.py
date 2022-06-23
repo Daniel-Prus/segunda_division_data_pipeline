@@ -9,7 +9,7 @@ from airflow.operators.dummy import DummyOperator
 # from airflow.models.baseoperator import chain
 from scripts.custom_operators import LoadDataToPostgres
 from scripts.data_processing import get_api_data_to_csv, get_and_push_data
-from scripts.postgres_supporter import FootballDB
+from dags.scripts.postgres_sql.postgres_supporter import FootballDB
 
 api_credentials = Variable.get("api_football_beta", deserialize_json=True)
 dag_config = Variable.get("seg_div_data_pipeline_config_2021", deserialize_json=True)
