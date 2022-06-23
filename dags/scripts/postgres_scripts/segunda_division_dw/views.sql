@@ -12,19 +12,19 @@ CREATE OR REPLACE VIEW view_match_results AS (
 		LEFT JOIN dim_team AS T_home ON T_home.team_id = R.team_home_id
 		LEFT JOIN dim_team AS T_away ON T_away.team_id = R.team_away_id
 		RIGHT JOIN dim_fixtures AS S ON S.fixture_id = R.fixture_id
-		ORDER BY S.fixture_date_utc)
+		ORDER BY S.fixture_date_utc);
 
 
 -- current standings Segunda Division
 
 --DROP MATERIALIZED VIEW mat_view_segdiv_current_standings;
 CREATE MATERIALIZED VIEW mat_view_segdiv_current_standings AS (
-SELECT s.standings_type_id, s.team_position, t.team_name, s.mp, s.w, s.d, s.l, s.gf, s.ga, s.gd, s.pts
-FROM fact_standings as s
-LEFT JOIN dim_team as t on t.team_id = s.team_id
-WHERE s.league_id = 141 and s.season = get_current_season(141) AND s.round = get_current_round(141));
+    SELECT s.standings_type_id, s.team_position, t.team_name, s.mp, s.w, s.d, s.l, s.gf, s.ga, s.gd, s.pts
+    FROM fact_standings as s
+    LEFT JOIN dim_team as t on t.team_id = s.team_id
+    WHERE s.league_id = 141 and s.season = get_current_season(141) AND s.round = get_current_round(141));
 
-CREATE UNIQUE INDEX ON mat_view_segdiv_current_standings (standings_type_id ASC,team_position ASC);
+    CREATE UNIQUE INDEX ON mat_view_segdiv_current_standings (standings_type_id ASC,team_position ASC);
 
 
 -- full performance
@@ -56,4 +56,4 @@ CREATE OR REPLACE VIEW view_performance AS (
 	FROM fact_results as r
 	LEFT JOIN fact_standings as s_home on s_home.league_id = r.league_id AND s_home.season = r.season AND s_home.round = r.round AND s_home.team_id = r.team_home_id AND s_home.standings_type_id = 1
 	LEFT JOIN fact_standings as s_away on s_away.league_id = r.league_id AND s_away.season = r.season AND s_away.round = r.round AND s_away.team_id = r.team_away_id AND s_away.standings_type_id = 1
-	)
+	);

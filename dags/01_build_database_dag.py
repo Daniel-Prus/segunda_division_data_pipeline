@@ -5,7 +5,7 @@ from airflow.providers.postgres.operators.postgres import PostgresOperator
 from airflow.utils.task_group import TaskGroup
 from airflow.models.baseoperator import chain
 from scripts.create_connection import create_conn_postgres, create_conn_file_path
-from dags.scripts.postgres_scripts.postgres_supporter import FootballDB, SegundaDivisionDW
+from scripts.postgres_scripts.postgres_supporter import FootballDB, SegundaDivisionDW
 from scripts.dag_docs.docs import DagDocs
 
 football_db = FootballDB()
@@ -124,24 +124,22 @@ with DAG("build_database", start_date=datetime(2022, 1, 1),
             postgres_conn_id="postgres_segunda_division_dw",
             autocommit=True,
             sql=["segunda_division_dw/functions.sql", "segunda_division_dw/views.sql",
-                 "segunda_division_dw/triggers.sql"]
-        )
+                 "segunda_division_dw/triggers.sql"])
 
         create_database >> add_postgres_connection >> build_tables >> create_objects
 
-        data_pipeline_file_path_conn = PythonOperator(
-            task_id="data_pipeline_csv_file_conn",
-            python_callable=create_conn_file_path,
-            op_kwargs={
-                "conn_id": "data_pipeline_csv_files",
-                "conn_type": "fs",
-                "login": "airflow",
-                "pwd": "airflow",
-                "desc": "data_pipeline_csv_file_conn",
-                "extra": '{"path":"/opt/airflow/dags/files"}'
-            }
+    data_pipeline_file_path_conn = PythonOperator(
+        task_id="data_pipeline_csv_file_conn",
+        python_callable=create_conn_file_path,
+        op_kwargs={
+            "conn_id": "data_pipeline_csv_files",
+            "conn_type": "fs",
+            "login": "airflow",
+            "pwd": "airflow",
+            "desc": "data_pipeline_csv_file_conn",
+            "extra": '{"path":"/opt/airflow/dags/files"}'
+        }
+    )
 
-        )
-
-        chain(add_postgres_localhost_connection, [build_football_db, build_segunda_division_dw],
-              data_pipeline_file_path_conn)
+    chain(add_postgres_localhost_connection, [build_football_db, build_segunda_division_dw],
+          data_pipeline_file_path_conn)

@@ -9,7 +9,7 @@ from airflow.operators.dummy import DummyOperator
 # from airflow.models.baseoperator import chain
 from scripts.custom_operators import LoadDataToPostgres
 from scripts.data_processing import get_api_data_to_csv, get_and_push_data
-from dags.scripts.postgres_scripts.postgres_supporter import FootballDB
+from scripts.postgres_scripts.postgres_supporter import FootballDB
 
 api_credentials = Variable.get("api_football_beta", deserialize_json=True)
 dag_config = Variable.get("seg_div_data_pipeline_config_2021", deserialize_json=True)
@@ -27,7 +27,8 @@ clear_data_football_db = football_db.clear_season_data()
 
 with DAG("seg_div_data_pipeline", start_date=datetime.fromisoformat(start_date),
          end_date=datetime.fromisoformat(end_date),
-         schedule_interval="0 11 * * 2", catchup=True, template_searchpath="/opt/airflow/dags/scripts/postgres_scripts/",
+         schedule_interval="0 11 * * 2", catchup=True,
+         template_searchpath="/opt/airflow/dags/scripts/postgres_scripts/",
          tags=['segdiv']) as dag:
     start = DummyOperator(task_id="start")
 

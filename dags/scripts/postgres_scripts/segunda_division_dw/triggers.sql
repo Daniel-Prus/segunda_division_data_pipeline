@@ -9,7 +9,7 @@ BEGIN
     REFRESH MATERIALIZED VIEW CONCURRENTLY mat_view_segdiv_current_standings;
     RETURN NULL;
 END;
-$$
+$$;
 
 
 CREATE TRIGGER trigger_refresh_mat_view
