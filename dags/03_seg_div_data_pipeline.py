@@ -27,7 +27,7 @@ clear_data_football_db = football_db.clear_season_data()
 
 with DAG("seg_div_data_pipeline", start_date=datetime.fromisoformat(start_date),
          end_date=datetime.fromisoformat(end_date),
-         schedule_interval="0 11 * * 2", catchup=True, template_searchpath="/opt/airflow/dags/scripts/sql_query/",
+         schedule_interval="0 11 * * 2", catchup=True, template_searchpath="/opt/airflow/dags/scripts/postgres_sql/",
          tags=['segdiv']) as dag:
     start = DummyOperator(task_id="start")
 
@@ -116,7 +116,7 @@ with DAG("seg_div_data_pipeline", start_date=datetime.fromisoformat(start_date),
         task_id="load_segunda_divison_dw",
         postgres_conn_id="postgres_segunda_division_dw",
         autocommit=True,
-        sql="load_segdiv_dw.sql",
+        sql="segunda_division_dw/load_segdiv_dw.sql",
         params={'league_id': league_id,
                 'season': season}
     )
