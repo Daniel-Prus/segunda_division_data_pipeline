@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="restore_data_football_raw_db"
   DTS:PackageType="5"
-  DTS:VersionBuild="114"
-  DTS:VersionGUID="{6237048B-0781-42C3-9417-06257C09DBAD}">
+  DTS:VersionBuild="115"
+  DTS:VersionGUID="{50D37E9D-25EC-497A-9E13-DC26A772DDB1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA96rRf88phUepSYQ+Br5oOQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAApfQJoqprTkhVhbLdVJMswME5UV2Olf4KfXc6LlyCcAAAAAAAOgAAAAAIAACAAAABx3rJIGyazAUzXga2h0J8YcHD6g6e8nkS2PsBLq9wsWhAAAAALNXO8UUaI6g1hiRJumtFvQAAAAJwHCfPahmorOoozckCVm3fifX9pYrURsfufHrUnQ3YpveWmz4kwyAHcL2eaATDTMZtTWt1sAmIE6IZ9uZ7QqrI</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA96rRf88phUepSYQ+Br5oOQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC84dxjmRkLB03WAPQJBE5FwLwlNGJjczXwSTYiYgzrEwAAAAAOgAAAAAIAACAAAABkNd9UzEVNKRTvBHUVN8mTKLB75glvA5aFxKO/jZJNgxAAAAC5nCIO8p43Octl6EgcMCCfQAAAAIOGym8ljP87P3CzQLY8LaWs2htgq56GWM3IgTpnooPxGooU5Dco2BgYuX5b90khnS9X0JiDOFMuUAKevufa+qY</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1019,7 +1019,7 @@
         <DTS:Property
           DTS:DataType="8"
           DTS:Name="ParameterValue"
-          Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA96rRf88phUepSYQ+Br5oOQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADEnGKlDJmLa8oqAbj+wLfb1bnYWkeakchvOvUIr1TMcwAAAAAOgAAAAAIAACAAAABy8vIAiZs9SZ5ovbvxvYBq4gBLjY3Fc7FT1BwLSKC+IxAAAAC5Xp2JQEWOkw8W7LPtGmANQAAAADypoSs3vEErlhxMcsNdm00nvDE0Rxf0NaAMGige0oxHog9ay1/ACY8VfSrusEXU1JN5qLpkmBI7VlogsfuuErQ</DTS:Property>
+          Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA96rRf88phUepSYQ+Br5oOQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAABDWbclREDqJow3uBs0gOqy82Zath/D6SmELC4GfqFOwAAAAAOgAAAAAIAACAAAADEmdjWx2j/p1BiGD13nfqsUT09TVnOaMQx72jZv1W1EhAAAAAxqTKe8dStgUlo4a2+StfWQAAAAENm7DZg1H0+opmrfH8WAqvL+G20MsSUSkq5UaD33P2opTlhHjHyU4dVdMklfMaqyvv7pylIA47cXFvR8lF7aTA</DTS:Property>
       </DTS:Property>
     </DTS:PackageParameter>
     <DTS:PackageParameter
@@ -6393,13 +6393,17 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="287.2,41.6"
+          Id="Package\Postgres_cal\ADO_NET_Postgres_cal_league_table_home"
+          TopLeft="470.714293730502,143.764707898599" />
+        <NodeLayout
           Size="216.8,41.6"
           Id="Package\Postgres_cal\cal_league_table_away_csv"
           TopLeft="109.285716146839,231.705885602529" />
         <NodeLayout
-          Size="287.2,41.6"
-          Id="Package\Postgres_cal\ADO_NET_Postgres_cal_league_table_home"
-          TopLeft="470.714293730502,143.764707898599" />
+          Size="251.2,41.6"
+          Id="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series"
+          TopLeft="472.142865183402,319.647063306459" />
         <NodeLayout
           Size="178.4,41.6"
           Id="Package\Postgres_cal\cal_league_table_csv"
@@ -6413,9 +6417,57 @@
           Id="Package\Postgres_cal\ADO_NET_Postgres_cal_league_table"
           TopLeft="469.523807784327,50.6960784528219" />
         <NodeLayout
+          Size="216,41.6"
+          Id="Package\Postgres_cal\cal_draw_series"
+          TopLeft="108.571430420389,318.117651520304" />
+        <NodeLayout
           Size="212,41.6"
           Id="Package\Postgres_cal\cal_league_table_home_csv"
           TopLeft="112.142859052639,143.764707898599" />
+        <EdgeLayout
+          Id="Package\Postgres_cal.Paths[Flat File Source Output3]"
+          TopLeft="324.571430420389,339.682357413381">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="147.571434763013,0"
+              Start="0,0"
+              End="140.071434763013,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="140.071434763013,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Postgres_cal.Paths[Flat File Source Output2]"
+          TopLeft="326.085716146839,252.888238549068">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="146.771434763013,0"
+              Start="0,0"
+              End="139.271434763013,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="139.271434763013,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Postgres_cal.Paths[Flat File Source Output1]"
           TopLeft="324.142859052639,164.564707898599">
@@ -6460,63 +6512,19 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Postgres_cal.Paths[Flat File Source Output2]"
-          TopLeft="326.085716146839,252.888238549068">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="146.771434763013,0"
-              Start="0,0"
-              End="139.271434763013,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="139.271434763013,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="216,41.6"
-          Id="Package\Postgres_cal\cal_draw_series"
-          TopLeft="108.571430420389,318.117651520304" />
-        <NodeLayout
-          Size="251.2,41.6"
-          Id="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series"
-          TopLeft="472.142865183402,319.647063306459" />
-        <EdgeLayout
-          Id="Package\Postgres_cal.Paths[Flat File Source Output3]"
-          TopLeft="324.571430420389,339.682357413381">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="147.571434763013,0"
-              Start="0,0"
-              End="140.071434763013,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="140.071434763013,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Postgres_cal\ADO_NET_Postgres_cal_league_table_home">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6581,14 +6589,6 @@
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Postgres_val\ADO_NET_Postgres_val_teams_market_value">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
