@@ -204,8 +204,10 @@ class SegundaDivisionDW:
         round smallint NULL,
         team_home_id integer NULL,
         team_away_id integer NULL,
-        team_home_winner boolean NULL,   
-        team_away_winner boolean NULL,
+        no_draw_home smallint NULL,
+        draw_home smallint NULL,
+        no_draw_away smallint NULL,
+        draw_away smallint NULL,
         goals_home smallint NULL,
         goals_away smallint NULL,
         score_halftime_home smallint NULL,
@@ -280,4 +282,5 @@ class SegundaDivisionDW:
         CREATE INDEX fact_results_multi_col_idx ON fact_results USING btree (league_id, season, round);
         CREATE INDEX fact_results_season_idx ON fact_results USING btree (season);
         CREATE INDEX fact_standings_multi_col_idx ON fact_standings USING btree (league_id, season, standings_type_id, round);
+        CREATE INDEX fact_results_fixture_id_idx ON fact_results USING btree (fixture_id);
     """
