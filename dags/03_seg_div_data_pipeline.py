@@ -101,17 +101,27 @@ with DAG("seg_div_data_pipeline", start_date=datetime.fromisoformat(start_date),
             ) for table in ["league_table", "league_table_home", "league_table_away"]
         ]
 
+        calculate_and_load_draw_series = PostgresOperator(
+            task_id="calculate_and_load_draw_series",
+            postgres_conn_id="postgres_football_db",
+            autocommit=True,
+            sql="football_db/.",
+            params={'league_id': league_id,
+                    'season': season}
+
+        )
+
         drop_duplicates = PostgresOperator(
             task_id="drop_duplicates",
             postgres_conn_id="postgres_football_db",
             autocommit=True,
-            sql=football_db.api_results_drop_duplicates,
+            sql=[football_db.api_results_drop_duplicates,
+                 football_db.cal_draw_series_drop_duplicates],
         )
 
-        clear_fooball_db >> [load_results, load_fixtures]
+        clear_fooball_db >> [load_results, load_fixtures] >> calculate_and_load_draw_series >> drop_duplicates
         clear_fooball_db.set_downstream(load_league_tables)
         drop_duplicates.set_upstream(load_league_tables)
-        drop_duplicates << [load_results, load_fixtures]
 
     load_segunda_divison_dw = PostgresOperator(
         task_id="load_segunda_divison_dw",
