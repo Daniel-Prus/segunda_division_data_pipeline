@@ -61,13 +61,13 @@ VALUES
 
 -- fact_results
 
-insert into fact_results (fixture_id, league_id, season, round, team_home_id, team_away_id,
-							  team_home_winner, team_away_winner, goals_home, goals_away, score_halftime_home,
+insert into fact_results (fixture_id, league_id, season, round, team_home_id, team_away_id, no_draw_home, draw_home,
+							  no_draw_away, draw_away, goals_home, goals_away, score_halftime_home,
 							  score_halftime_away, halftime_goals_total, fulltime_goals_total, match_result)
 
-    select fixture_id, league_id, season, round, team_home_id, team_away_id,
-		team_home_winner, team_away_winner, goals_home, goals_away, score_halftime_home, score_halftime_away,
-		halftime_goals_total, fulltime_goals_total, match_result
+    select fixture_id, league_id, season, round, team_home_id, team_away_id, no_draw_home, draw_home, no_draw_away,
+            draw_away, goals_home, goals_away, score_halftime_home, score_halftime_away, halftime_goals_total,
+            fulltime_goals_total, match_result
 
     from dblink ('hostaddr=127.0.0.1 port=5432 dbname=football_db user=airflow password=airflow',
                     'SELECT f.fixture_id,
@@ -76,8 +76,10 @@ insert into fact_results (fixture_id, league_id, season, round, team_home_id, te
                             f.league_round,
                             f.teams_home_id,
                             f.teams_away_id,
-                            r.teams_home_winner,
-                            r.teams_away_winner,
+                            dw.no_draw_home,
+                            dw.draw_home,
+                            dw.no_draw_away,
+                            dw.draw_away,
                             r.goals_home,
                             r.goals_away,
                             r.score_halftime_home,
@@ -85,8 +87,9 @@ insert into fact_results (fixture_id, league_id, season, round, team_home_id, te
                             r.halftime_goals_total,
                             r.fulltime_goals_total,
                             r.match_result
-                        FROM api.fixtures as f
-                        LEFT JOIN api.results as r on r.fixture_id = f.fixture_id')
+                        FROM api.fixtures AS f
+                        LEFT JOIN api.results AS r ON r.fixture_id = f.fixture_id
+                        INNER JOIN cal.draw_series AS dw on dw.fixture_id = f.fixture_id' )
     as t(
 		fixture_id bigint,
 		league_id smallint,
@@ -94,8 +97,10 @@ insert into fact_results (fixture_id, league_id, season, round, team_home_id, te
 		round smallint,
 		team_home_id integer,
 		team_away_id integer,
-		team_home_winner boolean,
-		team_away_winner boolean,
+        no_draw_home smallint,
+        draw_home smallint,
+        no_draw_away smallint,
+        draw_away smallint,
 		goals_home smallint,
 		goals_away smallint,
 		score_halftime_home smallint,
@@ -105,6 +110,7 @@ insert into fact_results (fixture_id, league_id, season, round, team_home_id, te
 		match_result smallint
 	);
 
+ no_draw_home, draw_home, no_draw_away, draw_away
 
 -- fact_standings
 
