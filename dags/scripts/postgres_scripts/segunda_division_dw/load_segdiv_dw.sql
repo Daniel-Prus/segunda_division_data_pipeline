@@ -1,5 +1,6 @@
 -- Load Segunda Division Data Warehouse (Data Pipeline)
 
+
 -- delete old data
 DELETE FROM fact_results
 WHERE league_id = {{params.league_id}} AND season = {{params.season}};
@@ -73,8 +74,9 @@ INSERT INTO fact_results (fixture_id, league_id, season, round, team_home_id, te
                             r.match_result
                         FROM api.fixtures as f
                         LEFT JOIN api.results as r on r.fixture_id = f.fixture_id
-                        WHERE f.league_id = {{params.league_id}} AND f.league_season = {{params.season}}
-                        ORDER BY f.league_season, f.league_round')
+                        INNER JOIN cal.draw_series AS dw on dw.fixture_id = f.fixture_id
+                        WHERE f.league_id = {{params.league_id}} AND f.league_season = {{params.season}}'
+                        )
     AS t(
 		fixture_id bigint,
 		league_id smallint,

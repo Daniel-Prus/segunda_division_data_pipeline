@@ -89,7 +89,7 @@ insert into fact_results (fixture_id, league_id, season, round, team_home_id, te
                             r.match_result
                         FROM api.fixtures AS f
                         LEFT JOIN api.results AS r ON r.fixture_id = f.fixture_id
-                        INNER JOIN cal.draw_series AS dw on dw.fixture_id = f.fixture_id' )
+                        INNER JOIN cal.draw_series AS dw on dw.fixture_id = f.fixture_id')
     as t(
 		fixture_id bigint,
 		league_id smallint,
@@ -109,8 +109,6 @@ insert into fact_results (fixture_id, league_id, season, round, team_home_id, te
 		fulltime_goals_total smallint,
 		match_result smallint
 	);
-
- no_draw_home, draw_home, no_draw_away, draw_away
 
 -- fact_standings
 
