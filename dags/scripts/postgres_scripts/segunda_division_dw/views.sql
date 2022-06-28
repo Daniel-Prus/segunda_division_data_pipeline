@@ -36,6 +36,10 @@ CREATE OR REPLACE VIEW view_performance AS (
 			,r.round
 			,r.team_home_id
 			,r.team_away_id
+			,r.no_draw_home
+			,r.draw_home
+			,r.no_draw_away
+			,r.draw_away
 			,r.goals_home
 			,r.goals_away
 			,r.score_halftime_home

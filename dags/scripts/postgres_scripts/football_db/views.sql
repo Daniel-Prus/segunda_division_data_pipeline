@@ -28,7 +28,6 @@ CREATE OR REPLACE VIEW view_draw_series_aux AS
 --  no draw/draw series by team_id
 
 CREATE OR REPLACE VIEW view_draw_series_final AS
-
 	    (with cte2 AS
 	                    (with cte1 AS
 	                            (SELECT *,LAG(aux_no_draw) OVER (PARTITION BY team_id ORDER BY team_id, fixture_date) as no_draw_lag
