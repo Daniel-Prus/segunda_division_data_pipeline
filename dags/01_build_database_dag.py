@@ -76,6 +76,7 @@ with DAG("build_database", start_date=datetime(2022, 1, 1),
                 football_db.add_indexes
             ]
         )
+
         create_database >> add_postgres_connection >> build_tables
 
     with TaskGroup("build_segunda_division_dw") as build_segunda_division_dw:

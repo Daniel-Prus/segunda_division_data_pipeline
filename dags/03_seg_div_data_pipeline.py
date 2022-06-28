@@ -105,7 +105,7 @@ with DAG("seg_div_data_pipeline", start_date=datetime.fromisoformat(start_date),
             task_id="calculate_and_load_draw_series",
             postgres_conn_id="postgres_football_db",
             autocommit=True,
-            sql="football_db/.",
+            sql=["football_db/views.sql", "football_db/calculate_draw_series.sql"],
             params={'league_id': league_id,
                     'season': season}
 
