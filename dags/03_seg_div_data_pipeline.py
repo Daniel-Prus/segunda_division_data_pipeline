@@ -1,5 +1,5 @@
 from airflow.models import DAG
-from datetime import datetime
+from datetime import datetime, timedelta
 from airflow.models import Variable
 from airflow.operators.python import PythonOperator
 from airflow.providers.postgres.operators.postgres import PostgresOperator
@@ -27,21 +27,12 @@ clear_data_football_db = football_db.clear_season_data()
 
 with DAG("seg_div_data_pipeline", start_date=datetime.fromisoformat(start_date),
          end_date=datetime.fromisoformat(end_date),
-         schedule_interval="0 11 * * 2", catchup=True,
+         dagrun_timeout=timedelta(seconds=60),
+         schedule_interval="0 11 * * 2", catchup=False,
          template_searchpath="/opt/airflow/dags/scripts/postgres_scripts/",
          tags=['segdiv']) as dag:
     start = DummyOperator(task_id="start")
 
-    get_api_to_csv = PythonOperator(
-        task_id="api_to_csv",
-        python_callable=get_api_data_to_csv,
-        op_kwargs={
-            "key": api_key,
-            "host": api_host,
-            "league_id": league_id,
-            "season": season
-        }
-    )
     with TaskGroup("process_api_data") as process_api_data:
         raw_data_csv_sensor = FileSensor(
             task_id="raw_data_csv_sensor",
@@ -134,4 +125,33 @@ with DAG("seg_div_data_pipeline", start_date=datetime.fromisoformat(start_date),
 
     finished = DummyOperator(task_id="finished")
 
-    start >> get_api_to_csv >> process_api_data >> load_football_db >> load_segunda_divison_dw >> finished
+    start >> process_api_data >> load_football_db >> load_segunda_divison_dw >> finished
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    """
+    get_api_to_csv = PythonOperator(
+        task_id="api_to_csv",
+        python_callable=get_api_data_to_csv,
+        op_kwargs={
+            "key": api_key,
+            "host": api_host,
+            "league_id": league_id,
+            "season": season
+        }
+    )"""

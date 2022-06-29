@@ -117,7 +117,8 @@ with DAG("build_database", start_date=datetime(2022, 1, 1),
                 segunda_division_dw.dim_team,
                 segunda_division_dw.dim_fixtures,
                 segunda_division_dw.dim_standings_type,
-                segunda_division_dw.add_indexes
+                segunda_division_dw.add_indexes,
+                segunda_division_dw.add_constraints
             ]
         )
         create_objects = PostgresOperator(

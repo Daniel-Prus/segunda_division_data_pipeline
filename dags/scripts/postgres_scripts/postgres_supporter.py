@@ -48,7 +48,7 @@ class FootballDB:
         "fixture_id", "teams_home_winner", "teams_away_winner", "goals_home", "goals_away", "score_halftime_home",
         "score_halftime_away", "halftime_goals_total", "fulltime_goals_total", "match_result"
     ]
-
+    # delete the newer versions
     api_results_drop_duplicates = """
         DELETE FROM api.results T1
         USING api.results T2
@@ -156,7 +156,7 @@ class FootballDB:
         updated timestamp DEFAULT CURRENT_TIMESTAMP
     );
     """
-
+    # delete the older versions
     cal_draw_series_drop_duplicates = """
         DELETE FROM cal.draw_series T1
         USING cal.draw_series T2
@@ -281,6 +281,19 @@ class SegundaDivisionDW:
     add_indexes = """
         CREATE INDEX fact_results_multi_col_idx ON fact_results USING btree (league_id, season, round);
         CREATE INDEX fact_results_season_idx ON fact_results USING btree (season);
-        CREATE INDEX fact_standings_multi_col_idx ON fact_standings USING btree (league_id, season, standings_type_id, round);
         CREATE INDEX fact_results_fixture_id_idx ON fact_results USING btree (fixture_id);
+    """
+
+    add_constraints = """
+    ALTER TABLE fact_results
+        ADD CONSTRAINT FK_results_team_home FOREIGN KEY (team_home_id) REFERENCES dim_team (team_id),
+        ADD CONSTRAINT FK_results_team_away FOREIGN KEY (team_away_id) REFERENCES dim_team (team_id),
+        ADD CONSTRAINT FK_results_league_season FOREIGN KEY (league_id, season) REFERENCES dim_league_season (league_id, season),
+        ADD CONSTRAINT FK_results_fixtures FOREIGN KEY (fixture_id) REFERENCES dim_fixtures (fixture_id);
+
+    ALTER TABLE fact_standings
+        ADD CONSTRAINT FK_standings_team FOREIGN KEY (team_id) REFERENCES dim_team (team_id),
+        ADD CONSTRAINT FK_standings_league_season FOREIGN KEY (league_id, season) REFERENCES dim_league_season (league_id, season),
+        ADD CONSTRAINT FK_standings_type FOREIGN KEY (standings_type_id) REFERENCES dim_standings_type (standings_type_id),
+        ADD CONSTRAINT unique_fact_standings_multi_col_idx UNIQUE (league_id, season, standings_type_id, round, team_id);
     """

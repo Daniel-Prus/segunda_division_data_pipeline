@@ -140,16 +140,3 @@ insert into fact_standings (league_id, season, standings_type_id, round, team_po
         GA smallint,
         GD smallint,
         Pts smallint);
-
--- add foreign keys
-
-ALTER TABLE fact_results
-    ADD CONSTRAINT FK_results_team_home FOREIGN KEY (team_home_id) REFERENCES dim_team (team_id),
-	ADD CONSTRAINT FK_results_team_away FOREIGN KEY (team_away_id) REFERENCES dim_team (team_id),
-	ADD CONSTRAINT FK_results_league_season FOREIGN KEY (league_id, season) REFERENCES dim_league_season (league_id, season),
-	ADD CONSTRAINT FK_results_fixtures FOREIGN KEY (fixture_id) REFERENCES dim_fixtures (fixture_id);
-
-ALTER TABLE fact_standings
-	ADD CONSTRAINT FK_standings_team FOREIGN KEY (team_id) REFERENCES dim_team (team_id),
-	ADD CONSTRAINT FK_standings_league_season FOREIGN KEY (league_id, season) REFERENCES dim_league_season (league_id, season),
-	ADD CONSTRAINT FK_standings_type FOREIGN KEY (standings_type_id) REFERENCES dim_standings_type (standings_type_id);

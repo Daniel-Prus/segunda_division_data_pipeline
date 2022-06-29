@@ -13,16 +13,16 @@ WHERE fixture_id IN (SELECT fixture_id
 				                     WHERE league_id = {{params.league_id}} AND league_season = {{params.season}}')
 				    AS t (fixture_id bigint));
 
-DELETE FROM fact_standings
-WHERE league_id = {{params.league_id}} AND season = {{params.season}};
+--DELETE FROM fact_standings
+--WHERE league_id = {{params.league_id}} AND season = {{params.season}};
 
 
 -- setting fact primary keys sequence
 BEGIN;
 LOCK TABLE fact_results IN EXCLUSIVE MODE;
-LOCK TABLE fact_standings IN EXCLUSIVE MODE;
+--LOCK TABLE fact_standings IN EXCLUSIVE MODE;
 SELECT setval('fact_results_id_seq', COALESCE((SELECT MAX(id)+1 FROM fact_results), 1), false);
-SELECT setval('fact_standings_id_seq', COALESCE((SELECT MAX(id)+1 FROM fact_standings), 1), false);
+--SELECT setval('fact_standings_id_seq', COALESCE((SELECT MAX(id)+1 FROM fact_standings), 1), false);
 COMMIT;
 
 drop extension if exists dblink;
@@ -50,7 +50,7 @@ INSERT INTO fact_results (fixture_id, league_id, season, round, team_home_id, te
 							  no_draw_away, draw_away, goals_home, goals_away, score_halftime_home,
 							  score_halftime_away, halftime_goals_total, fulltime_goals_total, match_result)
 
-    select fixture_id, league_id, season, round, team_home_id, team_away_id, no_draw_home, draw_home, no_draw_away,
+    SELECT fixture_id, league_id, season, round, team_home_id, team_away_id, no_draw_home, draw_home, no_draw_away,
             draw_away, goals_home, goals_away, score_halftime_home, score_halftime_away, halftime_goals_total,
             fulltime_goals_total, match_result
 
@@ -101,10 +101,10 @@ INSERT INTO fact_results (fixture_id, league_id, season, round, team_home_id, te
 
 -- fact_standings
 
-insert into fact_standings (standings_type_id, league_id, team_id, season, round, team_position, mp, w, d, l, gf, ga, gd, pts)
+INSERT INTO fact_standings (standings_type_id, league_id, team_id, season, round, team_position, mp, w, d, l, gf, ga, gd, pts)
 
-	select standings_type_id, league_id, team_id, season, round, team_position, mp, w, d, l, gf, ga, gd, pts
-	from dblink ('hostaddr=127.0.0.1 port=5432 dbname=football_db user=airflow password=airflow',
+	SELECT standings_type_id, league_id, team_id, season, round, team_position, mp, w, d, l, gf, ga, gd, pts
+	FROM dblink ('hostaddr=127.0.0.1 port=5432 dbname=football_db user=airflow password=airflow',
 	                'SELECT *
                         FROM (
                             SELECT league_id, season, 1 as standings_type_id, round, team_position, team_id, mp, w, d, l, gf, ga, gd, pts
@@ -117,7 +117,7 @@ insert into fact_standings (standings_type_id, league_id, team_id, season, round
                             FROM cal.league_table_away
                             ORDER BY  league_id, season, round,  standings_type_id, team_position) as t
                         WHERE t.league_id = {{params.league_id}} AND t.season = {{params.season}}')
-	as t(
+	AS t(
 	    league_id smallint,
         season smallint,
         standings_type_id smallint,
@@ -131,4 +131,5 @@ insert into fact_standings (standings_type_id, league_id, team_id, season, round
         GF smallint,
         GA smallint,
         GD smallint,
-        Pts smallint);
+        Pts smallint)
+    ON CONFLICT ON CONSTRAINT unique_fact_standings_multi_col_idx DO NOTHING;
