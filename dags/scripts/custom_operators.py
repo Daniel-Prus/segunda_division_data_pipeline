@@ -29,7 +29,7 @@ class LoadDataToPostgres(BaseOperator):
 
 
 class LoadLeagueTableToPostgres(BaseOperator):
-    sql = """INSERT INTO {destination_table} VALUES {row} 
+    sql = """INSERT INTO {destination_table} VALUES {rows} 
             ON CONFLICT ON CONSTRAINT {conflict_index} DO {conflict_action};"""
 
     def __init__(self, postgres_conn_id, database, destination_table, xcom_task_id,
@@ -52,17 +52,18 @@ class LoadLeagueTableToPostgres(BaseOperator):
         json_data = context['ti'].xcom_pull(task_ids=self.xcom_task_id, key=self.xcom_task_id_key)
         df = pd.read_json(json_data)
 
+        # values as string much faster than loop !!
         rows = list(df.itertuples(index=False, name=None))
+        rows = str(rows)[1:-1]
 
-        for row in rows:
-            self.hook.run(LoadLeagueTableToPostgres.sql.format(
-                destination_table=self.destination_table,
-                row=row,
-                conflict_index=self.conflict_index,
-                conflict_action=self.conflict_action,
-            ),
-                self.autocommit
-            )
+        self.hook.run(LoadLeagueTableToPostgres.sql.format(
+            destination_table=self.destination_table,
+            rows=rows,
+            conflict_index=self.conflict_index,
+            conflict_action=self.conflict_action,
+        ),
+            self.autocommit
+        )
 
         for output in self.hook.conn.notices:
             self.log.info(output)
