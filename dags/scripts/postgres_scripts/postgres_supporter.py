@@ -186,9 +186,6 @@ class FootballDB:
 
     def clear_season_data(self):
         clear_season_data = """
-                    DELETE FROM cal.league_table WHERE season = {season} AND league_id = {league_id};
-                    DELETE FROM cal.league_table_home WHERE season = {season} AND league_id = {league_id};
-                    DELETE FROM cal.league_table_away WHERE season = {season} AND league_id = {league_id};
                     DELETE FROM api.fixtures WHERE league_season = {season} AND league_id = {league_id};
                     """.format(season=self.season, league_id=self.league_id)
         return clear_season_data

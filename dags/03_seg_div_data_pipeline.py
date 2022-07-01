@@ -7,7 +7,7 @@ from airflow.sensors.filesystem import FileSensor
 from airflow.utils.task_group import TaskGroup
 from airflow.operators.dummy import DummyOperator
 # from airflow.models.baseoperator import chain
-from scripts.custom_operators import LoadDataToPostgres
+from scripts.custom_operators import LoadDataToPostgres, LoadLeagueTableToPostgres
 from scripts.data_processing import get_api_data_to_csv, get_and_push_data
 from scripts.postgres_scripts.postgres_supporter import FootballDB
 
@@ -82,13 +82,15 @@ with DAG("seg_div_data_pipeline", start_date=datetime.fromisoformat(start_date),
         )
 
         load_league_tables = [
-            LoadDataToPostgres(
+            LoadLeagueTableToPostgres(
                 task_id=f"load_{table}",
                 postgres_conn_id="postgres_football_db",
                 database="football_db",
                 destination_table=f"cal.{table}",
                 xcom_task_id="process_api_data.process_and_push_data",
-                xcom_task_id_key=table
+                xcom_task_id_key=table,
+                conflict_index=f"PK_cal_{table}",
+                conflict_action="NOTHING"
             ) for table in ["league_table", "league_table_home", "league_table_away"]
         ]
 
@@ -114,6 +116,7 @@ with DAG("seg_div_data_pipeline", start_date=datetime.fromisoformat(start_date),
         clear_fooball_db.set_downstream(load_league_tables)
         drop_duplicates.set_upstream(load_league_tables)
 
+
     load_segunda_divison_dw = PostgresOperator(
         task_id="load_segunda_divison_dw",
         postgres_conn_id="postgres_segunda_division_dw",
@@ -126,23 +129,6 @@ with DAG("seg_div_data_pipeline", start_date=datetime.fromisoformat(start_date),
     finished = DummyOperator(task_id="finished")
 
     start >> process_api_data >> load_football_db >> load_segunda_divison_dw >> finished
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     """
     get_api_to_csv = PythonOperator(

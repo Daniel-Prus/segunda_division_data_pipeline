@@ -1,7 +1,8 @@
 -- Load Segunda Division Data Warehouse (Data Pipeline)
 
+BEGIN;
+-- delete old data:
 
--- delete old data
 DELETE FROM fact_results
 WHERE league_id = {{params.league_id}} AND season = {{params.season}};
 
@@ -13,17 +14,13 @@ WHERE fixture_id IN (SELECT fixture_id
 				                     WHERE league_id = {{params.league_id}} AND league_season = {{params.season}}')
 				    AS t (fixture_id bigint));
 
---DELETE FROM fact_standings
---WHERE league_id = {{params.league_id}} AND season = {{params.season}};
+-- setting fact_results primary keys sequence:
 
-
--- setting fact primary keys sequence
-BEGIN;
 LOCK TABLE fact_results IN EXCLUSIVE MODE;
 --LOCK TABLE fact_standings IN EXCLUSIVE MODE;
 SELECT setval('fact_results_id_seq', COALESCE((SELECT MAX(id)+1 FROM fact_results), 1), false);
 --SELECT setval('fact_standings_id_seq', COALESCE((SELECT MAX(id)+1 FROM fact_standings), 1), false);
-COMMIT;
+
 
 drop extension if exists dblink;
 create extension dblink;
@@ -133,3 +130,5 @@ INSERT INTO fact_standings (standings_type_id, league_id, team_id, season, round
         GD smallint,
         Pts smallint)
     ON CONFLICT ON CONSTRAINT unique_fact_standings_multi_col_idx DO NOTHING;
+
+COMMIT;
