@@ -151,7 +151,7 @@ class TeamDrawAnalysis(_DataOrganizer):
 
         plot_type (str): results number - 'rslts_num', percentage share of draw results - 'pcts'.
 
-        seasons(str,int): provided and validated season.
+        seasons(str,int): provided and validated SEASON.
 
         top (int): top (positive) or last (negative) of teams to ilustrate.
 
@@ -225,8 +225,8 @@ class TeamDrawAnalysis(_DataOrganizer):
         """Calculate draw results performance for all teams and seasons by merging:
             - draws percentage share (TeamDrawAnalysis.teams_draw_results_summarize())
             - team table position (self.league_table())
-            - no draw series max/mean per season/total (self.teams_draw_series())
-            - draw series max/mean per season/total (self.teams_draw_series())
+            - no draw series max/mean per SEASON/total (self.teams_draw_series())
+            - draw series max/mean per SEASON/total (self.teams_draw_series())
 
             Returns
             ----------
@@ -385,7 +385,7 @@ class TeamDrawAnalysis(_DataOrganizer):
 
         # cerate df for seasons with unified columns
         for season in seasons_list:
-            # columns for particular season
+            # columns for particular SEASON
             columns_list = []
             # new unified columns names
             new_columns_name = []
@@ -396,7 +396,7 @@ class TeamDrawAnalysis(_DataOrganizer):
 
             df_filtered = draw_performance_filtered_teams[columns_list]
             df_filtered.columns = new_columns_name
-            # add multi column with season number
+            # add multi column with SEASON number
             df_filtered = pd.concat([df_filtered], axis=1, keys=[str(season)])
             df_list.append(df_filtered)
 
@@ -530,7 +530,7 @@ class TeamDrawAnalysis(_DataOrganizer):
 
             plot_type (str): type of bar plot - 'count' or 'pcts'.
 
-            seasons(str,int): league season to plot. Deafult - 'total' data.
+            seasons(str,int): league SEASON to plot. Deafult - 'total' data.
 
             top (int): top (positive) or last (negative) of teams to ilustrate.
 
@@ -767,7 +767,7 @@ class TeamDrawAnalysis(_DataOrganizer):
 
     def teams_goals_performance(self, seasons='all', teams='all'):
 
-        """Calculate goals mean per match and total goals difference for season.
+        """Calculate goals mean per match and total goals difference for SEASON.
 
             Parameters
             ----------
@@ -798,7 +798,7 @@ class TeamDrawAnalysis(_DataOrganizer):
 
         def teams_goals_mean_and_diff(_season):
 
-            """Calculate goals mean per match and total goals difference for season.
+            """Calculate goals mean per match and total goals difference for SEASON.
             """
             season_league_table = TeamDrawAnalysis.league_table(self, season=_season)
             season_league_table['goals_mean_' + str(_season)] = round(

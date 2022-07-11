@@ -45,7 +45,7 @@ class DrawAnalysis(_DataOrganizer):
             seasons_to_call = self._seasons
             return seasons_to_call
         elif isinstance(seasons, int):
-            seasons_to_call = f'season {seasons}'
+            seasons_to_call = f'SEASON {seasons}'
             return seasons_to_call
         else:
             seasons_to_call = f'seasons {sorted(seasons)}'
@@ -244,7 +244,7 @@ class DrawAnalysis(_DataOrganizer):
 
             Raises
             ----------
-                TypeError: Cannot draw subplots for one season data.
+                TypeError: Cannot draw subplots for one SEASON data.
 
             Returns
             ----------
@@ -279,17 +279,17 @@ class DrawAnalysis(_DataOrganizer):
 
         if subplots is True:
             if len(self._seasons) == 1:
-                raise TypeError('Cannot draw subplots for one season data.')
+                raise TypeError('Cannot draw subplots for one SEASON data.')
             elif len(self._seasons) >= 4:
                 draw_pcts_pie(title='Results percentage share per seasons', layout=(3, 3))
             else:
                 draw_pcts_pie(title='Results percentage share per seasons')
         else:
             if len(self._seasons) == 1:
-                draw_pcts_pie(title=f'Percentage share of results - season {self._seasons[0]} (%)',
+                draw_pcts_pie(title=f'Percentage share of results - SEASON {self._seasons[0]} (%)',
                               _seasons=seasons)
             elif isinstance(seasons, list) or (isinstance(seasons, int)):
-                draw_pcts_pie(title=f'Percentage share of results - season {seasons} (%)',
+                draw_pcts_pie(title=f'Percentage share of results - SEASON {seasons} (%)',
                               _seasons=seasons)
             else:
                 draw_pcts_pie(title=f'Percentage share of results to the total (%)')
@@ -334,7 +334,7 @@ class DrawAnalysis(_DataOrganizer):
 
     def results_per_month_pcts_plot(self, seasons='all'):
 
-        """Draw bar chart for percentage share of matches results per seasons with season average line.
+        """Draw bar chart for percentage share of matches results per seasons with SEASON average line.
 
             Parameters
             ----------

@@ -57,14 +57,14 @@ class FootballDB:
     """
 
     api_season = """
-        CREATE TABLE api.season(
-        season smallint NOT NULL,
+        CREATE TABLE api.SEASON(
+        SEASON smallint NOT NULL,
         league_id smallint NOT NULL,
         start_date date NOT NULL,
         end_date date NOT NULL,
         season_info varchar(9) GENERATED ALWAYS AS ((((date_part('year'::text, start_date))::text || '/'::text) || (date_part('year'::text, end_date))::text)) STORED,
         rounds smallint,
-        CONSTRAINT PK_api_season PRIMARY KEY (season, league_id)
+        CONSTRAINT PK_api_season PRIMARY KEY (SEASON, league_id)
     );
     """
 
@@ -90,7 +90,7 @@ class FootballDB:
         CREATE TABLE cal.league_table(
         league_id smallint,
         team_id integer,
-        season smallint,
+        SEASON smallint,
         round smallint,
         team_position smallint,
         MP smallint,
@@ -102,7 +102,7 @@ class FootballDB:
         GD smallint,
         Pts smallint,
         updated timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
-        CONSTRAINT PK_cal_league_table PRIMARY KEY (league_id, team_id, season, round)  
+        CONSTRAINT PK_cal_league_table PRIMARY KEY (league_id, team_id, SEASON, round)  
     );
     """
 
@@ -110,7 +110,7 @@ class FootballDB:
         CREATE TABLE cal.league_table_home(
         league_id smallint,
         team_id integer,
-        season smallint,
+        SEASON smallint,
         round smallint,
         team_position smallint,
         MP smallint,
@@ -122,7 +122,7 @@ class FootballDB:
         GD smallint,
         Pts smallint,
         updated timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
-        CONSTRAINT PK_cal_league_table_home PRIMARY KEY (league_id, team_id, season, round)
+        CONSTRAINT PK_cal_league_table_home PRIMARY KEY (league_id, team_id, SEASON, round)
     );
     """
 
@@ -130,7 +130,7 @@ class FootballDB:
         CREATE TABLE cal.league_table_away(
         league_id smallint,
         team_id integer,
-        season smallint,
+        SEASON smallint,
         round smallint,
         team_position smallint,
         MP smallint,
@@ -142,7 +142,7 @@ class FootballDB:
         GD smallint,
         Pts smallint,
         updated timestamp DEFAULT CURRENT_TIMESTAMP,
-        CONSTRAINT PK_cal_league_table_away PRIMARY KEY (league_id, team_id, season, round)
+        CONSTRAINT PK_cal_league_table_away PRIMARY KEY (league_id, team_id, SEASON, round)
     );
     """
 
@@ -168,7 +168,7 @@ class FootballDB:
         CREATE TABLE val.team_market_value(
         id BIGSERIAL PRIMARY KEY NOT NULL,
         team_id smallint NULL,
-        season smallint NULL,
+        SEASON smallint NULL,
         squad smallint NULL,
         age numeric (3, 1) NULL,
         foreigners smallint NULL,
@@ -197,7 +197,7 @@ class SegundaDivisionDW:
         id bigserial,
         fixture_id bigint NOT NULL,
         league_id smallint NULL,
-        season smallint NULL,
+        SEASON smallint NULL,
         round smallint NULL,
         team_home_id integer NULL,
         team_away_id integer NULL,
@@ -220,7 +220,7 @@ class SegundaDivisionDW:
     CREATE TABLE fact_standings(
         id bigserial,
         league_id smallint NOT NULL,
-        season smallint NOT NULL,
+        SEASON smallint NOT NULL,
         standings_type_id smallint NOT NULL,
         round smallint NOT NULL,
         team_position smallint NULL,
@@ -247,7 +247,7 @@ class SegundaDivisionDW:
     dim_league_season = """
     CREATE TABLE dim_league_season(
         league_id smallint NOT NULL,
-        season smallint NOT NULL,
+        SEASON smallint NOT NULL,
         league_level smallint NOT NULL,
         league_name varchar(100),
         league_country varchar(100),
@@ -255,7 +255,7 @@ class SegundaDivisionDW:
         end_date date NOT NULL,
         season_info varchar(9),
         rounds smallint,
-        CONSTRAINT PK_dim_league_season PRIMARY KEY (league_id, season)
+        CONSTRAINT PK_dim_league_season PRIMARY KEY (league_id, SEASON)
     );
     """
     dim_team = """
@@ -285,12 +285,12 @@ class SegundaDivisionDW:
     ALTER TABLE fact_results
         ADD CONSTRAINT FK_results_team_home FOREIGN KEY (team_home_id) REFERENCES dim_team (team_id),
         ADD CONSTRAINT FK_results_team_away FOREIGN KEY (team_away_id) REFERENCES dim_team (team_id),
-        ADD CONSTRAINT FK_results_league_season FOREIGN KEY (league_id, season) REFERENCES dim_league_season (league_id, season),
+        ADD CONSTRAINT FK_results_league_season FOREIGN KEY (league_id, SEASON) REFERENCES dim_league_season (league_id, SEASON),
         ADD CONSTRAINT FK_results_fixtures FOREIGN KEY (fixture_id) REFERENCES dim_fixtures (fixture_id);
 
     ALTER TABLE fact_standings
         ADD CONSTRAINT FK_standings_team FOREIGN KEY (team_id) REFERENCES dim_team (team_id),
-        ADD CONSTRAINT FK_standings_league_season FOREIGN KEY (league_id, season) REFERENCES dim_league_season (league_id, season),
+        ADD CONSTRAINT FK_standings_league_season FOREIGN KEY (league_id, SEASON) REFERENCES dim_league_season (league_id, SEASON),
         ADD CONSTRAINT FK_standings_type FOREIGN KEY (standings_type_id) REFERENCES dim_standings_type (standings_type_id),
-        ADD CONSTRAINT unique_fact_standings_multi_col_idx UNIQUE (league_id, season, standings_type_id, round, team_id);
+        ADD CONSTRAINT unique_fact_standings_multi_col_idx UNIQUE (league_id, SEASON, standings_type_id, round, team_id);
     """

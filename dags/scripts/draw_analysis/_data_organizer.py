@@ -293,7 +293,7 @@ class _DataOrganizer:
 
             Parameters
             ----------
-                seasons (int): provided league season.
+                seasons (int): provided league SEASON.
                 spot(str): 'home' for home results standings, 'away' - away results standings
 
             Returns
@@ -377,7 +377,7 @@ class _DataOrganizer:
 
             Parameters
             ----------
-                season (int): provided league season.
+                SEASON (int): provided league SEASON.
 
             Returns
             ----------
@@ -454,7 +454,7 @@ def transfrom_rawdata_api_fixtures(rawdata, nan):
 
     df_optimized.drop(columns=columns_to_drop, inplace=True)
 
-    # 3. Keep only regular season
+    # 3. Keep only regular SEASON
     reg_season_bool_series = (df_optimized['league.round'].str.contains('Regular Season'))
     df_optimized = df_optimized[reg_season_bool_series].reset_index()
     df_optimized.drop(columns='index', inplace=True)

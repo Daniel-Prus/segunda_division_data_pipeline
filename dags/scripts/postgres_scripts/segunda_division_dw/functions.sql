@@ -1,7 +1,7 @@
 -- segunda_division league_id (141)
 
 
--- get current season (league_id)
+-- get current SEASON (league_id)
 
 CREATE OR REPLACE FUNCTION get_current_season (league_id_param int)
 RETURNS int

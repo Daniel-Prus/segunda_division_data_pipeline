@@ -35,14 +35,14 @@ def calulate_league_table_to_csv(raw_data, seasons):
     df_list = []
 
     for season in seasons:
-        fixtures_filtered = raw_data[raw_data['league.season'] == season]
+        fixtures_filtered = raw_data[raw_data['league.SEASON'] == season]
         df = pd.DataFrame()
         for rnd in range(1, 43):
             if rnd == 1:
                 round_filtered = fixtures_filtered[fixtures_filtered['league.round'] == 'Regular Season - ' + str(rnd)]
                 seg_div = TeamDrawAnalysis(round_filtered)
                 league_table = seg_div.league_table(season=season)
-                league_table['season'] = season
+                league_table['SEASON'] = season
                 league_table['round'] = rnd
                 df_list.append(league_table)
                 df = round_filtered
@@ -55,7 +55,7 @@ def calulate_league_table_to_csv(raw_data, seasons):
                 if rnd not in seg_div.fixtures_data.league_round.to_list():
                     break
                 league_table = seg_div.league_table(season=season)
-                league_table['season'] = season
+                league_table['SEASON'] = season
                 league_table['round'] = rnd
                 df_list.append(league_table)
 
@@ -76,14 +76,14 @@ def calulate_league_table_home_away_to_csv(raw_data, seasons, spot):
     df_list = []
 
     for season in seasons:
-        fixtures_filtered = raw_data[raw_data['league.season'] == season]
+        fixtures_filtered = raw_data[raw_data['league.SEASON'] == season]
         df = pd.DataFrame()
         for rnd in range(1, 43):
             if rnd == 1:
                 round_filtered = fixtures_filtered[fixtures_filtered['league.round'] == 'Regular Season - ' + str(rnd)]
                 seg_div = TeamDrawAnalysis(round_filtered)
                 league_table = seg_div.teams_standings_home_away(season=season, spot=spot)
-                league_table['season'] = season
+                league_table['SEASON'] = season
                 league_table['round'] = rnd
                 df_list.append(league_table)
                 df = round_filtered
@@ -96,7 +96,7 @@ def calulate_league_table_home_away_to_csv(raw_data, seasons, spot):
                 if rnd not in seg_div.fixtures_data.league_round.to_list():
                     break
                 league_table = seg_div.teams_standings_home_away(season=season, spot=spot)
-                league_table['season'] = season
+                league_table['SEASON'] = season
                 league_table['round'] = rnd
                 df_list.append(league_table)
 

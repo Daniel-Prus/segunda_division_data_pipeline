@@ -1,6 +1,6 @@
 -- auxiliary view to calculate 'draw series'
 
-CREATE OR REPLACE VIEW view_draw_series_aux AS
+CREATE OR REPLACE VIEW v_draw_series_aux AS
 	(with cte2 AS
 	                (with cte1 AS
 	                            (SELECT f.fixture_id
@@ -27,12 +27,12 @@ CREATE OR REPLACE VIEW view_draw_series_aux AS
 
 --  no draw/draw series by team_id
 
-CREATE OR REPLACE VIEW view_draw_series_final AS
+CREATE OR REPLACE VIEW v_draw_series_final AS
 	    (with cte2 AS
 	                    (with cte1 AS
 	                            (SELECT *,LAG(aux_no_draw) OVER (PARTITION BY team_id ORDER BY team_id, fixture_date) as no_draw_lag
 										 ,LAG(aux_draw) OVER (PARTITION BY team_id ORDER BY team_id, fixture_date) as draw_lag
-								 FROM view_draw_series_aux)
+								 FROM v_draw_series_aux)
 
 						SELECT *
 						        ,COUNT(CASE WHEN no_draw_lag = 0 or no_draw_lag is null THEN 0 END) OVER (ORDER BY team_id, fixture_date) AS no_draw_series_aux

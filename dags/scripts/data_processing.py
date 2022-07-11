@@ -66,7 +66,7 @@ def calulate_league_table_home_away(season, spot):
     df_list = []
 
     for season in seg.seasons:
-        raw_data_filtered = raw_data[raw_data['league.season'] == season]
+        raw_data_filtered = raw_data[raw_data['league.SEASON'] == season]
         df = pd.DataFrame()
         for rnd in range(1, 43):
             if rnd == 1:
@@ -90,10 +90,10 @@ def calulate_league_table_home_away(season, spot):
     concat_league_tables = pd.concat(df_list)
     concat_league_tables['Team'] = league_table['Team'].map(teams_id)
     concat_league_tables.reset_index(inplace=True)
-    concat_league_tables['season'] = season
+    concat_league_tables['SEASON'] = season
     concat_league_tables['league_id'] = league_id
     concat_league_tables = concat_league_tables[
-        ['league_id', 'Team', 'season', 'round', 'index', 'MP', 'W', 'D', 'L', 'GF', 'GA', 'GD', 'Pts']]
+        ['league_id', 'Team', 'SEASON', 'round', 'index', 'MP', 'W', 'D', 'L', 'GF', 'GA', 'GD', 'Pts']]
 
     league_table_json = concat_league_tables.to_json()
     return league_table_json
@@ -111,7 +111,7 @@ def calulate_league_table(season):
     df_list = []
 
     for season in seg.seasons:
-        raw_data_filtered = raw_data[raw_data['league.season'] == season]
+        raw_data_filtered = raw_data[raw_data['league.SEASON'] == season]
         df = pd.DataFrame()
         for rnd in range(1 , 43):
             if rnd == 1:
@@ -135,10 +135,10 @@ def calulate_league_table(season):
     concat_league_tables = pd.concat(df_list)
     concat_league_tables['Team'] = league_table['Team'].map(teams_id)
     concat_league_tables.reset_index(inplace=True)
-    concat_league_tables['season'] = season
+    concat_league_tables['SEASON'] = season
     concat_league_tables['league_id'] = league_id
     concat_league_tables = concat_league_tables[
-        ['league_id', 'Team', 'season', 'round', 'index', 'MP', 'W', 'D', 'L', 'GF', 'GA', 'GD', 'Pts']]
+        ['league_id', 'Team', 'SEASON', 'round', 'index', 'MP', 'W', 'D', 'L', 'GF', 'GA', 'GD', 'Pts']]
 
     league_table_json = concat_league_tables.to_json()
     return league_table_json

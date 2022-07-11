@@ -14,19 +14,19 @@ from scripts.postgres_scripts.postgres_supporter import FootballDB
 api_credentials = Variable.get("api_football_beta", deserialize_json=True)
 dag_config = Variable.get("seg_div_data_pipeline_config_2021", deserialize_json=True)
 
-api_key = api_credentials["api_key"]
-api_host = api_credentials["api_host"]
-league_id = dag_config["league_id"]
-season = dag_config["season"]
-start_date = dag_config["start_date"]
-end_date = dag_config["end_date"]
+API_KEY = api_credentials["api_key"]
+API_HOST = api_credentials["api_host"]
+LEAGUE_ID = dag_config["league_id"]
+SEASON = dag_config["season"]
+START_DATE = dag_config["start_date"]
+END_DATE = dag_config["end_date"]
 
-# sql query to clear tables according to season and league_id
-football_db = FootballDB(season=season, league_id=league_id)
+# sql query to clear tables according to SEASON and LEAGUE_ID
+football_db = FootballDB(season=SEASON, league_id=LEAGUE_ID)
 clear_data_football_db = football_db.clear_season_data()
 
-with DAG("seg_div_data_pipeline", start_date=datetime.fromisoformat(start_date),
-         end_date=datetime.fromisoformat(end_date),
+with DAG("seg_div_data_pipeline", start_date=datetime.fromisoformat(START_DATE),
+         end_date=datetime.fromisoformat(END_DATE),
          dagrun_timeout=timedelta(seconds=60),
          schedule_interval="0 11 * * 2", catchup=False,
          template_searchpath="/opt/airflow/dags/scripts/postgres_scripts/",
@@ -48,7 +48,7 @@ with DAG("seg_div_data_pipeline", start_date=datetime.fromisoformat(start_date),
             task_id="process_and_push_data",
             python_callable=get_and_push_data,
             op_kwargs={
-                "season": season
+                "season": SEASON
             }
         )
 
@@ -99,8 +99,8 @@ with DAG("seg_div_data_pipeline", start_date=datetime.fromisoformat(start_date),
             postgres_conn_id="postgres_football_db",
             autocommit=True,
             sql=["football_db/views.sql", "football_db/calculate_draw_series.sql"],
-            params={'league_id': league_id,
-                    'season': season}
+            params={'league_id': LEAGUE_ID,
+                    'SEASON': SEASON}
 
         )
 
@@ -116,14 +116,13 @@ with DAG("seg_div_data_pipeline", start_date=datetime.fromisoformat(start_date),
         clear_fooball_db.set_downstream(load_league_tables)
         drop_duplicates.set_upstream(load_league_tables)
 
-
     load_segunda_divison_dw = PostgresOperator(
         task_id="load_segunda_divison_dw",
         postgres_conn_id="postgres_segunda_division_dw",
         autocommit=True,
         sql="segunda_division_dw/load_segdiv_dw.sql",
-        params={'league_id': league_id,
-                'season': season}
+        params={'league_id': LEAGUE_ID,
+                'SEASON': SEASON}
     )
 
     finished = DummyOperator(task_id="finished")
@@ -135,9 +134,9 @@ with DAG("seg_div_data_pipeline", start_date=datetime.fromisoformat(start_date),
         task_id="api_to_csv",
         python_callable=get_api_data_to_csv,
         op_kwargs={
-            "key": api_key,
-            "host": api_host,
-            "league_id": league_id,
-            "season": season
+            "key": API_KEY,
+            "host": API_HOST,
+            "league_id": LEAGUE_ID,
+            "SEASON": SEASON
         }
     )"""

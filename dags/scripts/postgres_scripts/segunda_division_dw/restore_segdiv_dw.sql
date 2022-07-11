@@ -12,9 +12,9 @@ insert into dim_league_season
 
     select *
     from dblink ('hostaddr=127.0.0.1 port=5432 dbname=football_db user=airflow password=airflow',
-				 'SELECT l.league_id, s.season, l.league_level, l.league_name, l.league_country,
+				 'SELECT l.league_id, s.SEASON, l.league_level, l.league_name, l.league_country,
                             s.start_date, s.end_date, s.season_info, s.rounds
-                  FROM api.season AS s
+                  FROM api.SEASON AS s
                   LEFT JOIN api.league AS l ON l.league_id = s.league_id')
     as t (
         league_id smallint,
@@ -116,15 +116,15 @@ insert into fact_standings (league_id, season, standings_type_id, round, team_po
 
 	select league_id, season, standings_type_id, round, team_position, team_id, mp, w, d, l, gf, ga, gd, pts
 	from dblink ('hostaddr=127.0.0.1 port=5432 dbname=football_db user=airflow password=airflow',
-				 	'SELECT league_id, season, 1 as standings_type_id, round, team_position, team_id, mp, w, d, l, gf, ga, gd, pts
+				 	'SELECT league_id, SEASON, 1 as standings_type_id, round, team_position, team_id, mp, w, d, l, gf, ga, gd, pts
 					FROM cal.league_table
 					UNION ALL
-					SELECT league_id, season, 2 as standings_type_id, round, team_position, team_id, mp, w, d, l, gf, ga, gd, pts
+					SELECT league_id, SEASON, 2 as standings_type_id, round, team_position, team_id, mp, w, d, l, gf, ga, gd, pts
 					FROM cal.league_table_home
 					UNION ALL
-					SELECT league_id, season, 3 as standings_type_id, round, team_position, team_id, mp, w, d, l, gf, ga, gd, pts
+					SELECT league_id, SEASON, 3 as standings_type_id, round, team_position, team_id, mp, w, d, l, gf, ga, gd, pts
 					FROM cal.league_table_away
-					ORDER BY  league_id, season, round,  standings_type_id, team_position;')
+					ORDER BY  league_id, SEASON, round,  standings_type_id, team_position;')
 	as t(
         league_id smallint,
         season smallint,

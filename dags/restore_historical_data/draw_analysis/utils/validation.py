@@ -74,10 +74,10 @@ def rslts_type_arg_validation(self, rslts_type):
 
 
 def teams_standings_arg_validation(self, season, spot):
-    """Validation of - season, spot arguments . Auxiliry function for 'teams_standings_home_away' method.
+    """Validation of - SEASON, spot arguments . Auxiliry function for 'teams_standings_home_away' method.
     """
 
-    # season arg
+    # SEASON arg
     if not isinstance(season, int):
         raise TypeError(f"Season argument must be integer not - {type(season).__name__} type.")
 
