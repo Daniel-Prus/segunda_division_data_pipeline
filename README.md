@@ -21,10 +21,20 @@ It contains two data delivering approaches - full and incremental data load.
 
 
 ## Architecture
+Football data is collected every week from RapidApi Api-Football-Beta with the use of Airflow Python Operator.
+
+
+
+
+
+
+
+
+
+
+
 
 ![seg_div_data_pipeline](images/seg_div_data_pipeline.png)
-
-Football data is collected every week from RapidApi Api-Football-Beta with the use of Airflow Python Operator.
 
 
 
