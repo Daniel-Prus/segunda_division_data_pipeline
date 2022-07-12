@@ -76,7 +76,7 @@ Process of data loading is done locally using SQL Server Integration Services pa
 ![etl_ssis_graph](images/etl_ssis_graph.png)
 ![postgres_odbc](images/postgres_odbc.png)
 ![restore_data_ssis_package](images/restore_data_ssis_package.png)
-![ssis](images/images/ssis.png)
+![ssis](images/ssis.png)
 
 ## Power BI Dashboards
 
