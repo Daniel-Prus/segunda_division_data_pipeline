@@ -21,18 +21,7 @@ It contains two data delivering approaches - full and incremental data load.
 
 
 ## Architecture
-Football data is collected every week from RapidApi Api-Football-Beta with the use of Airflow Python Operator.
-
-
-
-
-
-
-
-
-
-
-
+Football data is collected weekly (according to the league schedule) from RapidApi Api-Football-Beta with the use of Airflow Python Operator.
 
 ![seg_div_data_pipeline](images/seg_div_data_pipeline.png)
 
@@ -58,7 +47,6 @@ Football data is collected every week from RapidApi Api-Football-Beta with the u
 ![segdiv_erd_diagram](images/segdiv_erd_diagram.png)
 
 
-
 The data warehouse is designed using fact constellation schema in which multiple fact tables share the same dimension tables.
 
 Due to the complexity of the data, fact_standings have been separated from the main fact table and constitute a separate unit for easier analysis and debugging. It is possible to bridge the fact tables using league_id, season, round, team_id columns to recreate the full teams performance.
@@ -77,9 +65,24 @@ DW is equipped with PL/pgSQL objects and scripts that speed up and facilitate qu
 
 ## Restore Historical Data
 
+"./dags/restore_historical_data"
+
 Python scripts that allow to execute ETL job according to given seasons and league ID at once use 'full load' paradigm. 
 Process of data loading is done locally using SQL Server Integration Services package and PostgreSQL ODBC driver.
+
+   - SSIS package: dags/restore_historical_data/csv_to_postgres_ssis/csv_to_postgres_ssis/restore_data_football_raw_db.dtsx
+   - SSIS output logs: dags/restore_historical_data/csv_to_postgres_ssis/logs
+
+![etl_ssis_graph](images/etl_ssis_graph.png)
+![postgres_odbc](images/postgres_odbc.png)
+![restore_data_ssis_package](images/restore_data_ssis_package.png)
+![ssis](images/images/ssis.png)
+
 ## Power BI Dashboards
+
+![dashboard](images/dashboard.gif)
+
+
 ## Airflow Dag Description
 
 - 01_build_database_dag.py
@@ -91,7 +94,8 @@ Process of data loading is done locally using SQL Server Integration Services pa
 	- use to restore football data for "restore historical data" process
 
 - 03_seg_div_data_pipeline.py 
-	- main data pipline dag
+    - main data pipline dag
+
 ## Tech Stack And Requirements
 
 - Data source: RapidAPI/ API – football, Web scraping - www.transfermarkt.com
@@ -105,11 +109,13 @@ Process of data loading is done locally using SQL Server Integration Services pa
 - Power BI Desktop 
 
 IDE: Pycharm, PgAdmin 4, Visual Studio 2017
+
 ## Reflections
 - process is geared towards acquiring the most relevant data, facts, indicators and figures (ignoring less important dimensions)
 - why not surrogate keys ? At this stage, the data is highly unified and protected against changes (fixed names of leagues and teams, no sponsors in proper names, unified league levels)
 - combining data from different sources is done using python "match algorithm"(details in repository - "segunda_division_draw_analysis" ./3_external_variables/02_team_names_match_algorithm.ipynb)
 - poor performance of SSIS and PostgreSQL ODBC driver (switch to Apache Nifi in future)
+- 
 ## Next Features
 - 'pre-match odds' dimension data
 - monthly 'team values' fact table
