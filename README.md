@@ -33,10 +33,10 @@ images/datapipeline_graph.png
 1. Data is collected from RapidApi Api-Football-Beta on season request and save as csv file by Airflow Python Operator
 2. Input undergoes transformations and data checks then pushed to Airflow x-com.
 3. Data transformation and computation process:
--  results (matches played)
-- fixtures (updated season schedule)
-- league tables - total, home, away (calculated using draw_analysis python package)
-- draw/no draws series (calculated using PL/pgSQL scripts)
+   - results (matches played)
+   - fixtures (updated season schedule)
+   - league tables - total, home, away (calculated using draw_analysis python package)
+   - draw/no draws series (calculated using PL/pgSQL scripts)
 
 4. Football_db incremental load by season with Custom Airflow Operators - LoadDataToPostgres and LoadLeagueTableToPostgres
 5. Data Warehouse incremental load using PL/pgSQL transcation block.
