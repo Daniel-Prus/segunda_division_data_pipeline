@@ -19,11 +19,14 @@ It contains two data delivering approaches - full and incremental data load.
 7. [Reflections](#Reflections)
 8. [Next features](#Next-features)
 ## Architecture
-![Alt text](images/seg_div_data_pipeline.png)
+![seg_div_data_pipeline](images/seg_div_data_pipeline.png)
+
 Football data is collected every week from RapidApi Api-Football-Beta with the use of Airflow Python Operator.
 
-
+images/datapipeline_graph.png
 ### Data pipeline steps (03_seg_div_data_pipeline.py):
+
+![datapipeline_graph](images/datapipeline_graph.png)
 
 1. Data is collected from RapidApi Api-Football-Beta on season request and save as csv file by Airflow Python Operator
 2. Input undergoes transformations and data checks then pushed to Airflow x-com.
