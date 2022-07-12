@@ -44,6 +44,9 @@ Football data is collected every week from RapidApi Api-Football-Beta with the u
 5. Data Warehouse incremental load using PL/pgSQL transcation block.
 
 ## Data Warehouse
+![segdiv_erd_diagram](images/segdiv_erd_diagram.png)
+
+
 
 The data warehouse is designed using fact constellation schema in which multiple fact tables share the same dimension tables.
 
