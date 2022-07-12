@@ -113,9 +113,10 @@ IDE: Pycharm, PgAdmin 4, Visual Studio 2017
 ## Reflections
 - process is geared towards acquiring the most relevant data, facts, indicators and figures (ignoring less important dimensions)
 - why not surrogate keys ? At this stage, the data is highly unified and protected against changes (fixed names of leagues and teams, no sponsors in proper names, unified league levels)
-- combining data from different sources is done using python "match algorithm"(details in repository - "segunda_division_draw_analysis" ./3_external_variables/02_team_names_match_algorithm.ipynb)
+- combining data from different sources is done using python "match algorithm" (details in repository - "segunda_division_draw_analysis" ./3_external_variables/02_team_names_match_algorithm.ipynb)
 - poor performance of SSIS and PostgreSQL ODBC driver (switch to Apache Nifi in future)
-- 
+- "draw analysis python package" is not customized for data pipeline process (new highly optimized python class in future)
+
 ## Next Features
 - 'pre-match odds' dimension data
 - monthly 'team values' fact table
