@@ -12,7 +12,7 @@ from scripts.data_processing import get_api_data_to_csv, get_and_push_data
 from scripts.postgres_scripts.postgres_supporter import FootballDB
 
 api_credentials = Variable.get("api_football_beta", deserialize_json=True)
-dag_config = Variable.get("seg_div_data_pipeline_config_2021", deserialize_json=True)
+dag_config = Variable.get("seg_div_data_pipeline_config_2022", deserialize_json=True)
 
 API_KEY = api_credentials["api_key"]
 API_HOST = api_credentials["api_host"]
@@ -25,12 +25,14 @@ END_DATE = dag_config["end_date"]
 football_db = FootballDB(season=SEASON, league_id=LEAGUE_ID)
 clear_data_football_db = football_db.clear_season_data()
 
-with DAG("seg_div_data_pipeline", start_date=datetime.fromisoformat(START_DATE),
-         end_date=datetime.fromisoformat(END_DATE),
+with DAG("seg_div_data_pipeline",
+         start_date=datetime.fromisoformat(START_DATE),
+         end_date=datetime.fromisoformat(END_DATE) + timedelta(days=7),
          dagrun_timeout=timedelta(seconds=60),
          schedule_interval="0 11 * * 2", catchup=False,
          template_searchpath="/opt/airflow/dags/scripts/postgres_scripts/",
          tags=['segdiv']) as dag:
+
     start = DummyOperator(task_id="start")
 
     with TaskGroup("process_api_data") as process_api_data:
