@@ -66,7 +66,7 @@ def calulate_league_table_home_away(season, spot):
     df_list = []
 
     for season in seg.seasons:
-        raw_data_filtered = raw_data[raw_data['league.SEASON'] == season]
+        raw_data_filtered = raw_data[raw_data['league.season'] == season]
         df = pd.DataFrame()
         for rnd in range(1, 43):
             if rnd == 1:
@@ -111,7 +111,7 @@ def calulate_league_table(season):
     df_list = []
 
     for season in seg.seasons:
-        raw_data_filtered = raw_data[raw_data['league.SEASON'] == season]
+        raw_data_filtered = raw_data[raw_data['league.season'] == season]
         df = pd.DataFrame()
         for rnd in range(1 , 43):
             if rnd == 1:
