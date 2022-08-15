@@ -9,8 +9,8 @@ CREATE OR REPLACE VIEW v_match_results AS (
 			,R.round
 			,CONCAT(R.goals_home, ':',  R.goals_away) AS "match_result"
 		FROM fact_results AS R
-		LEFT JOIN dim_team AS T_home ON T_home.team_id = R.team_home_id
-		LEFT JOIN dim_team AS T_away ON T_away.team_id = R.team_away_id
+		JOIN dim_team AS T_home ON T_home.team_id = R.team_home_id
+		JOIN dim_team AS T_away ON T_away.team_id = R.team_away_id
 		RIGHT JOIN dim_fixtures AS S ON S.fixture_id = R.fixture_id
 		ORDER BY S.fixture_date_utc);
 
@@ -21,7 +21,7 @@ CREATE OR REPLACE VIEW v_match_results AS (
 CREATE MATERIALIZED VIEW mv_segdiv_current_standings AS (
     SELECT s.standings_type_id, s.team_position, t.team_name, s.mp, s.w, s.d, s.l, s.gf, s.ga, s.gd, s.pts
     FROM fact_standings as s
-    LEFT JOIN dim_team as t on t.team_id = s.team_id
+    JOIN dim_team as t on t.team_id = s.team_id
     WHERE s.league_id = 141 and s.season = get_current_season(141) AND s.round = get_current_round(141));
 
     CREATE UNIQUE INDEX ON mv_segdiv_current_standings (standings_type_id ASC,team_position ASC);
@@ -71,8 +71,8 @@ CREATE OR REPLACE VIEW v_match_results_pcts_league_season AS (
 						(SELECT r.league_id, r.season
 								,CASE WHEN r.match_result = 0 THEN 'draw' WHEN r.match_result = 1 THEN 'home_win' ELSE 'away_win' END AS match_result
 								,round (COUNT(*) / r2.match_num_sum::numeric, 2) as results_pcts
-						FROM fact_results_test AS r
-						JOIN (SELECT r2.league_id, r2.season, COUNT(*) AS match_num_sum FROM fact_results_test AS r2 GROUP BY r2.league_id, r2.season) AS r2 ON r2.league_id = r.league_id AND r2.season = r.season
+						FROM fact_results AS r
+						JOIN (SELECT r2.league_id, r2.season, COUNT(*) AS match_num_sum FROM fact_results AS r2 GROUP BY r2.league_id, r2.season) AS r2 ON r2.league_id = r.league_id AND r2.season = r.season
 						GROUP BY r.league_id, r.season,  r.match_result, r2.match_num_sum) AS t1
 			JOIN (SELECT DISTINCT league_id, league_name, league_country FROM dim_league_season) AS ls ON ls.league_id = t1.league_id
 			ORDER BY  ls.league_name, t1.season, t1.match_result DESC);
