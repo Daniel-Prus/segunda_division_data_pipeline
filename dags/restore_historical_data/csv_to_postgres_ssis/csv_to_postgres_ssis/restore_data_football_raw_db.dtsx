@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="restore_data_football_raw_db"
   DTS:PackageType="5"
-  DTS:VersionBuild="115"
-  DTS:VersionGUID="{50D37E9D-25EC-497A-9E13-DC26A772DDB1}">
+  DTS:VersionBuild="119"
+  DTS:VersionGUID="{FAA1BB75-D8DC-4D64-8696-834D448F1AF3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA96rRf88phUepSYQ+Br5oOQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC84dxjmRkLB03WAPQJBE5FwLwlNGJjczXwSTYiYgzrEwAAAAAOgAAAAAIAACAAAABkNd9UzEVNKRTvBHUVN8mTKLB75glvA5aFxKO/jZJNgxAAAAC5nCIO8p43Octl6EgcMCCfQAAAAIOGym8ljP87P3CzQLY8LaWs2htgq56GWM3IgTpnooPxGooU5Dco2BgYuX5b90khnS9X0JiDOFMuUAKevufa+qY</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAsg2n6JeuJk6s7knMAWPZ1QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACs4e220tgsKBQQPXL784BRWUrKB7GLubt5RSLeqX67fQAAAAAOgAAAAAIAACAAAABX2b3ik2a4lw2hohJiVmlD1affNh26nPU8Ng8xUMkQfBAAAAB8A0DrnjgaezE/etXCt0C5QAAAAAzGpZxZMUrOArju3xO6yRXUxp58qZ9t0X6BxMW8NPxUNi1xWUa1/XR4qPcMJU6/D+jUI312e8wcQc7ldooK4FI</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,7 +44,7 @@
           DTS:ColumnNamesInFirstDataRow="True"
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
+          DTS:CodePage="65001"
           DTS:ConnectionString="C:\Users\admin\PycharmProjects\segunda_division_data_pipeline\dags\restore_historical_data\files\fixtures.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
@@ -54,7 +54,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Column 0"
-              DTS:DTSID="{C135F03F-F683-4274-895E-6D62351C54CD}"
+              DTS:DTSID="{2CE4A852-5EB3-4758-825A-1EE855A4DC5C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -63,7 +63,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="fixture_id"
-              DTS:DTSID="{3752E477-70B8-4F1C-AE5E-03E6D1BF6756}"
+              DTS:DTSID="{0D71CC57-72B2-4495-8031-7C1FCC4277ED}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -72,7 +72,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="fixture_date"
-              DTS:DTSID="{28EC14A0-EF7A-4D68-A55B-D1B94F89E5FE}"
+              DTS:DTSID="{CA5E1845-6F01-48EA-BB95-11CD54DB7E2F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -81,7 +81,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="fixture_timestamp"
-              DTS:DTSID="{4E9520F4-6BF0-40A9-8A2F-EAD7DA38C26D}"
+              DTS:DTSID="{E5B4CA00-E26A-4EB3-A8ED-923563040776}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -90,7 +90,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="league_id"
-              DTS:DTSID="{7350B846-FCAB-4D7C-8123-5D9DD30ED99D}"
+              DTS:DTSID="{F2AC89DC-791A-4A32-9923-8994EBF320A0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -99,7 +99,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="league_name"
-              DTS:DTSID="{3A444F8C-E379-4C57-998D-5272FDFB7F66}"
+              DTS:DTSID="{CDDA2654-0E75-4AA0-9A0B-10D2659B2E0E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -108,7 +108,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="league_country"
-              DTS:DTSID="{ED8B41AE-4CE1-4D55-A860-E8D2E3B8E354}"
+              DTS:DTSID="{41AC5698-7F9D-41BA-9192-8E23BCC8DB9B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -117,7 +117,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="league_season"
-              DTS:DTSID="{59FD7038-8935-43F2-B9D2-206ECA5BAB72}"
+              DTS:DTSID="{D71B19AB-F706-4E35-9347-7A05F2A31D0C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -126,7 +126,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="league_round"
-              DTS:DTSID="{0ECAF6F9-0199-4CE0-B342-CF9C54846280}"
+              DTS:DTSID="{07380732-894D-4970-9D7B-8E98424ABC52}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -135,7 +135,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="teams_home_id"
-              DTS:DTSID="{366E8E71-D424-474D-81A2-59303126CCF5}"
+              DTS:DTSID="{093360A3-C659-4476-A9CF-A012DEA384C0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -144,7 +144,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="teams_home_name"
-              DTS:DTSID="{FF68C225-D07A-4B4D-86D1-1AA94CCA8F07}"
+              DTS:DTSID="{F5CE2E51-EC25-46D8-B602-6149DDE1997A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -153,7 +153,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="teams_away_id"
-              DTS:DTSID="{13E0AFAF-7F5F-4518-8FE0-70021E241D01}"
+              DTS:DTSID="{F592DA79-00B5-4C30-800B-FB367A9B1783}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -162,7 +162,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="teams_away_name"
-              DTS:DTSID="{98F4C0EA-4558-41A4-B7E8-003EDCA7D14C}"
+              DTS:DTSID="{ABCAF3FB-34AF-4872-A0F9-09765A14CB8B}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -191,7 +191,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="league_id"
-              DTS:DTSID="{39B715CF-3652-4587-8385-70266FB2D3EE}"
+              DTS:DTSID="{9DCFFE90-7A3C-45A9-9E19-77F1FD9CCA7D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -200,7 +200,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="league_level"
-              DTS:DTSID="{F34A1611-96B3-435F-9617-4F04821E0BA9}"
+              DTS:DTSID="{3B31BC60-A1E3-48E9-ABCF-FC9B8D6F2404}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -209,7 +209,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="league_name"
-              DTS:DTSID="{14537A7C-6035-4C56-8995-9484DD623B85}"
+              DTS:DTSID="{9DF002E8-649F-4AB4-BD2C-A8406AC230D0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -218,7 +218,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="league_country"
-              DTS:DTSID="{A9F35B81-84DD-41C4-81F1-3A3FB207AB41}"
+              DTS:DTSID="{EC8C1E47-0655-4E0E-A970-6826D049DE79}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -422,7 +422,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="team"
-              DTS:DTSID="{C76ABD21-A1DD-4F76-B1E9-8C684A4D263F}"
+              DTS:DTSID="{66DEF074-DC53-4F40-9445-8A65CACF7918}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -431,7 +431,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="id"
-              DTS:DTSID="{7373868B-CEF7-4F2C-AD38-0CECE72C0B83}"
+              DTS:DTSID="{B0AE5320-9560-460E-95F8-A5C14FA3D178}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -799,7 +799,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="index"
-              DTS:DTSID="{CEAEDEA9-13D1-4966-908D-C971C6A2C642}"
+              DTS:DTSID="{37778492-BB69-47BA-962F-2F9EFCDF07F3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -808,7 +808,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Team"
-              DTS:DTSID="{E0A881F0-C66A-494D-9E2B-7F295E1E184D}"
+              DTS:DTSID="{B49C48C6-0163-4C3B-9577-07F186732F56}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -817,7 +817,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="MP"
-              DTS:DTSID="{CFDF490A-2807-4557-A15E-71EEB5223296}"
+              DTS:DTSID="{961826E1-04E6-4B6B-BBEC-80EDFE4F6E26}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -826,7 +826,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="W"
-              DTS:DTSID="{F9E3C9D5-C0A4-4411-9A24-A764A0961F09}"
+              DTS:DTSID="{226670F7-3D6F-4395-827C-00AE7C16A9A5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -835,7 +835,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="D"
-              DTS:DTSID="{D3CBEE25-854D-4944-A0D6-D6766C8A57C6}"
+              DTS:DTSID="{FBCBE7ED-22D3-4448-AF1F-28E42B7B710D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -844,7 +844,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="L"
-              DTS:DTSID="{7A0CE0C2-F361-40E4-A201-10389B49751F}"
+              DTS:DTSID="{64021881-A1ED-46B2-9886-3DCF5272F586}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -853,7 +853,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="GF"
-              DTS:DTSID="{3E808931-BEE5-406C-8653-D725B63F7F4E}"
+              DTS:DTSID="{DF3E70B5-8B71-447A-9EE7-D25CF8B69C9C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -862,7 +862,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="GA"
-              DTS:DTSID="{2A0F3865-7E26-4067-B31F-1D004B1F7630}"
+              DTS:DTSID="{5A1079E3-732C-41A3-8C95-289AEFF89B1F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -871,7 +871,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="GD"
-              DTS:DTSID="{FE03545A-460A-4524-9244-1D8A29B6C603}"
+              DTS:DTSID="{B3BA7255-B34E-4942-BB26-77432E1C4845}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -880,7 +880,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Pts"
-              DTS:DTSID="{3BE3DE0E-7130-476C-B938-B47DB3544D32}"
+              DTS:DTSID="{01568EA5-A982-4453-8DA9-22F2D65280BC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -889,7 +889,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="season"
-              DTS:DTSID="{69D7BD59-3051-4534-AAE4-682466F68B29}"
+              DTS:DTSID="{62373C2D-CCC5-4E55-91D5-067510115A5D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -898,7 +898,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="round"
-              DTS:DTSID="{8A05C232-C560-4178-8EFB-3B5C6042689C}"
+              DTS:DTSID="{C16C737F-D0B9-4CEC-8C65-1EDD041083A0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -907,7 +907,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="league_id"
-              DTS:DTSID="{4A870065-9A64-4959-BCA7-604DE36A273D}"
+              DTS:DTSID="{B4B17C15-98CC-4839-B5B9-04BE8B10817F}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1019,7 +1019,7 @@
         <DTS:Property
           DTS:DataType="8"
           DTS:Name="ParameterValue"
-          Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA96rRf88phUepSYQ+Br5oOQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAABDWbclREDqJow3uBs0gOqy82Zath/D6SmELC4GfqFOwAAAAAOgAAAAAIAACAAAADEmdjWx2j/p1BiGD13nfqsUT09TVnOaMQx72jZv1W1EhAAAAAxqTKe8dStgUlo4a2+StfWQAAAAENm7DZg1H0+opmrfH8WAqvL+G20MsSUSkq5UaD33P2opTlhHjHyU4dVdMklfMaqyvv7pylIA47cXFvR8lF7aTA</DTS:Property>
+          Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAsg2n6JeuJk6s7knMAWPZ1QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADZNKqQToIvbHteZnvSTV/nchTpStMwyqR3wnznnPwK5wAAAAAOgAAAAAIAACAAAABEN1S1u9G4131AGYv+k3DUb69Gh1RzNPlsjbpWPArykxAAAABe7tWRasTMcdTSO+bmnOgGQAAAANe56DyXTu6uvAaNBrIHUziZ1N6DIgPSjeO4Plx98qFbY7d7btrtipoe6vuxGCzB2oRnJe4Kg2HqRT3VK9co7gA</DTS:Property>
       </DTS:Property>
     </DTS:PackageParameter>
     <DTS:PackageParameter
@@ -1108,7 +1108,7 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[fixture_id]"
-                      cachedCodepage="1252"
+                      cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="fixture_id"
@@ -1116,7 +1116,7 @@
                       lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[fixture_id]" />
                     <inputColumn
                       refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[fixture_date]"
-                      cachedCodepage="1252"
+                      cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="fixture_date"
@@ -1124,7 +1124,7 @@
                       lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[fixture_date]" />
                     <inputColumn
                       refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[fixture_timestamp]"
-                      cachedCodepage="1252"
+                      cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="fixture_timestamp"
@@ -1132,7 +1132,7 @@
                       lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[fixture_timestamp]" />
                     <inputColumn
                       refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[league_id]"
-                      cachedCodepage="1252"
+                      cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="league_id"
@@ -1140,7 +1140,7 @@
                       lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[league_id]" />
                     <inputColumn
                       refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[league_name]"
-                      cachedCodepage="1252"
+                      cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="league_name"
@@ -1148,7 +1148,7 @@
                       lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[league_name]" />
                     <inputColumn
                       refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[league_country]"
-                      cachedCodepage="1252"
+                      cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="league_country"
@@ -1156,7 +1156,7 @@
                       lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[league_country]" />
                     <inputColumn
                       refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[league_season]"
-                      cachedCodepage="1252"
+                      cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="league_season"
@@ -1164,7 +1164,7 @@
                       lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[league_season]" />
                     <inputColumn
                       refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[league_round]"
-                      cachedCodepage="1252"
+                      cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="league_round"
@@ -1172,7 +1172,7 @@
                       lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[league_round]" />
                     <inputColumn
                       refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[teams_home_id]"
-                      cachedCodepage="1252"
+                      cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="teams_home_id"
@@ -1180,7 +1180,7 @@
                       lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[teams_home_id]" />
                     <inputColumn
                       refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[teams_home_name]"
-                      cachedCodepage="1252"
+                      cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="teams_home_name"
@@ -1188,7 +1188,7 @@
                       lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[teams_home_name]" />
                     <inputColumn
                       refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[teams_away_id]"
-                      cachedCodepage="1252"
+                      cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="teams_away_id"
@@ -1196,7 +1196,7 @@
                       lineageId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[teams_away_id]" />
                     <inputColumn
                       refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].Columns[teams_away_name]"
-                      cachedCodepage="1252"
+                      cachedCodepage="65001"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="teams_away_name"
@@ -1259,9 +1259,9 @@
                       length="50"
                       name="teams_away_name" />
                     <externalMetadataColumn
-                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[updated]"
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_fixtures.Inputs[ADO NET Destination Input].ExternalColumns[created]"
                       dataType="dbTimeStamp"
-                      name="updated" />
+                      name="created" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1593,9 +1593,9 @@
                       dataType="i2"
                       name="match_result" />
                     <externalMetadataColumn
-                      refId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Inputs[ADO NET Destination Input].ExternalColumns[updated]"
+                      refId="Package\Postgres_api\ADO_NET_Postgres_api_schedule.Inputs[ADO NET Destination Input].ExternalColumns[created]"
                       dataType="dbTimeStamp"
-                      name="updated" />
+                      name="created" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1907,7 +1907,7 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[fixture_id]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -1929,7 +1929,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[fixture_date]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -1951,7 +1951,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[fixture_timestamp]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -1973,7 +1973,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[league_id]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -1995,7 +1995,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[league_name]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -2017,7 +2017,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[league_country]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -2039,7 +2039,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[league_season]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -2061,7 +2061,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[league_round]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -2083,7 +2083,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[teams_home_id]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -2105,7 +2105,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[teams_home_name]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -2127,7 +2127,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[teams_away_id]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -2149,7 +2149,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].Columns[teams_away_name]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
@@ -2174,79 +2174,79 @@
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[fixture_id]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       length="50"
                       name="fixture_id" />
                     <externalMetadataColumn
                       refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[fixture_date]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       length="50"
                       name="fixture_date" />
                     <externalMetadataColumn
                       refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[fixture_timestamp]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       length="50"
                       name="fixture_timestamp" />
                     <externalMetadataColumn
                       refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[league_id]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       length="50"
                       name="league_id" />
                     <externalMetadataColumn
                       refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[league_name]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       length="50"
                       name="league_name" />
                     <externalMetadataColumn
                       refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[league_country]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       length="50"
                       name="league_country" />
                     <externalMetadataColumn
                       refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[league_season]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       length="50"
                       name="league_season" />
                     <externalMetadataColumn
                       refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[league_round]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       length="50"
                       name="league_round" />
                     <externalMetadataColumn
                       refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[teams_home_id]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       length="50"
                       name="teams_home_id" />
                     <externalMetadataColumn
                       refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[teams_home_name]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       length="50"
                       name="teams_home_name" />
                     <externalMetadataColumn
                       refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[teams_away_id]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       length="50"
                       name="teams_away_id" />
                     <externalMetadataColumn
                       refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[teams_away_name]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       length="50"
                       name="teams_away_name" />
                     <externalMetadataColumn
                       refId="Package\Postgres_api\fixtures_csv.Outputs[Flat File Source Output].ExternalColumns[Column 0]"
-                      codePage="1252"
+                      codePage="65001"
                       dataType="str"
                       length="50"
                       name="Column 0" />
@@ -3285,9 +3285,9 @@
                       dataType="i2"
                       name="draw_away" />
                     <externalMetadataColumn
-                      refId="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series.Inputs[ADO NET Destination Input].ExternalColumns[updated]"
+                      refId="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series.Inputs[ADO NET Destination Input].ExternalColumns[created]"
                       dataType="dbTimeStamp"
-                      name="updated" />
+                      name="created" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3525,9 +3525,9 @@
                       dataType="i2"
                       name="pts" />
                     <externalMetadataColumn
-                      refId="Package\Postgres_cal\ADO_NET_Postgres_cal_league_table.Inputs[ADO NET Destination Input].ExternalColumns[updated]"
+                      refId="Package\Postgres_cal\ADO_NET_Postgres_cal_league_table.Inputs[ADO NET Destination Input].ExternalColumns[created]"
                       dataType="dbTimeStamp"
-                      name="updated" />
+                      name="created" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3765,9 +3765,9 @@
                       dataType="i2"
                       name="pts" />
                     <externalMetadataColumn
-                      refId="Package\Postgres_cal\ADO_NET_Postgres_cal_league_table_away.Inputs[ADO NET Destination Input].ExternalColumns[updated]"
+                      refId="Package\Postgres_cal\ADO_NET_Postgres_cal_league_table_away.Inputs[ADO NET Destination Input].ExternalColumns[created]"
                       dataType="dbTimeStamp"
-                      name="updated" />
+                      name="created" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3934,14 +3934,6 @@
                       externalMetadataColumnId="Package\Postgres_cal\ADO_NET_Postgres_cal_league_table_home.Inputs[ADO NET Destination Input].ExternalColumns[league_id]"
                       lineageId="Package\Postgres_cal\cal_league_table_home_csv.Outputs[Flat File Source Output].Columns[league_id]" />
                     <inputColumn
-                      refId="Package\Postgres_cal\ADO_NET_Postgres_cal_league_table_home.Inputs[ADO NET Destination Input].Columns[index]"
-                      cachedCodepage="65001"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="index"
-                      externalMetadataColumnId="Package\Postgres_cal\ADO_NET_Postgres_cal_league_table_home.Inputs[ADO NET Destination Input].ExternalColumns[team_position]"
-                      lineageId="Package\Postgres_cal\cal_league_table_home_csv.Outputs[Flat File Source Output].Columns[index]" />
-                    <inputColumn
                       refId="Package\Postgres_cal\ADO_NET_Postgres_cal_league_table_home.Inputs[ADO NET Destination Input].Columns[Team]"
                       cachedCodepage="65001"
                       cachedDataType="str"
@@ -3949,6 +3941,14 @@
                       cachedName="Team"
                       externalMetadataColumnId="Package\Postgres_cal\ADO_NET_Postgres_cal_league_table_home.Inputs[ADO NET Destination Input].ExternalColumns[team_id]"
                       lineageId="Package\Postgres_cal\cal_league_table_home_csv.Outputs[Flat File Source Output].Columns[Team]" />
+                    <inputColumn
+                      refId="Package\Postgres_cal\ADO_NET_Postgres_cal_league_table_home.Inputs[ADO NET Destination Input].Columns[index]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="index"
+                      externalMetadataColumnId="Package\Postgres_cal\ADO_NET_Postgres_cal_league_table_home.Inputs[ADO NET Destination Input].ExternalColumns[team_position]"
+                      lineageId="Package\Postgres_cal\cal_league_table_home_csv.Outputs[Flat File Source Output].Columns[index]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -4005,9 +4005,9 @@
                       dataType="i2"
                       name="pts" />
                     <externalMetadataColumn
-                      refId="Package\Postgres_cal\ADO_NET_Postgres_cal_league_table_home.Inputs[ADO NET Destination Input].ExternalColumns[updated]"
+                      refId="Package\Postgres_cal\ADO_NET_Postgres_cal_league_table_home.Inputs[ADO NET Destination Input].ExternalColumns[created]"
                       dataType="dbTimeStamp"
-                      name="updated" />
+                      name="created" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -5665,14 +5665,6 @@
                       cachedName="total_market_value"
                       externalMetadataColumnId="Package\Postgres_val\ADO_NET_Postgres_val_teams_market_value.Inputs[ADO NET Destination Input].ExternalColumns[total_market_value]"
                       lineageId="Package\Postgres_val\team_market_value_csv.Outputs[Flat File Source Output].Columns[total_market_value]" />
-                    <inputColumn
-                      refId="Package\Postgres_val\ADO_NET_Postgres_val_teams_market_value.Inputs[ADO NET Destination Input].Columns[team]"
-                      cachedCodepage="65001"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="team"
-                      externalMetadataColumnId="Package\Postgres_val\ADO_NET_Postgres_val_teams_market_value.Inputs[ADO NET Destination Input].ExternalColumns[team_id]"
-                      lineageId="Package\Postgres_val\team_market_value_csv.Outputs[Flat File Source Output].Columns[team]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -5711,9 +5703,9 @@
                       dataType="i8"
                       name="total_market_value" />
                     <externalMetadataColumn
-                      refId="Package\Postgres_val\ADO_NET_Postgres_val_teams_market_value.Inputs[ADO NET Destination Input].ExternalColumns[updated]"
+                      refId="Package\Postgres_val\ADO_NET_Postgres_val_teams_market_value.Inputs[ADO NET Destination Input].ExternalColumns[created]"
                       dataType="dbTimeStamp"
-                      name="updated" />
+                      name="created" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -6183,7 +6175,7 @@
     design-time-name="Package\Postgres_api">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="137.6,41.6"
           Id="Package\Postgres_api\teams_csv"
@@ -6243,9 +6235,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6267,9 +6257,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6291,9 +6279,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6315,9 +6301,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6339,9 +6323,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6393,51 +6375,51 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="216,41.6"
+          Id="Package\Postgres_cal\cal_draw_series"
+          TopLeft="108.571430420389,318.117651520304" />
+        <NodeLayout
           Size="287.2,41.6"
           Id="Package\Postgres_cal\ADO_NET_Postgres_cal_league_table_home"
-          TopLeft="470.714293730502,143.764707898599" />
+          TopLeft="468.714293730502,143.764707898599" />
         <NodeLayout
-          Size="216.8,41.6"
-          Id="Package\Postgres_cal\cal_league_table_away_csv"
-          TopLeft="109.285716146839,231.705885602529" />
-        <NodeLayout
-          Size="251.2,41.6"
-          Id="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series"
-          TopLeft="472.142865183402,319.647063306459" />
-        <NodeLayout
-          Size="178.4,41.6"
-          Id="Package\Postgres_cal\cal_league_table_csv"
-          TopLeft="113.333333333333,49.1666666666667" />
+          Size="212,41.6"
+          Id="Package\Postgres_cal\cal_league_table_home_csv"
+          TopLeft="112.142859052639,143.764707898599" />
         <NodeLayout
           Size="285.6,41.6"
           Id="Package\Postgres_cal\ADO_NET_Postgres_cal_league_table_away"
           TopLeft="472.857150909852,232.470591495606" />
         <NodeLayout
+          Size="216.8,41.6"
+          Id="Package\Postgres_cal\cal_league_table_away_csv"
+          TopLeft="109.285716146839,231.705885602529" />
+        <NodeLayout
           Size="287.2,41.6"
           Id="Package\Postgres_cal\ADO_NET_Postgres_cal_league_table"
           TopLeft="469.523807784327,50.6960784528219" />
         <NodeLayout
-          Size="216,41.6"
-          Id="Package\Postgres_cal\cal_draw_series"
-          TopLeft="108.571430420389,318.117651520304" />
+          Size="251.2,41.6"
+          Id="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series"
+          TopLeft="471.142865183402,319.647063306459" />
         <NodeLayout
-          Size="212,41.6"
-          Id="Package\Postgres_cal\cal_league_table_home_csv"
-          TopLeft="112.142859052639,143.764707898599" />
+          Size="178.4,41.6"
+          Id="Package\Postgres_cal\cal_league_table_csv"
+          TopLeft="113.333333333333,49.1666666666667" />
         <EdgeLayout
           Id="Package\Postgres_cal.Paths[Flat File Source Output3]"
-          TopLeft="324.571430420389,339.682357413381">
+          TopLeft="324.571430420389,339.682357413382">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="147.571434763013,0"
+              EndConnector="146.571434763013,0"
               Start="0,0"
-              End="140.071434763013,0">
+              End="139.071434763013,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="140.071434763013,0" />
+                    End="139.071434763013,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6474,14 +6456,14 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="146.571434677864,0"
+              EndConnector="144.571434677863,0"
               Start="0,0"
-              End="139.071434677864,0">
+              End="137.071434677863,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="139.071434677864,0" />
+                    End="137.071434677863,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6524,14 +6506,6 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Postgres_cal\ADO_NET_Postgres_cal_league_table_away">
     <Properties>
       <Property>
@@ -6541,6 +6515,14 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Postgres_cal\ADO_NET_Postgres_cal_league_table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Postgres_cal\ADO_NET_Postgres_cal_draw_series">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

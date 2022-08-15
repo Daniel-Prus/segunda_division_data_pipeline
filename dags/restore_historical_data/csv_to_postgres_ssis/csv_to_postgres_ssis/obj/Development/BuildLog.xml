@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>csv_to_postgres_ssis</Name>
-    <LastWriteTime>2022-06-24T09:42:41.6592913Z</LastWriteTime>
+    <LastWriteTime>2022-08-15T12:20:25.997632Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>restore_data_football_raw_db.dtsx</Name>
-      <LastWriteTime>2022-06-24T11:41:38.0572802Z</LastWriteTime>
+      <LastWriteTime>2022-08-15T12:20:25.9586295Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
