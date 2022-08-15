@@ -7,7 +7,7 @@ from segdiv_data_scripts import read_json_api_credentials, calulate_league_table
 start = datetime.now()
 
 LEAGUE_ID = 141
-SEASONS = [2018, 2019, 2020, 2021]
+SEASONS = [2018, 2019, 2020, 2021, 2022]
 API_CREDENTIALS = read_json_api_credentials("./api_football_beta.json")
 
 # get and save raw_data.csv:
