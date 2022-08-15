@@ -89,7 +89,7 @@ class GetApiFootballData:
             df_list = []
             for season in seasons:
                 df = GetApiFootballData.__get_api(self, GetApiFootballData.fixtures_url,
-                                                  **{"league": league_id, "SEASON": season})
+                                                  **{"league": league_id, "season": season})
                 df_list.append(df)
 
             concat_df = pd.concat(df_list)
