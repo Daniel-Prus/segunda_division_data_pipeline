@@ -11,7 +11,7 @@ WHERE fixture_id IN (SELECT fixture_id
                     FROM dblink ('hostaddr=127.0.0.1 port=5432 dbname=football_db user=airflow password=airflow',
 				                    'SELECT fixture_id
 				                     FROM api.fixtures
-				                     WHERE league_id = {{params.league_id}} AND league_season = {{params.SEASON}}')
+				                     WHERE league_id = {{params.league_id}} AND league_season = {{params.season}}')
 				    AS t (fixture_id bigint));
 
 -- setting fact_results primary keys sequence:
@@ -34,7 +34,7 @@ INSERT INTO dim_fixtures
     FROM dblink ('hostaddr=127.0.0.1 port=5432 dbname=football_db user=airflow password=airflow',
 				 'SELECT fixture_id, fixture_date, fixture_timestamp
 				  FROM api.fixtures
-				  WHERE league_id = {{params.league_id}} AND league_season = {{params.SEASON}}')
+				  WHERE league_id = {{params.league_id}} AND league_season = {{params.season}}')
     AS t(
 		fixture_id bigint,
         fixture_date_utc timestamp without time zone,
@@ -70,9 +70,9 @@ INSERT INTO fact_results (fixture_id, league_id, season, round, team_home_id, te
                             r.fulltime_goals_total,
                             r.match_result
                         FROM api.fixtures as f
-                        LEFT JOIN api.results as r on r.fixture_id = f.fixture_id
-                        INNER JOIN cal.draw_series AS dw on dw.fixture_id = f.fixture_id
-                        WHERE f.league_id = {{params.league_id}} AND f.league_season = {{params.SEASON}}'
+                        JOIN api.results as r on r.fixture_id = f.fixture_id
+                        JOIN cal.draw_series AS dw on dw.fixture_id = f.fixture_id
+                        WHERE f.league_id = {{params.league_id}} AND f.league_season = {{params.season}}'
                         )
     AS t(
 		fixture_id bigint,
@@ -104,16 +104,16 @@ INSERT INTO fact_standings (standings_type_id, league_id, team_id, season, round
 	FROM dblink ('hostaddr=127.0.0.1 port=5432 dbname=football_db user=airflow password=airflow',
 	                'SELECT *
                         FROM (
-                            SELECT league_id, SEASON, 1 as standings_type_id, round, team_position, team_id, mp, w, d, l, gf, ga, gd, pts
+                            SELECT league_id, season, 1 as standings_type_id, round, team_position, team_id, mp, w, d, l, gf, ga, gd, pts
                             FROM cal.league_table
                             UNION ALL
-                            SELECT league_id, SEASON, 2 as standings_type_id, round, team_position, team_id, mp, w, d, l, gf, ga, gd, pts
+                            SELECT league_id, season, 2 as standings_type_id, round, team_position, team_id, mp, w, d, l, gf, ga, gd, pts
                             FROM cal.league_table_home
                             UNION ALL
-                            SELECT league_id, SEASON, 3 as standings_type_id, round, team_position, team_id, mp, w, d, l, gf, ga, gd, pts
+                            SELECT league_id, season, 3 as standings_type_id, round, team_position, team_id, mp, w, d, l, gf, ga, gd, pts
                             FROM cal.league_table_away
-                            ORDER BY  league_id, SEASON, round,  standings_type_id, team_position) as t
-                        WHERE t.league_id = {{params.league_id}} AND t.SEASON = {{params.SEASON}}')
+                            ORDER BY  league_id, season, round,  standings_type_id, team_position) as t
+                        WHERE t.league_id = {{params.league_id}} AND t.SEASON = {{params.season}}')
 	AS t(
 	    league_id smallint,
         season smallint,

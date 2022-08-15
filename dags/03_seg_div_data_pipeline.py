@@ -103,7 +103,7 @@ with DAG("seg_div_data_pipeline",
             autocommit=True,
             sql=["football_db/views.sql", "football_db/calculate_draw_series.sql"],
             params={'league_id': LEAGUE_ID,
-                    'SEASON': SEASON}
+                    'season': SEASON}
 
         )
 
@@ -125,7 +125,7 @@ with DAG("seg_div_data_pipeline",
         autocommit=True,
         sql="segunda_division_dw/load_segdiv_dw.sql",
         params={'league_id': LEAGUE_ID,
-                'SEASON': SEASON}
+                'season': SEASON}
     )
 
     finished = DummyOperator(task_id="finished")

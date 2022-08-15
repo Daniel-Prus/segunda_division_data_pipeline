@@ -6,7 +6,7 @@ CREATE OR REPLACE FUNCTION trigger_refresh_mat_view()
     LANGUAGE plpgsql
 AS $$
 BEGIN
-    REFRESH MATERIALIZED VIEW CONCURRENTLY mat_view_segdiv_current_standings;
+    REFRESH MATERIALIZED VIEW CONCURRENTLY mv_segdiv_current_standings;
     RETURN NULL;
 END;
 $$;
