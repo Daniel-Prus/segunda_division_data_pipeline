@@ -29,7 +29,8 @@ with DAG("seg_div_data_pipeline",
          start_date=datetime.fromisoformat(START_DATE),
          end_date=datetime.fromisoformat(END_DATE) + timedelta(days=7),
          dagrun_timeout=timedelta(seconds=60),
-         schedule_interval="0 11 * * 2", catchup=False,
+         schedule_interval="0 11 * * 2",
+         catchup=False,
          template_searchpath="/opt/airflow/dags/scripts/postgres_scripts/",
          tags=['segdiv']) as dag:
 
