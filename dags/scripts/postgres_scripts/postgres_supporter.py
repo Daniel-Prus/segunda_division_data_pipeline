@@ -24,7 +24,7 @@ class FootballDB:
             teams_home_name varchar(50) NULL,
             teams_away_id integer NULL,
             teams_away_name varchar(50) NULL, 
-            updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
     """
 
@@ -40,7 +40,7 @@ class FootballDB:
         halftime_goals_total smallint NULL,
         fulltime_goals_total smallint NULL,
         match_result smallint NULL,
-        updated timestamp DEFAULT CURRENT_TIMESTAMP
+        created timestamp DEFAULT CURRENT_TIMESTAMP
     );
     """
 
@@ -101,7 +101,7 @@ class FootballDB:
         GA smallint,
         GD smallint,
         Pts smallint,
-        updated timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
+        created timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
         CONSTRAINT PK_cal_league_table PRIMARY KEY (league_id, team_id, SEASON, round)  
     );
     """
@@ -121,7 +121,7 @@ class FootballDB:
         GA smallint,
         GD smallint,
         Pts smallint,
-        updated timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
+        created timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
         CONSTRAINT PK_cal_league_table_home PRIMARY KEY (league_id, team_id, SEASON, round)
     );
     """
@@ -141,7 +141,7 @@ class FootballDB:
         GA smallint,
         GD smallint,
         Pts smallint,
-        updated timestamp DEFAULT CURRENT_TIMESTAMP,
+        created timestamp DEFAULT CURRENT_TIMESTAMP,
         CONSTRAINT PK_cal_league_table_away PRIMARY KEY (league_id, team_id, SEASON, round)
     );
     """
@@ -153,7 +153,7 @@ class FootballDB:
         draw_home smallint,
         no_draw_away smallint,
         draw_away smallint,
-        updated timestamp DEFAULT CURRENT_TIMESTAMP
+        created timestamp DEFAULT CURRENT_TIMESTAMP
     );
     """
     # delete the older versions
@@ -174,7 +174,7 @@ class FootballDB:
         foreigners smallint NULL,
         market_value bigint NULL,
         total_market_value bigint NULL,
-        updated timestamp DEFAULT CURRENT_TIMESTAMP
+        created timestamp DEFAULT CURRENT_TIMESTAMP
     );
     """
 
