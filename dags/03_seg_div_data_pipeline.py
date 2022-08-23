@@ -36,6 +36,16 @@ with DAG("seg_div_data_pipeline",
 
     start = DummyOperator(task_id="start")
 
+    get_api_to_csv = PythonOperator(
+        task_id="api_to_csv",
+        python_callable=get_api_data_to_csv,
+        op_kwargs={
+            "key": API_KEY,
+            "host": API_HOST,
+            "league_id": LEAGUE_ID,
+            "season": SEASON
+        }
+    )
     with TaskGroup("process_api_data") as process_api_data:
         raw_data_csv_sensor = FileSensor(
             task_id="raw_data_csv_sensor",
@@ -130,16 +140,5 @@ with DAG("seg_div_data_pipeline",
 
     finished = DummyOperator(task_id="finished")
 
-    start >> process_api_data >> load_football_db >> load_segunda_divison_dw >> finished
+    start >> get_api_to_csv >> process_api_data >> load_football_db >> load_segunda_divison_dw >> finished
 
-    """
-    get_api_to_csv = PythonOperator(
-        task_id="api_to_csv",
-        python_callable=get_api_data_to_csv,
-        op_kwargs={
-            "key": API_KEY,
-            "host": API_HOST,
-            "league_id": LEAGUE_ID,
-            "SEASON": SEASON
-        }
-    )"""

@@ -24,7 +24,7 @@ def get_api_data_to_csv(key, host, league_id, season):
 def get_results():
     raw_data = pd.read_csv("/opt/airflow/dags/files/raw_data.csv")
 
-    results = TeamDrawAnalysis(raw_data).fixtures_data.tail(25)
+    results = TeamDrawAnalysis(raw_data).fixtures_data
     results = results[[
         'fixture_id', 'teams_home_winner', 'teams_away_winner', 'goals_home', 'goals_away', 'score_halftime_home',
         'score_halftime_away', 'halftime_goals_total', 'fulltime_goals_total', 'match_result']]

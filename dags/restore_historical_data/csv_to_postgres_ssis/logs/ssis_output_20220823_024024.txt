@@ -1,0 +1,570 @@
+Microsoft (R) SQL Server Execute Package Utility
+Version 15.0.2000.5 for 64-bit
+Copyright (C) 2019 Microsoft. All rights reserved.
+
+Started:  02:37:48
+Progress: 2022-08-23 02:37:49.28
+   Source: Postgres_api 
+   Validating: 0% complete
+End Progress
+Progress: 2022-08-23 02:37:49.62
+   Source: Postgres_api 
+   Validating: 10% complete
+End Progress
+Progress: 2022-08-23 02:37:49.70
+   Source: Postgres_api 
+   Validating: 20% complete
+End Progress
+Progress: 2022-08-23 02:37:49.83
+   Source: Postgres_api 
+   Validating: 30% complete
+End Progress
+Progress: 2022-08-23 02:37:49.92
+   Source: Postgres_api 
+   Validating: 40% complete
+End Progress
+Progress: 2022-08-23 02:37:49.96
+   Source: Postgres_api 
+   Validating: 50% complete
+End Progress
+Progress: 2022-08-23 02:37:49.96
+   Source: Postgres_api 
+   Validating: 60% complete
+End Progress
+Progress: 2022-08-23 02:37:49.97
+   Source: Postgres_api 
+   Validating: 70% complete
+End Progress
+Progress: 2022-08-23 02:37:49.97
+   Source: Postgres_api 
+   Validating: 80% complete
+End Progress
+Progress: 2022-08-23 02:37:49.97
+   Source: Postgres_api 
+   Validating: 90% complete
+End Progress
+Progress: 2022-08-23 02:37:49.97
+   Source: Postgres_api 
+   Validating: 100% complete
+End Progress
+Progress: 2022-08-23 02:37:49.97
+   Source: Postgres_cal 
+   Validating: 0% complete
+End Progress
+Progress: 2022-08-23 02:37:50.06
+   Source: Postgres_cal 
+   Validating: 12% complete
+End Progress
+Progress: 2022-08-23 02:37:50.25
+   Source: Postgres_cal 
+   Validating: 25% complete
+End Progress
+Progress: 2022-08-23 02:37:50.43
+   Source: Postgres_cal 
+   Validating: 37% complete
+End Progress
+Progress: 2022-08-23 02:37:50.60
+   Source: Postgres_cal 
+   Validating: 50% complete
+End Progress
+Progress: 2022-08-23 02:37:50.60
+   Source: Postgres_cal 
+   Validating: 62% complete
+End Progress
+Progress: 2022-08-23 02:37:50.60
+   Source: Postgres_cal 
+   Validating: 75% complete
+End Progress
+Progress: 2022-08-23 02:37:50.60
+   Source: Postgres_cal 
+   Validating: 87% complete
+End Progress
+Progress: 2022-08-23 02:37:50.60
+   Source: Postgres_cal 
+   Validating: 100% complete
+End Progress
+Progress: 2022-08-23 02:37:50.60
+   Source: Postgres_val 
+   Validating: 0% complete
+End Progress
+Progress: 2022-08-23 02:37:50.71
+   Source: Postgres_val 
+   Validating: 50% complete
+End Progress
+Progress: 2022-08-23 02:37:50.71
+   Source: Postgres_val 
+   Validating: 100% complete
+End Progress
+Progress: 2022-08-23 02:37:51.01
+   Source: SQL truncate tables 
+   Executing query "TRUNCATE TABLE api.fixtures, api.results, api.seas...".: 100% complete
+End Progress
+Progress: 2022-08-23 02:37:51.01
+   Source: Postgres_val 
+   Validating: 0% complete
+End Progress
+Progress: 2022-08-23 02:37:51.01
+   Source: Postgres_api 
+   Validating: 0% complete
+End Progress
+Progress: 2022-08-23 02:37:51.01
+   Source: Postgres_cal 
+   Validating: 0% complete
+End Progress
+Progress: 2022-08-23 02:37:51.27
+   Source: Postgres_cal 
+   Validating: 12% complete
+End Progress
+Progress: 2022-08-23 02:37:51.32
+   Source: Postgres_val 
+   Validating: 50% complete
+End Progress
+Progress: 2022-08-23 02:37:51.32
+   Source: Postgres_val 
+   Validating: 100% complete
+End Progress
+Warning: 2022-08-23 02:37:51.33
+   Code: 0x80047076
+   Source: Postgres_val SSIS.Pipeline
+   Description: The output column "team" (33) on output "Flat File Source Output" (32) and component "team_market_value_csv" (28) is not subsequently used in the Data Flow task. Removing this unused output column can increase Data Flow task performance.
+End Warning
+Progress: 2022-08-23 02:37:51.33
+   Source: Postgres_val 
+   Prepare for Execute: 0% complete
+End Progress
+Progress: 2022-08-23 02:37:51.33
+   Source: Postgres_val 
+   Prepare for Execute: 50% complete
+End Progress
+Progress: 2022-08-23 02:37:51.33
+   Source: Postgres_val 
+   Prepare for Execute: 100% complete
+End Progress
+Progress: 2022-08-23 02:37:51.34
+   Source: Postgres_val 
+   Pre-Execute: 0% complete
+End Progress
+Progress: 2022-08-23 02:37:51.34
+   Source: Postgres_val 
+   Pre-Execute: 50% complete
+End Progress
+Progress: 2022-08-23 02:37:51.41
+   Source: Postgres_val 
+   Pre-Execute: 100% complete
+End Progress
+Progress: 2022-08-23 02:37:51.45
+   Source: Postgres_api 
+   Validating: 10% complete
+End Progress
+Progress: 2022-08-23 02:37:51.60
+   Source: Postgres_api 
+   Validating: 20% complete
+End Progress
+Progress: 2022-08-23 02:37:51.72
+   Source: Postgres_cal 
+   Validating: 25% complete
+End Progress
+Progress: 2022-08-23 02:37:51.99
+   Source: Postgres_api 
+   Validating: 30% complete
+End Progress
+Progress: 2022-08-23 02:37:52.20
+   Source: Postgres_api 
+   Validating: 40% complete
+End Progress
+Progress: 2022-08-23 02:37:52.21
+   Source: Postgres_cal 
+   Validating: 37% complete
+End Progress
+Progress: 2022-08-23 02:37:52.32
+   Source: Postgres_api 
+   Validating: 50% complete
+End Progress
+Progress: 2022-08-23 02:37:52.32
+   Source: Postgres_api 
+   Validating: 60% complete
+End Progress
+Progress: 2022-08-23 02:37:52.32
+   Source: Postgres_api 
+   Validating: 70% complete
+End Progress
+Progress: 2022-08-23 02:37:52.32
+   Source: Postgres_api 
+   Validating: 80% complete
+End Progress
+Progress: 2022-08-23 02:37:52.32
+   Source: Postgres_api 
+   Validating: 90% complete
+End Progress
+Progress: 2022-08-23 02:37:52.32
+   Source: Postgres_api 
+   Validating: 100% complete
+End Progress
+Progress: 2022-08-23 02:37:52.32
+   Source: Postgres_api 
+   Prepare for Execute: 0% complete
+End Progress
+Progress: 2022-08-23 02:37:52.32
+   Source: Postgres_api 
+   Prepare for Execute: 10% complete
+End Progress
+Progress: 2022-08-23 02:37:52.32
+   Source: Postgres_api 
+   Prepare for Execute: 20% complete
+End Progress
+Progress: 2022-08-23 02:37:52.32
+   Source: Postgres_api 
+   Prepare for Execute: 30% complete
+End Progress
+Progress: 2022-08-23 02:37:52.32
+   Source: Postgres_api 
+   Prepare for Execute: 40% complete
+End Progress
+Progress: 2022-08-23 02:37:52.32
+   Source: Postgres_api 
+   Prepare for Execute: 50% complete
+End Progress
+Progress: 2022-08-23 02:37:52.32
+   Source: Postgres_api 
+   Prepare for Execute: 60% complete
+End Progress
+Progress: 2022-08-23 02:37:52.32
+   Source: Postgres_api 
+   Prepare for Execute: 70% complete
+End Progress
+Progress: 2022-08-23 02:37:52.32
+   Source: Postgres_api 
+   Prepare for Execute: 80% complete
+End Progress
+Progress: 2022-08-23 02:37:52.32
+   Source: Postgres_api 
+   Prepare for Execute: 90% complete
+End Progress
+Progress: 2022-08-23 02:37:52.32
+   Source: Postgres_api 
+   Prepare for Execute: 100% complete
+End Progress
+Progress: 2022-08-23 02:37:52.43
+   Source: Postgres_api 
+   Pre-Execute: 0% complete
+End Progress
+Progress: 2022-08-23 02:37:52.43
+   Source: Postgres_api 
+   Pre-Execute: 10% complete
+End Progress
+Progress: 2022-08-23 02:37:52.43
+   Source: Postgres_api 
+   Pre-Execute: 20% complete
+End Progress
+Progress: 2022-08-23 02:37:52.43
+   Source: Postgres_api 
+   Pre-Execute: 30% complete
+End Progress
+Progress: 2022-08-23 02:37:52.46
+   Source: Postgres_api 
+   Pre-Execute: 40% complete
+End Progress
+Progress: 2022-08-23 02:37:52.48
+   Source: Postgres_api 
+   Pre-Execute: 50% complete
+End Progress
+Progress: 2022-08-23 02:37:52.51
+   Source: Postgres_api 
+   Pre-Execute: 60% complete
+End Progress
+Progress: 2022-08-23 02:37:52.53
+   Source: Postgres_api 
+   Pre-Execute: 70% complete
+End Progress
+Progress: 2022-08-23 02:37:52.56
+   Source: Postgres_api 
+   Pre-Execute: 80% complete
+End Progress
+Progress: 2022-08-23 02:37:52.56
+   Source: Postgres_api 
+   Pre-Execute: 90% complete
+End Progress
+Progress: 2022-08-23 02:37:52.56
+   Source: Postgres_api 
+   Pre-Execute: 100% complete
+End Progress
+Progress: 2022-08-23 02:37:52.76
+   Source: Postgres_cal 
+   Validating: 50% complete
+End Progress
+Progress: 2022-08-23 02:37:52.76
+   Source: Postgres_cal 
+   Validating: 62% complete
+End Progress
+Progress: 2022-08-23 02:37:52.76
+   Source: Postgres_cal 
+   Validating: 75% complete
+End Progress
+Progress: 2022-08-23 02:37:52.76
+   Source: Postgres_cal 
+   Validating: 87% complete
+End Progress
+Progress: 2022-08-23 02:37:52.76
+   Source: Postgres_cal 
+   Validating: 100% complete
+End Progress
+Progress: 2022-08-23 02:37:52.77
+   Source: Postgres_cal 
+   Prepare for Execute: 0% complete
+End Progress
+Progress: 2022-08-23 02:37:52.77
+   Source: Postgres_cal 
+   Prepare for Execute: 12% complete
+End Progress
+Progress: 2022-08-23 02:37:52.77
+   Source: Postgres_cal 
+   Prepare for Execute: 25% complete
+End Progress
+Progress: 2022-08-23 02:37:52.77
+   Source: Postgres_cal 
+   Prepare for Execute: 37% complete
+End Progress
+Progress: 2022-08-23 02:37:52.77
+   Source: Postgres_cal 
+   Prepare for Execute: 50% complete
+End Progress
+Progress: 2022-08-23 02:37:52.77
+   Source: Postgres_cal 
+   Prepare for Execute: 62% complete
+End Progress
+Progress: 2022-08-23 02:37:52.77
+   Source: Postgres_cal 
+   Prepare for Execute: 75% complete
+End Progress
+Progress: 2022-08-23 02:37:52.77
+   Source: Postgres_cal 
+   Prepare for Execute: 87% complete
+End Progress
+Progress: 2022-08-23 02:37:52.77
+   Source: Postgres_cal 
+   Prepare for Execute: 100% complete
+End Progress
+Progress: 2022-08-23 02:37:52.88
+   Source: Postgres_cal 
+   Pre-Execute: 0% complete
+End Progress
+Progress: 2022-08-23 02:37:52.93
+   Source: Postgres_cal 
+   Pre-Execute: 12% complete
+End Progress
+Progress: 2022-08-23 02:37:52.93
+   Source: Postgres_cal 
+   Pre-Execute: 25% complete
+End Progress
+Progress: 2022-08-23 02:37:52.93
+   Source: Postgres_cal 
+   Pre-Execute: 37% complete
+End Progress
+Progress: 2022-08-23 02:37:52.97
+   Source: Postgres_cal 
+   Pre-Execute: 50% complete
+End Progress
+Progress: 2022-08-23 02:37:52.98
+   Source: Postgres_cal 
+   Pre-Execute: 62% complete
+End Progress
+Progress: 2022-08-23 02:37:53.02
+   Source: Postgres_cal 
+   Pre-Execute: 75% complete
+End Progress
+Progress: 2022-08-23 02:37:53.03
+   Source: Postgres_cal 
+   Pre-Execute: 87% complete
+End Progress
+Progress: 2022-08-23 02:37:53.07
+   Source: Postgres_cal 
+   Pre-Execute: 100% complete
+End Progress
+Progress: 2022-08-23 02:37:54.76
+   Source: Postgres_val 
+   Post Execute: 0% complete
+End Progress
+Progress: 2022-08-23 02:37:54.76
+   Source: Postgres_val 
+   Post Execute: 50% complete
+End Progress
+Progress: 2022-08-23 02:37:54.76
+   Source: Postgres_val 
+   Post Execute: 100% complete
+End Progress
+Progress: 2022-08-23 02:37:54.79
+   Source: Postgres_val 
+   Cleanup: 0% complete
+End Progress
+Progress: 2022-08-23 02:37:54.79
+   Source: Postgres_val 
+   Cleanup: 50% complete
+End Progress
+Progress: 2022-08-23 02:37:54.79
+   Source: Postgres_val 
+   Cleanup: 100% complete
+End Progress
+Progress: 2022-08-23 02:40:01.41
+   Source: Postgres_api 
+   Post Execute: 0% complete
+End Progress
+Progress: 2022-08-23 02:40:01.41
+   Source: Postgres_api 
+   Post Execute: 10% complete
+End Progress
+Progress: 2022-08-23 02:40:01.41
+   Source: Postgres_api 
+   Post Execute: 20% complete
+End Progress
+Progress: 2022-08-23 02:40:01.41
+   Source: Postgres_api 
+   Post Execute: 30% complete
+End Progress
+Progress: 2022-08-23 02:40:01.41
+   Source: Postgres_api 
+   Post Execute: 40% complete
+End Progress
+Progress: 2022-08-23 02:40:01.42
+   Source: Postgres_api 
+   Post Execute: 50% complete
+End Progress
+Progress: 2022-08-23 02:40:01.44
+   Source: Postgres_api 
+   Post Execute: 60% complete
+End Progress
+Progress: 2022-08-23 02:40:01.46
+   Source: Postgres_api 
+   Post Execute: 70% complete
+End Progress
+Progress: 2022-08-23 02:40:01.47
+   Source: Postgres_api 
+   Post Execute: 80% complete
+End Progress
+Progress: 2022-08-23 02:40:01.48
+   Source: Postgres_api 
+   Post Execute: 90% complete
+End Progress
+Progress: 2022-08-23 02:40:01.48
+   Source: Postgres_api 
+   Post Execute: 100% complete
+End Progress
+Progress: 2022-08-23 02:40:01.48
+   Source: Postgres_api 
+   Cleanup: 0% complete
+End Progress
+Progress: 2022-08-23 02:40:01.48
+   Source: Postgres_api 
+   Cleanup: 10% complete
+End Progress
+Progress: 2022-08-23 02:40:01.48
+   Source: Postgres_api 
+   Cleanup: 20% complete
+End Progress
+Progress: 2022-08-23 02:40:01.48
+   Source: Postgres_api 
+   Cleanup: 30% complete
+End Progress
+Progress: 2022-08-23 02:40:01.48
+   Source: Postgres_api 
+   Cleanup: 40% complete
+End Progress
+Progress: 2022-08-23 02:40:01.48
+   Source: Postgres_api 
+   Cleanup: 50% complete
+End Progress
+Progress: 2022-08-23 02:40:01.48
+   Source: Postgres_api 
+   Cleanup: 60% complete
+End Progress
+Progress: 2022-08-23 02:40:01.48
+   Source: Postgres_api 
+   Cleanup: 70% complete
+End Progress
+Progress: 2022-08-23 02:40:01.48
+   Source: Postgres_api 
+   Cleanup: 80% complete
+End Progress
+Progress: 2022-08-23 02:40:01.48
+   Source: Postgres_api 
+   Cleanup: 90% complete
+End Progress
+Progress: 2022-08-23 02:40:01.48
+   Source: Postgres_api 
+   Cleanup: 100% complete
+End Progress
+Progress: 2022-08-23 02:40:24.55
+   Source: Postgres_cal 
+   Post Execute: 0% complete
+End Progress
+Progress: 2022-08-23 02:40:24.55
+   Source: Postgres_cal 
+   Post Execute: 12% complete
+End Progress
+Progress: 2022-08-23 02:40:24.55
+   Source: Postgres_cal 
+   Post Execute: 25% complete
+End Progress
+Progress: 2022-08-23 02:40:24.55
+   Source: Postgres_cal 
+   Post Execute: 37% complete
+End Progress
+Progress: 2022-08-23 02:40:24.55
+   Source: Postgres_cal 
+   Post Execute: 50% complete
+End Progress
+Progress: 2022-08-23 02:40:24.55
+   Source: Postgres_cal 
+   Post Execute: 62% complete
+End Progress
+Progress: 2022-08-23 02:40:24.55
+   Source: Postgres_cal 
+   Post Execute: 75% complete
+End Progress
+Progress: 2022-08-23 02:40:24.56
+   Source: Postgres_cal 
+   Post Execute: 87% complete
+End Progress
+Progress: 2022-08-23 02:40:24.56
+   Source: Postgres_cal 
+   Post Execute: 100% complete
+End Progress
+Progress: 2022-08-23 02:40:24.56
+   Source: Postgres_cal 
+   Cleanup: 0% complete
+End Progress
+Progress: 2022-08-23 02:40:24.56
+   Source: Postgres_cal 
+   Cleanup: 12% complete
+End Progress
+Progress: 2022-08-23 02:40:24.56
+   Source: Postgres_cal 
+   Cleanup: 25% complete
+End Progress
+Progress: 2022-08-23 02:40:24.56
+   Source: Postgres_cal 
+   Cleanup: 37% complete
+End Progress
+Progress: 2022-08-23 02:40:24.56
+   Source: Postgres_cal 
+   Cleanup: 50% complete
+End Progress
+Progress: 2022-08-23 02:40:24.56
+   Source: Postgres_cal 
+   Cleanup: 62% complete
+End Progress
+Progress: 2022-08-23 02:40:24.56
+   Source: Postgres_cal 
+   Cleanup: 75% complete
+End Progress
+Progress: 2022-08-23 02:40:24.56
+   Source: Postgres_cal 
+   Cleanup: 87% complete
+End Progress
+Progress: 2022-08-23 02:40:24.56
+   Source: Postgres_cal 
+   Cleanup: 100% complete
+End Progress
+DTExec: The package execution returned DTSER_SUCCESS (0).
+Started:  02:37:48
+Finished: 02:40:24
+Elapsed:  155.672 seconds

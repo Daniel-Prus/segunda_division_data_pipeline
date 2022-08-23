@@ -64,6 +64,7 @@ class LoadLeagueTableToPostgres(BaseOperator):
         ),
             self.autocommit
         )
-
+        lala =pd.DataFrame(self.log.info)
+        lala.to_csv(f'/opt/airflow/dags/files/output_{self.destination_table}.csv', index=False)
         for output in self.hook.conn.notices:
             self.log.info(output)

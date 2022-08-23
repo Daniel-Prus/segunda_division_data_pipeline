@@ -80,7 +80,7 @@ class GetApiFootballData:
         """
 
         if isinstance(seasons, int):
-            querystring = {"league": league_id, "SEASON": seasons}
+            querystring = {"league": league_id, "season": seasons}
             df = GetApiFootballData.__get_api(self, GetApiFootballData.fixtures_url, **querystring)
             return df
 
@@ -88,7 +88,7 @@ class GetApiFootballData:
             df_list = []
             for season in seasons:
                 df = GetApiFootballData.__get_api(self, GetApiFootballData.fixtures_url,
-                                                  **{"league": league_id, "SEASON": season})
+                                                  **{"league": league_id, "season": season})
                 df_list.append(df)
 
             concat_df = pd.concat(df_list)
@@ -123,7 +123,7 @@ class GetApiFootballData:
 
     def get_seasons_details(self, league_id):
 
-        """ Get seasons details - availability, years, start and end of SEASON.
+        """ Get seasons details - availability, years, start and end of season.
             Method requires calculated 'country_leagues_overview' attribute by running method
             'get_country_leagues_overview'.
 
