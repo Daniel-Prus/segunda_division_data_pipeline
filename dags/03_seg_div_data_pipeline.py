@@ -141,4 +141,3 @@ with DAG("seg_div_data_pipeline",
     finished = DummyOperator(task_id="finished")
 
     start >> get_api_to_csv >> process_api_data >> load_football_db >> load_segunda_divison_dw >> finished
-
