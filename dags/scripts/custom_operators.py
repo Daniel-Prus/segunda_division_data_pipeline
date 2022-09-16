@@ -67,4 +67,3 @@ class LoadLeagueTableToPostgres(BaseOperator):
 
         for output in self.hook.conn.notices:
             self.log.info(output)
-
